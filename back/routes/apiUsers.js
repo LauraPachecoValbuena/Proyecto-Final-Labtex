@@ -132,7 +132,7 @@ router.post("/add", (req, res) => {
           companyName: req.body.companyName,
           country: req.body.country,
           isAdmin: req.body.isAdmin,
-          role: req.body.role
+          role: req.body.role //como hago xa no tener q meterlo a mano?? 
         })
         newUser.save((err, obj) => {
           if (err){
