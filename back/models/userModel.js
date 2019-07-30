@@ -11,10 +11,11 @@ const userSchema = new Schema(
     mobile: Number,
     companyName: String,
     country: String,
-    isAdmin: Boolean,
+    isAdmin: { type:Boolean, default: false},
     role: { type: Schema.Types.ObjectId, ref: "Role" }
   },
-  { collection: "users" }
+  { collection: "users" },
+  {  versionKey: false  }
 );
 
 module.exports = mongoose.model("User", userSchema);

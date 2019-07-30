@@ -8,7 +8,7 @@ const userModel = require("../models/userModel");
 const roleModel = require("../models/roleModel");
 
 //estamos pididnedo que nos liste todos los usuarios.
-router.get("/", async (req, res) => {
+router.get("/list", async (req, res) => {
   //cuando tengas mas peticiones, consultas no será solo / puesto que habrá que distinguirlas.
   const token = req.headers.authorization.replace("Bearer ", "");
 
@@ -57,7 +57,7 @@ router.put("/:id", async (req, res) => {
   try {
     let vtoken = jwt.verify(token, "mysecret");
     let user;
-    if (vtoken.isAdmin) {
+    if (vtoken.isAdmin || vtoken.id === req.params.id) {
       await userModel.findOneAndUpdate(
         { _id: req.params.id },
         {
@@ -78,6 +78,7 @@ router.put("/:id", async (req, res) => {
         { _id: req.params.id },
         {
           username: req.body.username,
+          // ...(req.body.username != null && {username: req.body.username}),
           email: req.body.email,
           password: req.body.password,
           surname: req.body.surname,
@@ -99,8 +100,55 @@ router.put("/:id", async (req, res) => {
 });
 
 //aqui estamos añadiendo un usuario nuevo.
-
-router.post("/", async (req, res) {
+router.post("/add", (req, res) => {
     const token = req.headers.authorization.replace("Bearer ", "");
-})
+
+    try {
+      let vtoken = jwt.verify(token, "mysecret");
+      if (vtoken.isAdmin) {
+        const newUser = new userModel({
+          username: req.body.username,
+          email: req.body. email,
+          password: md5(req.body.password),
+          surname: req.body.surname,
+          mobile: req.body.mobile,
+          companyName: req.body.companyName,
+          country: req.body.country,
+          isAdmin: req.body.isAdmin,
+          role: req.body.role
+        })
+        newUser.save((err, obj) => {
+          if (err){
+            console.log("ups!! tenemos un error guardando", err);
+          } else {
+            res.send(obj);
+            console.log(obj);
+          }
+        });
+      }
+    } catch (err) {
+      console.log(err);
+      res.status(401).send("Sorry, you don't have permission");
+    }
+});
+
+//aqui estamos eliminando un usuario a través del id.Sólo el admin.
+router.delete("/:id", (req, res) => {
+  const token = req.headers.authorization.replace("Bearer ", "");
+
+  try {
+    let vtoken = jwt.verify(token, "mysecret");
+    if (vtoken.isAdmin) {
+      userModel.deleteOne({_id: req.params.id}, (err, raw) => {
+        res.send();
+      })
+    } else {
+      res.send("Sorry, you don't have permission. You are not an Admin");
+    }
+  } catch (err) {
+    res.status(401).send("Sorry, you don't have permission your Token is not valid")
+  }
+});
+
+
 module.exports = router;
