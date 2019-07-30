@@ -4,11 +4,13 @@ var router = express.Router();
 //requerirlas (sólo las rutas de back)
 var apiUsersRouter = require("./apiUsers");
 var apiAuthRouter = require("./apiAuth");
+var apiGarmentsRouter = require("./apiGarments");
 
 //llamarlas
 // (/users) es la segunda parte de la url
 router.use("/users", apiUsersRouter);
 router.use("/auth", apiAuthRouter);
+router.use("/garments", apiGarmentsRouter);
 
 //exportar
 module.exports = router;
