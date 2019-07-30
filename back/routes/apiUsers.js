@@ -58,18 +58,28 @@ router.put("/:id", async (req, res) => {
     let vtoken = jwt.verify(token, "mysecret");
     let user;
     if (vtoken.isAdmin || vtoken.id === req.params.id) {
+      console.log(req.body);
       await userModel.findOneAndUpdate(
         { _id: req.params.id },
         {
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-            surname: req.body.surname,
-            mobile: req.body.mobile,
-            companyName: req.body.companyName,
-            country: req.body.country,
-            isAdmin: req.body.isAdmin,
-            role: req.body.role
+            // username: req.body.username,
+            // email: req.body.email,
+            // password: req.body.password,
+            // surname: req.body.surname,
+            // mobile: req.body.mobile,
+            // companyName: req.body.companyName,
+            // country: req.body.country,
+            // isAdmin: req.body.isAdmin,
+            // role: req.body.role
+            ...(req.body.username != null && {username: req.body.username}),
+            ...(req.body.email != null && {email: req.body.email}),
+            ...(req.body.password != null && {password: req.body.password}),
+            ...(req.body.surname != null && {surname: req.body.surname}),
+            ...(req.body.mobile != null && {mobile: req.body.mobile}),
+            ...(req.body.companyName != null && {companyName: req.body.companyName}),
+            ...(req.body.country != null && {country: req.body.country}),
+            ...(req.body.isAdmin != null && {isAdmin: req.body.isAdmin}),
+            ...(req.body.role != null && {role: req.body.role}),
         }
       );
       user = await userModel.findById(req.params.id, { password: 0 });
@@ -77,14 +87,21 @@ router.put("/:id", async (req, res) => {
       await userModel.findOneAndUpdate(
         { _id: req.params.id },
         {
-          username: req.body.username,
-          // ...(req.body.username != null && {username: req.body.username}),
-          email: req.body.email,
-          password: req.body.password,
-          surname: req.body.surname,
-          mobile: req.body.mobile,
-          companyName: req.body.companyName,
-          country: req.body.country
+          // username: req.body.username,
+          // email: req.body.email,
+          // password: req.body.password,
+          // surname: req.body.surname,
+          // mobile: req.body.mobile,
+          // companyName: req.body.companyName,
+          // country: req.body.country
+          ...(req.body.username != null && {username: req.body.username}),
+          ...(req.body.email != null && {email: req.body.email}),
+          ...(req.body.password != null && {password: req.body.password}),
+          ...(req.body.surname != null && {surname: req.body.surname}),
+          ...(req.body.mobile != null && {mobile: req.body.mobile}),
+          ...(req.body.companyName != null && {companyName: req.body.companyName}),
+          ...(req.body.country != null && {country: req.body.country}),
+
         }
       );
       user = await userModel.findById(req.params.id, {

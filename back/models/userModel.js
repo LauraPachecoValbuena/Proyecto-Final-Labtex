@@ -15,7 +15,7 @@ const userSchema = new Schema(
     role: { type: Schema.Types.ObjectId, ref: "Role" }
   },
   { collection: "users" },
-  {  versionKey: false  }
+  // {  versionKey: false  }
 );
 
 module.exports = mongoose.model("User", userSchema);
