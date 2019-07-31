@@ -143,16 +143,20 @@ router.post("/add", (req, res) => {
       });
       newUser.save((err, obj) => {
         if (err) {
-          console.log("ups!! tenemos un error guardando", err);
-        } else {
-          res.send(obj);
-          console.log(obj);
-        }
+          if (err.code === 11000) {
+            console.log(err);
+            res.send("El usuario ya existe.");
+          } else {
+            res.send("err" + err.msg[0]);
+          }
+        } 
+        res.send(obj);
+        console.log(obj);
       });
     }
   } catch (err) {
     console.log(err);
-    res.status(401).send("Sorry, you don't have permission");
+    res.status(401).send("Sorry, you don't have permission" + err);
   }
 });
 
