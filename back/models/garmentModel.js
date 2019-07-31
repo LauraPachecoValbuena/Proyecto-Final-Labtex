@@ -5,7 +5,7 @@ const garmentSchema = new Schema(
     {
         reference: { type: Number, required: true, unique: true },
         description: String,
-        dateAdded: Date,
+        dateAdded: {type: Date, default: Date.now},       
         season: String,
         size: { type: Schema.Types.ObjectId, ref: "Size"  },
         color: { type: Schema.Types.ObjectId, ref: "Color"},

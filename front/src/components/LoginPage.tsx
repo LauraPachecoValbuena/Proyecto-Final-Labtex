@@ -1,10 +1,12 @@
 import React from "react";
 import * as actions from "../actions";
 import { connect } from "react-redux";
-// import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
+import { IMyUser } from "../reducers/myUserReducer";
 
 interface IProps {
   saveToken: (token: string) => void;
+  saveMyUser: (myUser: IMyUser) => void;
 }
 
 const Login: React.FC<IProps> = props => {
@@ -34,6 +36,11 @@ const Login: React.FC<IProps> = props => {
         res.text().then(token => {
           localStorage.setItem("token", token);
           props.saveToken(token);
+          const decode = jwt.decode(token);
+          console.log(decode);
+          if (typeof decode !== "string" && decode !== null) {
+            props.saveMyUser(decode);
+          }
         });
       }
     });
@@ -81,7 +88,8 @@ const Login: React.FC<IProps> = props => {
 };
 
 const mapDispatchToProps = {
-    saveToken: actions.saveToken
+    saveToken: actions.saveToken,
+    saveMyUser: actions.saveMyUser,
 };
 
 export default connect(

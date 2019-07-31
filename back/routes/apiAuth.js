@@ -18,6 +18,7 @@ router.post("/", (req, res) => {
           id: documents[0]._id,
           username: documents[0].username,
           email: documents[0].email,
+          role: documents[0].role,
           isAdmin: documents[0].isAdmin ? true : false
         },
         "mysecret",

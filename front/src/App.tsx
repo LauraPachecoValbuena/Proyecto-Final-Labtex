@@ -4,6 +4,7 @@ import { BrowserRouter, Redirect, Switch, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
 import { connect } from "react-redux";
 import { IGlobalState } from "./reducers/reducers";
+import LayoutPage from "./components/LayoutPage";
 
 interface IPropsGlobal {
   token: string;
@@ -13,7 +14,8 @@ const App: React.FC<IPropsGlobal> = props => {
   return (
     <BrowserRouter>
       {!props.token && <LoginPage />}
-      {/* {props.token && <LayoutPage />} */}
+      {props.token && <LayoutPage />}
+      <Route path="/layout" exact component={LayoutPage} />
       <Redirect to="/" />
     </BrowserRouter>
   );
