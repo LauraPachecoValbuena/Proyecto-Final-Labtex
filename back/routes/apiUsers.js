@@ -20,7 +20,7 @@ router.get("/list", async (req, res) => {
         .find({}, { password: 0 })
         .populate("role", { _id: 0 });
     } else {
-      users = await userModel.find({}, { password: 0, isAdmin: 0 });
+      users = await userModel.find({}, { password: 0, isAdmin: 0, role: 0 });
     }
     res.send(users);
   } catch (e) {
@@ -36,11 +36,14 @@ router.get("/:id", async (req, res) => {
     let vtoken = jwt.verify(token, "mysecret");
     let user;
     if (vtoken.isAdmin) {
-      user = await userModel.findById(req.params.id, { password: 0 });
+      user = await userModel
+        .findById(req.params.id, { password: 0 })
+        .populate("role", { _id: 0 });
     } else {
       user = await userModel.findById(req.params.id, {
         password: 0,
-        isAdmin: 0
+        isAdmin: 0,
+        role: 0
       });
     }
     res.send(user);
@@ -48,7 +51,6 @@ router.get("/:id", async (req, res) => {
     res.status(400).send(e);
   }
 });
-
 
 //Aquí estamos buscando por id y editando los datos en función de si es admin o no.
 router.put("/:id", async (req, res) => {
@@ -62,27 +64,31 @@ router.put("/:id", async (req, res) => {
       await userModel.findOneAndUpdate(
         { _id: req.params.id },
         {
-            // username: req.body.username,
-            // email: req.body.email,
-            // password: req.body.password,
-            // surname: req.body.surname,
-            // mobile: req.body.mobile,
-            // companyName: req.body.companyName,
-            // country: req.body.country,
-            // isAdmin: req.body.isAdmin,
-            // role: req.body.role
-            ...(req.body.username != null && {username: req.body.username}),
-            ...(req.body.email != null && {email: req.body.email}),
-            ...(req.body.password != null && {password: req.body.password}),
-            ...(req.body.surname != null && {surname: req.body.surname}),
-            ...(req.body.mobile != null && {mobile: req.body.mobile}),
-            ...(req.body.companyName != null && {companyName: req.body.companyName}),
-            ...(req.body.country != null && {country: req.body.country}),
-            ...(req.body.isAdmin != null && {isAdmin: req.body.isAdmin}),
-            ...(req.body.role != null && {role: req.body.role}),
+          // username: req.body.username,
+          // email: req.body.email,
+          // password: req.body.password,
+          // surname: req.body.surname,
+          // mobile: req.body.mobile,
+          // companyName: req.body.companyName,
+          // country: req.body.country,
+          // isAdmin: req.body.isAdmin,
+          // role: req.body.role
+          ...(req.body.username != null && { username: req.body.username }),
+          ...(req.body.email != null && { email: req.body.email }),
+          ...(req.body.password != null && { password: req.body.password }),
+          ...(req.body.surname != null && { surname: req.body.surname }),
+          ...(req.body.mobile != null && { mobile: req.body.mobile }),
+          ...(req.body.companyName != null && {
+            companyName: req.body.companyName
+          }),
+          ...(req.body.country != null && { country: req.body.country }),
+          ...(req.body.isAdmin != null && { isAdmin: req.body.isAdmin }),
+          ...(req.body.role != null && { role: req.body.role })
         }
       );
-      user = await userModel.findById(req.params.id, { password: 0 });
+      user = await userModel
+        .findById(req.params.id, { password: 0 })
+        .populate("role", { _id: 0 });
     } else {
       await userModel.findOneAndUpdate(
         { _id: req.params.id },
@@ -94,14 +100,15 @@ router.put("/:id", async (req, res) => {
           // mobile: req.body.mobile,
           // companyName: req.body.companyName,
           // country: req.body.country
-          ...(req.body.username != null && {username: req.body.username}),
-          ...(req.body.email != null && {email: req.body.email}),
-          ...(req.body.password != null && {password: req.body.password}),
-          ...(req.body.surname != null && {surname: req.body.surname}),
-          ...(req.body.mobile != null && {mobile: req.body.mobile}),
-          ...(req.body.companyName != null && {companyName: req.body.companyName}),
-          ...(req.body.country != null && {country: req.body.country}),
-
+          ...(req.body.username != null && { username: req.body.username }),
+          ...(req.body.email != null && { email: req.body.email }),
+          ...(req.body.password != null && { password: req.body.password }),
+          ...(req.body.surname != null && { surname: req.body.surname }),
+          ...(req.body.mobile != null && { mobile: req.body.mobile }),
+          ...(req.body.companyName != null && {
+            companyName: req.body.companyName
+          }),
+          ...(req.body.country != null && { country: req.body.country })
         }
       );
       user = await userModel.findById(req.params.id, {
@@ -118,35 +125,35 @@ router.put("/:id", async (req, res) => {
 
 //aqui estamos añadiendo un usuario nuevo.
 router.post("/add", (req, res) => {
-    const token = req.headers.authorization.replace("Bearer ", "");
+  const token = req.headers.authorization.replace("Bearer ", "");
 
-    try {
-      let vtoken = jwt.verify(token, "mysecret");
-      if (vtoken.isAdmin) {
-        const newUser = new userModel({
-          username: req.body.username,
-          email: req.body. email,
-          password: md5(req.body.password),
-          surname: req.body.surname,
-          mobile: req.body.mobile,
-          companyName: req.body.companyName,
-          country: req.body.country,
-          isAdmin: req.body.isAdmin,
-          role: req.body.role //como hago xa no tener q meterlo a mano?? 
-        })
-        newUser.save((err, obj) => {
-          if (err){
-            console.log("ups!! tenemos un error guardando", err);
-          } else {
-            res.send(obj);
-            console.log(obj);
-          }
-        });
-      }
-    } catch (err) {
-      console.log(err);
-      res.status(401).send("Sorry, you don't have permission");
+  try {
+    let vtoken = jwt.verify(token, "mysecret");
+    if (vtoken.isAdmin) {
+      const newUser = new userModel({
+        username: req.body.username,
+        email: req.body.email,
+        password: md5(req.body.password),
+        surname: req.body.surname,
+        mobile: req.body.mobile,
+        companyName: req.body.companyName,
+        country: req.body.country,
+        isAdmin: req.body.isAdmin,
+        role: req.body.role //como hago xa no tener q meterlo a mano??
+      });
+      newUser.save((err, obj) => {
+        if (err) {
+          console.log("ups!! tenemos un error guardando", err);
+        } else {
+          res.send(obj);
+          console.log(obj);
+        }
+      });
     }
+  } catch (err) {
+    console.log(err);
+    res.status(401).send("Sorry, you don't have permission");
+  }
 });
 
 //aqui estamos eliminando un usuario a través del id.Sólo el admin.
@@ -156,16 +163,17 @@ router.delete("/:id", (req, res) => {
   try {
     let vtoken = jwt.verify(token, "mysecret");
     if (vtoken.isAdmin) {
-      userModel.deleteOne({_id: req.params.id}, (err, raw) => {
+      userModel.deleteOne({ _id: req.params.id }, (err, raw) => {
         res.send();
-      })
+      });
     } else {
       res.send("Sorry, you don't have permission. You are not an Admin");
     }
   } catch (err) {
-    res.status(401).send("Sorry, you don't have permission your Token is not valid")
+    res
+      .status(401)
+      .send("Sorry, you don't have permission your Token is not valid");
   }
 });
-
 
 module.exports = router;

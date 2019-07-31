@@ -33,6 +33,7 @@ router.post("/add", (req, res) => {
 
     try {
         //aqui tendrá que ir el if con la condición que sólo pueden añadir designers y buyers.??
+        if
     const newGarment = new garmentModel({
         reference: req.body.reference,
         description: req.body.description,
@@ -58,7 +59,7 @@ router.post("/add", (req, res) => {
 
 
 //aqui estamos eliminando una prenda.
-routrt.delete("/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
     const token = req.headers.authorization.replace("Bearer ", "");
 
     try {
