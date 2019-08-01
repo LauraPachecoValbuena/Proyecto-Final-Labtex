@@ -22,6 +22,7 @@ router.get("/list", async (req, res) => {
     } else {
       users = await userModel.find({}, { password: 0, isAdmin: 0, role: 0 });
     }
+    console.log(users)
     res.send(users);
   } catch (e) {
     res.status(400).send(e);
@@ -53,7 +54,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //Aquí estamos buscando por id y editando los datos en función de si es admin o no.
-router.put("/:id", async (req, res) => {
+router.put("/edit/:id", async (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
 
   try {

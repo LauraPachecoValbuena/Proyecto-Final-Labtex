@@ -85,8 +85,8 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             {/* <span className="navbar-toggler-icon" /> */}
           </button>
           {props.myUser.isAdmin && (
-            <Link to="/users/add" className="btn btn-info">
-              Add New User
+            <Link to="/users/list" className="btn btn-outline-info my-2 my-sm-0">
+              Employees
             </Link>
           )}
         </form>
