@@ -5,12 +5,18 @@ var router = express.Router();
 var apiUsersRouter = require("./apiUsers");
 var apiAuthRouter = require("./apiAuth");
 var apiGarmentsRouter = require("./apiGarments");
+var apiRolesRouter = require("./apiRoles");
+var apiSizesRouter = require("./apiSizes");
+var apiColorsRouter = require("./apiColors");
 
 //llamarlas
 // (/users) es la segunda parte de la url
 router.use("/users", apiUsersRouter);
 router.use("/auth", apiAuthRouter);
 router.use("/garments", apiGarmentsRouter);
+router.use("/roles", apiRolesRouter);
+router.use("/sizes", apiSizesRouter);
+router.use("/colors", apiColorsRouter);
 
 //exportar
 module.exports = router;

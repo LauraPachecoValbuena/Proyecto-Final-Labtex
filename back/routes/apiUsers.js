@@ -22,7 +22,7 @@ router.get("/list", async (req, res) => {
     } else {
       users = await userModel.find({}, { password: 0, isAdmin: 0, role: 0 });
     }
-    console.log(users)
+    console.log(users);
     res.send(users);
   } catch (e) {
     res.status(400).send(e);
@@ -67,10 +67,14 @@ router.put("/edit/:id", async (req, res) => {
         {
           ...(req.body.username != null && { username: req.body.username }),
           ...(req.body.email != null && { email: req.body.email }),
-          ...(req.body.password != null && { password: req.body.password }),
+          ...(req.body.password != null && {
+            password: md5(req.body.password)
+          }),
           ...(req.body.surname != null && { surname: req.body.surname }),
           ...(req.body.mobile != null && { mobile: req.body.mobile }),
-          ...(req.body.companyName != null && {companyName: req.body.companyName }),
+          ...(req.body.companyName != null && {
+            companyName: req.body.companyName
+          }),
           ...(req.body.country != null && { country: req.body.country }),
           ...(req.body.isAdmin != null && { isAdmin: req.body.isAdmin }),
           ...(req.body.role != null && { role: req.body.role })
@@ -85,7 +89,7 @@ router.put("/edit/:id", async (req, res) => {
         {
           ...(req.body.username != null && { username: req.body.username }),
           ...(req.body.email != null && { email: req.body.email }),
-          ...(req.body.password != null && { password: req.body.password }),
+          ...(req.body.password != null && { password: md5(req.body.password) }),
           ...(req.body.surname != null && { surname: req.body.surname }),
           ...(req.body.mobile != null && { mobile: req.body.mobile }),
           ...(req.body.companyName != null && {
@@ -132,7 +136,7 @@ router.post("/add", (req, res) => {
           } else {
             res.send("err" + err.msg[0]);
           }
-        } 
+        }
         res.send(obj);
         console.log(obj);
       });

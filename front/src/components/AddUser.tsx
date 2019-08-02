@@ -5,8 +5,10 @@ import { RouteComponentProps } from "react-router";
 import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions";
 import { connect } from "react-redux";
+import { IRole } from "../interfaceRole";
 
 interface IPropsGlobal {
+  roles: IRole[];
   user: IUser[];
   token: string;
   myUser: IMyUser;
@@ -22,7 +24,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
   const [companyName, setCompanyName] = React.useState("");
   const [country, setCountry] = React.useState("");
   const [isAdmin, setIsAdmin] = React.useState(false);
-//   const [role, setRole] = React.useState("");
+  const [role, setRole] = React.useState("");
 
   const updateUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.currentTarget.value);
@@ -56,9 +58,9 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
     setIsAdmin(event.currentTarget.checked);
   };
 
-//   const updateRole = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     setRole(event.currentTarget.value);
-//   };
+  const updateRole = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setRole(event.currentTarget.value);
+  };
 
   const Add = () => {
     fetch("http://localhost:3000/api/users/add", {
@@ -76,7 +78,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
         companyName: companyName,
         country: country,
         isAdmin: isAdmin,
-        // role: role
+        role: role
       })
     }).then(response => {
       if (response.ok) {
@@ -159,16 +161,14 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             />
             <br />
             <h4>Role</h4>
-            {/* <input
-              type="text"
-              id="role"
-              placeholder=""
-              className="form-control"
-              onChange={updateRole}
-            /> */}
+            <select onChange={updateRole}>
+              {props.roles.map(r => (
+                <option value={r._id}>{r.name}</option>
+              ))}
+            </select>
             <br />
             <div className=" form-group form-check">
-              <h4>Administrador</h4>
+              <h4>Administrator</h4>
               <input
                 type="checkbox"
                 className="form-control"
@@ -193,7 +193,8 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
 const mapStateToProps = (state: IGlobalState) => ({
   users: state.users,
   token: state.token,
-  myUser: state.myUser
+  myUser: state.myUser,
+  roles: state.roles
 });
 
 const mapDispatchToProps = {

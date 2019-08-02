@@ -86,7 +86,7 @@ const ShowUsers: React.FC<
                   <td>{u.mobile}</td>
                   <td>{u.companyName}</td>
                   <td>{u.country}</td>
-                  <td>{u.isAdmin}</td>
+                  <td>{u.isAdmin + ""}</td>
                   <td>{u.role.name}</td>
                   <td>
                     <Link to={"/users/edit/" + u._id} className="btn btn-info">

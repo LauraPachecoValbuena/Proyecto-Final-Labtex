@@ -28,33 +28,34 @@ router.get("/list", (req, res) => {
 
 
 //aquí estamos añadiendo una prenda.
-// router.post("/add", (req, res) => {
-//     const token = req.headers.authorization.replace("Bearer ", "");
+router.post("/add", (req, res) => {
+    const token = req.headers.authorization.replace("Bearer ", "");
 
-//     try {
-//         //aqui tendrá que ir el if con la condición que sólo pueden añadir designers y buyers.??
-//         if
-//     const newGarment = new garmentModel({
-//         reference: req.body.reference,
-//         description: req.body.description,
-//         season: req.body.season,
-//         size: req.body.size,
-//         color: req.body.color,
-//         users: req.body.users
-//     })
-//     newGarment.save((err, obj) => {
-//         if (err){
-//             console.log("ups!! tenemos un error guardando", err);
-//         } else {
-//             res.send(obj);
-//             console.log(obj);
-//         }
-//     });
-//         } catch (err) {
-//             console.log(err);
-//             res.status(401).send("Sorry, you don't have permission");
-//         }
-// });
+    try {
+        let vtoken = jwt.verify(token, "mysecret");
+        let garments,
+        if (vtoken.id === role.id)
+        const newGarment = new garmentModel({
+        reference: req.body.reference,
+        description: req.body.description,
+        season: req.body.season,
+        sizes: req.body.sizes,
+        colors: req.body.colors,
+        users: req.body.users
+    })
+    newGarment.save((err, obj) => {
+        if (err){
+            console.log("ups!! tenemos un error guardando", err);
+        } else {
+            res.send(obj);
+            console.log(obj);
+        }
+    });
+        } catch (err) {
+            console.log(err);
+            res.status(401).send("Sorry, you don't have permission");
+        }
+});
 
 
 //aqui estamos eliminando una prenda.

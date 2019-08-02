@@ -14,7 +14,7 @@ const App: React.FC<IPropsGlobal> = props => {
   return (
     <BrowserRouter>
       {!props.token && <LoginPage />}
-      {props.token && <LayoutPage />}
+      {props.token && <Route component={LayoutPage} />}
       <Redirect to="/" />
     </BrowserRouter>
   );

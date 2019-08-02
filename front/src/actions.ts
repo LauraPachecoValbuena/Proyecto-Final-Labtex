@@ -2,6 +2,7 @@ import { ActionCreator } from "redux";
 import { TAction } from "./actionsTypes";
 import { IMyUser } from "./reducers/myUserReducer";
 import { IUser } from "./interfaceIuser";
+import { IRole } from "./interfaceRole";
 
 export const saveToken: ActionCreator<TAction> = (token: string) => ({
     type: "SAVE_TOKEN",
@@ -32,4 +33,9 @@ export const editUser: ActionCreator<TAction> = (user_id: string, user: IUser) =
 export const addNewUser: ActionCreator<TAction> = (user: IUser) => ({
     type: "ADD_NEW_USER",
     user
+});
+
+export const setRoles: ActionCreator<TAction> = (roles: IRole[]) => ({
+    type: "SET_ROLES",
+    roles
 });

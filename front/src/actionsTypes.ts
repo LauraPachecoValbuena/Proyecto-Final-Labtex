@@ -1,5 +1,6 @@
 import { IMyUser } from "./reducers/myUserReducer";
 import { IUser } from "./interfaceIuser";
+import { IRole } from "./interfaceRole";
 
 type TSaveTokenAction = {
     type: "SAVE_TOKEN";
@@ -32,10 +33,16 @@ type TAddNewUserAction = {
     user: IUser;
 };
 
+type TSetRolesAction = {
+    type: "SET_ROLES";
+    roles: IRole[];
+}
+
 export type TAction =
     | TSaveTokenAction
     | TSaveMyUserAction
     | TSetUsersAction
     | TRemoveUserAction
     | TEditUserAction
-    | TAddNewUserAction;
+    | TAddNewUserAction
+    | TSetRolesAction;

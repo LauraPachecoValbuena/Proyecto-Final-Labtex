@@ -76,7 +76,6 @@ const EditUser: React.FC<
   }
 
   const Edit = (user_id: string) => {
-    console.log("entraaaa");
     fetch("http://localhost:3000/api/users/edit/" + user._id, {
       method: "PUT",
       headers: {
