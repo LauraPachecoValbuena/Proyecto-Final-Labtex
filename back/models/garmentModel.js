@@ -9,7 +9,8 @@ const garmentSchema = new Schema(
     season: String,
     sizes: [{ type: Schema.Types.ObjectId, ref: "Size" }],
     colors: [{ type: Schema.Types.ObjectId, ref: "Color" }],
-    users: [{ type: Schema.Types.ObjectId, ref: "User" }]
+    users: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    images: [{ type: String }],
   },
   { collection: "garments" }
 );
