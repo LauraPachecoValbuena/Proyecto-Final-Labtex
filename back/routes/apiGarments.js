@@ -11,13 +11,10 @@ const colorModel = require("../models/colorModel");
 const garmentModel = require("../models/garmentModel");
 
 //Listamos las garments que haya en la base de datos.
-router.get("/list", (req, res) => {
+router.get("/", (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
   garmentModel
     .find({})
-    .populate("Size")
-    .populate("Color")
-    .populate("User")
     .then(objs => {
       res.send(objs);
       console.log(objs);
@@ -35,19 +32,7 @@ router.get("/:id", async (req, res) => {
     let vtoken = jwt.verify(token, "mysecret");
     let garment;
     if (vtoken) {
-      garment = await garmentModel
-        .findById(req.params.id)
-        .populate("sizes", { _id: 0 })
-        .populate("colors", { _id: 0 })
-        .populate("users", {
-          _id: 0,
-          isAdmin: 0,
-          password: 0,
-          surname: 0,
-          mobile: 0,
-          companyName: 0,
-          country: 0
-        });
+      garment = await garmentModel.findById(req.params.id);
     } else {
       send("error");
     }
@@ -59,44 +44,34 @@ router.get("/:id", async (req, res) => {
 
 //estamos buscando por id y editando los datos de la prenda.
 router.put("/edit/:id", async (req, res) => {
-    const token = req.headers.authorization.replace("Bearer ", "");
+  const token = req.headers.authorization.replace("Bearer ", "");
 
-    try {
-        let vtoken = jwt.verify(token, "mysecret");
-        let garment;
-        if (vtoken) {
-            await garmentModel.findOneAndUpdate(
-                { _id: req.params.id },
-                {
-                    ...(req.body.reference != null && { reference: req.body.reference }),
-                    ...(req.body.description != null && { description: req.body.description }),
-                    ...(req.body.season != null && { season: req.body.season }),
-                    ...(req.body.sizes != null && { sizes: req.body.sizes }),
-                    ...(req.body. colors != null && { colors: req.body.colors }),
-                    ...(req.body.users != null && { users: req.body.users }),
-                    ...(req.body.images != null && { images: req.body.images })
-                }
-            );
-            garment = await garmentModel
-            .findById(req.params.id)
-            .populate("sizes", { _id: 0 })
-            .populate("colors", { _id: 0 })
-            .populate("users", {
-                _id: 0,
-                isAdmin: 0,
-                password: 0,
-                surname: 0,
-                mobile: 0,
-                companyName: 0,
-                country: 0
-              });
-        } else {
-            send("error");
+  try {
+    let vtoken = jwt.verify(token, "mysecret");
+    let garment;
+    if (vtoken) {
+      await garmentModel.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          ...(req.body.reference != null && { reference: req.body.reference }),
+          ...(req.body.description != null && {
+            description: req.body.description
+          }),
+          ...(req.body.season != null && { season: req.body.season }),
+          ...(req.body.sizes != null && { sizes: req.body.sizes }),
+          ...(req.body.colors != null && { colors: req.body.colors }),
+          ...(req.body.users != null && { users: req.body.users }),
+          ...(req.body.images != null && { images: req.body.images })
         }
-        res.send(garment);
-    } catch (e) {
-        res.status(400).send(e);
+      );
+      garment = await garmentModel.findById(req.params.id);
+    } else {
+      send("error");
     }
+    res.send(garment);
+  } catch (e) {
+    res.status(400).send(e);
+  }
 });
 
 //aquí estamos añadiendo una prenda.
