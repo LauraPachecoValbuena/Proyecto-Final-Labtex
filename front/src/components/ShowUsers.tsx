@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { IUser } from "../interfaceIuser";
 import { IGlobalState } from "../reducers/reducers";
-import * as actions from "../actions";
+import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { Link, RouteComponentProps, Redirect } from "react-router-dom";
 

@@ -1,6 +1,6 @@
-import { IMyUser } from "./reducers/myUserReducer";
-import { IUser } from "./interfaceIuser";
-import { IRole } from "./interfaceRole";
+import { IMyUser } from "../reducers/myUserReducer";
+import { IUser } from "../interfaceIuser";
+import { IRole } from "../interfaceRole";
 
 type TSaveTokenAction = {
     type: "SAVE_TOKEN";

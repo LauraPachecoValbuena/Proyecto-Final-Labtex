@@ -1,5 +1,5 @@
 import { IUser } from "../interfaceIuser";
-import { TAction } from "../actionsTypes";
+import { TAction } from "../actions/userActionsTypes";
 
 
 const initialState: IUser[] = [];

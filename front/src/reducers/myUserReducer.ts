@@ -1,4 +1,4 @@
-import { TAction } from "../actionsTypes";
+import { TAction } from "../actions/userActionsTypes";
 
 
 export interface IMyUser {

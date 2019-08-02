@@ -1,5 +1,5 @@
 import React from "react";
-import * as actions from "../actions";
+import * as actions from "../actions/userActions";
 import { IMyUser } from "../reducers/myUserReducer";
 import { IGlobalState } from "../reducers/reducers";
 import { connect } from "react-redux";

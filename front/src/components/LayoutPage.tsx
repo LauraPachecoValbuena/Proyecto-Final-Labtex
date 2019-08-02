@@ -6,7 +6,7 @@ import EditUser from "./EditUser";
 import AddUser from "./AddUser";
 import { IRole } from "../interfaceRole";
 import { IGlobalState } from "../reducers/reducers";
-import * as actions from "../actions";
+import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 
 interface IPropsGlobal {

@@ -1,5 +1,5 @@
 import React from "react";
-import * as actions from "../actions";
+import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import jwt from "jsonwebtoken";
 import { IMyUser } from "../reducers/myUserReducer";

@@ -1,8 +1,8 @@
 import { ActionCreator } from "redux";
-import { TAction } from "./actionsTypes";
-import { IMyUser } from "./reducers/myUserReducer";
-import { IUser } from "./interfaceIuser";
-import { IRole } from "./interfaceRole";
+import { TAction } from "./userActionsTypes";
+import { IMyUser } from "../reducers/myUserReducer";
+import { IUser } from "../interfaceIuser";
+import { IRole } from "../interfaceRole";
 
 export const saveToken: ActionCreator<TAction> = (token: string) => ({
     type: "SAVE_TOKEN",

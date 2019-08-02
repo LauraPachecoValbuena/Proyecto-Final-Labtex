@@ -1,5 +1,5 @@
 import { IRole } from "../interfaceRole";
-import { TAction } from "../actionsTypes";
+import { TAction } from "../actions/userActionsTypes";
 
 
 const initialState: IRole[] = [];

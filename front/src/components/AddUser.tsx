@@ -3,7 +3,7 @@ import { IUser } from "../interfaceIuser";
 import { IMyUser } from "../reducers/myUserReducer";
 import { RouteComponentProps } from "react-router";
 import { IGlobalState } from "../reducers/reducers";
-import * as actions from "../actions";
+import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { IRole } from "../interfaceRole";
 
