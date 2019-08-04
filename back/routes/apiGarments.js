@@ -11,7 +11,7 @@ const colorModel = require("../models/colorModel");
 const garmentModel = require("../models/garmentModel");
 
 //Listamos las garments que haya en la base de datos.
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
   garmentModel
     .find({})
