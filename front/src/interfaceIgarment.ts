@@ -3,9 +3,8 @@ export interface IGarment {
     reference: string;
     description?: string;
     season: string;
-    sizes: [string],
-    colors: [string];
-    users: [string];
+    sizes: [{ name:string }],
+    colors: [{ name:string }];
+    users: [{ username:string }];
     images?: [string];
-
 }

@@ -8,6 +8,7 @@ import { IRole } from "../interfaceRole";
 import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
+import ShowGarments from "./ShowGarments";
 
 interface IPropsGlobal {
   token: string;
@@ -45,6 +46,7 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
         <Route path="/users/add" exact component={AddUser} />
         <Route path="/users/list" exact component={ShowUsers} />
         <Route path="/users/edit/:user_id" exact component={EditUser} />
+        <Route path="/garments/list" exact component={ShowGarments} />
       </Switch>
     </div>
   );

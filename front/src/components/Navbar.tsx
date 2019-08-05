@@ -5,6 +5,7 @@ import { IGlobalState } from '../reducers/reducers';
 import { connect } from 'react-redux';
 // import { SideNav, SideNavItem, Button, Dropdown, Divider, } from 'react-materialize';
 import { Link } from 'react-router-dom';
+import ShowGarments from './ShowGarments';
 
 interface IPropsGlobal {
 	myUser: IMyUser;
@@ -26,7 +27,8 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 		      <ul className="navbar-nav">
 		        <li className="nav-item active">
 		          <a className="nav-link" href="#">
-		            Home <span className="sr-only">(current)</span>
+		            Home <span className="sr-only">(current)
+					</span>
 		          </a>
 		        </li>
 		{/* <li className="nav-item">
@@ -42,7 +44,6 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 		        <li className="nav-item dropdown">
 		          <a
 		            className="nav-link dropdown-toggle"
-		            href="#"
 		            id="navbarDropdownMenuLink"
 		            data-toggle="dropdown"
 		            aria-haspopup="true"
@@ -54,9 +55,9 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 		            className="dropdown-menu"
 		            aria-labelledby="navbarDropdownMenuLink"
 		          >
-		            <a className="dropdown-item" href="#">
+		            <Link to={"/garments/list"} className="dropdown-item" >
 		              SS'19
-		            </a>
+		            </Link>
 		            <a className="dropdown-item" href="#">
 		              AW'20
 		            </a>

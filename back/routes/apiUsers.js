@@ -110,6 +110,7 @@ router.put("/edit/:id", async (req, res) => {
   }
 });
 
+
 //aqui estamos añadiendo un usuario nuevo.
 router.post("/add", (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
