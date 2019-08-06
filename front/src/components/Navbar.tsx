@@ -3,9 +3,9 @@ import * as actions from '../actions/userActions';
 import { IMyUser } from '../reducers/myUserReducer';
 import { IGlobalState } from '../reducers/reducers';
 import { connect } from 'react-redux';
-// import { SideNav, SideNavItem, Button, Dropdown, Divider, } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import ShowGarments from './ShowGarments';
+// import "./styles/Navbar.css";
 
 interface IPropsGlobal {
 	myUser: IMyUser;
@@ -13,6 +13,8 @@ interface IPropsGlobal {
 }
 
 const Navbar: React.FC<IPropsGlobal> = (props) => {
+	
+	// const { SideNav, SideNavItem, Button, Dropdown, Divider} = require ('react-materialize');
 	const logOut = () => {
 		props.saveToken('');
 		localStorage.removeItem('token');
@@ -30,13 +32,13 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 		            Home <span className="sr-only">(current)
 					</span>
 		          </a>
-		        </li>
-		{/* <li className="nav-item">
+		        </li> 
+		{ /* <li className="nav-item">
 		  <a className="nav-link" href="#">
 		    Features
-		  </a>
-		</li> */}
-		{/* <li className="nav-item">
+		  </a>  
+		</li> */
+		/* <li className="nav-item">
 		  <a className="nav-link" href="#">
 		    Pricing
 		  </a>
@@ -97,51 +99,51 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
     
 
 //---------------MATERIALIZE-----------------------//
-// 		<div className="container-fluid">
-// 			{/* <style>
+		// <div className="container-fluid">
+			/* <style>
 
-//       #root > div > div {
-//         z-index: 99999 !important;
-//       }
+      #root > div > div {
+        z-index: 99999 !important;
+      }
 
-// </style> */}
-// 			<SideNav trigger={<Button>asdasd</Button>} options={{ closeOnClick: true }}>
-// 				<div className="sidebarr">
-// 					<SideNavItem
-// 						userView
-// 						user={{
-// 							background: 'https://placeimg.com/640/480/tech',
-// 							image: './public/images/LogoLabtex.png',
-// 							name: 'John Doe'
-// 						}}
-// 					/>
-// 					<SideNavItem href="#!icon" icon="cloud">
-// 						First Link With Icon
-// 					</SideNavItem>
-// 					<Dropdown
-// 						trigger={<Button>texto</Button>}
-// 						options={{
-// 							alignment: 'left',
-// 							hover: false,
-// 							belowOrigin: true,
-// 							constrainWidth: false,
-// 							coverTrigger: true
-// 						}}
-// 					>
-// 						<a href="#">one</a>
-// 						<a href="#">two</a>
-// 						<Divider />
-// 						<a href="#">three</a>
-// 					</Dropdown>
+</style> */
+			/* <SideNav trigger={<Button>asdasd</Button>} options={{ closeOnClick: true }}>
+				<div className="sidebarr">
+					<SideNavItem
+						userView
+						user={{
+							background: 'https://placeimg.com/640/480/tech',
+							image: './public/images/LogoLabtex.png',
+							name: 'John Doe'
+						}}
+					/>
+					<SideNavItem href="#!icon" icon="cloud">
+						First Link With Icon
+					</SideNavItem>
+					<Dropdown
+						trigger={<Button>texto</Button>}
+						options={{
+							alignment: 'left',
+							hover: false,
+							belowOrigin: true,
+							constrainWidth: false,
+							coverTrigger: true
+						}}
+					>
+						<a href="#">one</a>
+						<a href="#">two</a>
+						<Divider />
+						<a href="#">three</a>
+					</Dropdown>
 
-// 					<SideNavItem divider />
-// 					<SideNavItem subheader>Subheader</SideNavItem>
-// 					<SideNavItem waves href="#!third">
-// 						Third Link With Waves
-// 					</SideNavItem>
-// 				</div>
-// 			</SideNav>
-// 		</div>
+					<SideNavItem divider />
+					<SideNavItem subheader>Subheader</SideNavItem>
+					<SideNavItem waves href="#!third">
+						Third Link With Waves
+					</SideNavItem>
+				</div>
+			</SideNav>
+		</div> */
 	);
 };
 

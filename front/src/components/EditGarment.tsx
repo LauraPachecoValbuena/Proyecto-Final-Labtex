@@ -60,10 +60,10 @@ const EditGarment: React.FC<
       setReference(garment.reference);
       if (garment.description) setDescription(garment.description);
       if (garment.season) setSeason(garment.season);
-      if (garment.sizes) setSizes(garment.sizes);
-      if (garment.colors) setColors(garment.colors);
-      if (garment.users) setUsers(garment.users);
-      if (garment.images) setImages(garment.images);
+      // if (garment.sizes) setSizes(garment.sizes);
+      // if (garment.colors) setColors(garment.colors);
+      // if (garment.users) setUsers(garment.users);
+      // if (garment.images) setImages(garment.images);
     }
   }, [garment]);
 
@@ -98,105 +98,106 @@ const EditGarment: React.FC<
   };
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-6">
-          <div className="form-group" id="formEdit">
-            <h3>Garment Details</h3>
-            <br />
-            <h4>Username</h4>
-            <input
-              type="text"
-              id="username"
-              placeholder=""
-              className="form-control"
-              value={username}
-              onChange={updateUsername}
-            />
-            <br />
+    <div></div>
+    // <div className="container">
+    //   <div className="row justify-content-center">
+    //     <div className="col-6">
+    //       <div className="form-group" id="formEdit">
+    //         <h3>Garment Details</h3>
+    //         <br />
+    //         <h4>Username</h4>
+    //         <input
+    //           type="text"
+    //           id="username"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={username}
+    //           onChange={updateUsername}
+    //         />
+    //         <br />
            
              
-                <h4>Colors</h4>
-            <select onChange={updateColors}>
-              {garment.colors.map(c => (
-                <option value={c._id}>{c.name}</option>
-              ))}
-            </select>
-            <br />
+    //             <h4>Colors</h4>
+    //         <select onChange={updateColors}>
+    //           {garment.colors.map(c => (
+    //             <option value={c._id}>{c.name}</option>
+    //           ))}
+    //         </select>
+    //         <br />
 
-            <h4>Email</h4>
-            <input
-              type="text"
-              id="email"
-              placeholder=""
-              className="form-control"
-              value={email}
-              onChange={updateEmail}
-            />
-            <br />
-            <h4>Password</h4>
-            <input
-              type="password"
-              id="password"
-              placeholder=""
-              className="form-control"
-              value={password}
-              onChange={updatePassword}
-            />
-            <br />
-            <h4>Mobile</h4>
-            <input
-              type="number"
-              id="mobile"
-              placeholder=""
-              className="form-control"
-              value={mobile}
-              onChange={updateMobile}
-            />
-            <br />
-            <h4>Company Name</h4>
-            <input
-              type="text"
-              id="companyName"
-              placeholder=""
-              className="form-control"
-              value={companyName}
-              onChange={updateCompanyName}
-            />
-            <br />
-            <h4>Country</h4>
-            <input
-              type="text"
-              id="country"
-              placeholder=""
-              className="form-control"
-              value={country}
-              onChange={updateCountry}
-            />
-            <br />
-            {/* {props.myUser.isAdmin && ( */}
-            <div className=" form-group form-check">
-              <h4>Administrador</h4>
-              <input
-                type="checkbox"
-                className="form-control"
-                checked={isAdmin}
-                onChange={updateIsAdmin}
-              />
-              <br />
-            </div>
-            {/* )} */}
-            <button
-              type="submit"
-              className="btn btn-outline-info"
-              onClick={() => Edit(user._id)}
-            >
-              Save
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    //         <h4>Email</h4>
+    //         <input
+    //           type="text"
+    //           id="email"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={email}
+    //           onChange={updateEmail}
+    //         />
+    //         <br />
+    //         <h4>Password</h4>
+    //         <input
+    //           type="password"
+    //           id="password"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={password}
+    //           onChange={updatePassword}
+    //         />
+    //         <br />
+    //         <h4>Mobile</h4>
+    //         <input
+    //           type="number"
+    //           id="mobile"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={mobile}
+    //           onChange={updateMobile}
+    //         />
+    //         <br />
+    //         <h4>Company Name</h4>
+    //         <input
+    //           type="text"
+    //           id="companyName"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={companyName}
+    //           onChange={updateCompanyName}
+    //         />
+    //         <br />
+    //         <h4>Country</h4>
+    //         <input
+    //           type="text"
+    //           id="country"
+    //           placeholder=""
+    //           className="form-control"
+    //           value={country}
+    //           onChange={updateCountry}
+    //         />
+    //         <br />
+    //         {/* {props.myUser.isAdmin && ( */}
+    //         <div className=" form-group form-check">
+    //           <h4>Administrador</h4>
+    //           <input
+    //             type="checkbox"
+    //             className="form-control"
+    //             checked={isAdmin}
+    //             onChange={updateIsAdmin}
+    //           />
+    //           <br />
+    //         </div>
+    //         {/* )} */}
+    //         <button
+    //           type="submit"
+    //           className="btn btn-outline-info"
+    //           onClick={() => Edit(user._id)}
+    //         >
+    //           Save
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
