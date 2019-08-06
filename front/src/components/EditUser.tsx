@@ -24,9 +24,11 @@ const EditUser: React.FC<
   const [companyName, setCompanyName] = React.useState("");
   const [country, setCountry] = React.useState("");
   const [isAdmin, setIsAdmin] = React.useState(false);
+  const [error, setError] = React.useState("");
 
   const updateUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.currentTarget.value);
+    setError("");
   };
 
   const updateSurname = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,6 +37,7 @@ const EditUser: React.FC<
 
   const updateEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
+    setError("");
   };
 
   const updatePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -76,30 +79,34 @@ const EditUser: React.FC<
   }
 
   const Edit = (user_id: string) => {
-    fetch("http://localhost:3000/api/users/edit/" + user._id, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: "Bearer " + props.token
-      },
-      body: JSON.stringify({
-        username: username,
-        surname: surname,
-        email: email,
-        password: password,
-        mobile: mobile,
-        companyName: companyName,
-        country: country,
-        isAdmin: isAdmin
-      })
-    }).then(response => {
-      if (response.ok) {
-        response.json().then(u => {
-          props.editUser(user_id, u);
-          props.history.push("/users/list");
-        });
-      }
-    });
+    if (username && email) {
+      fetch("http://localhost:3000/api/users/edit/" + user._id, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: "Bearer " + props.token
+        },
+        body: JSON.stringify({
+          username: username,
+          surname: surname,
+          email: email,
+          password: password,
+          mobile: mobile,
+          companyName: companyName,
+          country: country,
+          isAdmin: isAdmin
+        })
+      }).then(response => {
+        if (response.ok) {
+          response.json().then(u => {
+            props.editUser(user_id, u);
+            props.history.push("/users/list");
+          });
+        }
+      });
+    } else {
+      setError("Username or email will be empty");
+    }
   };
 
   return (
@@ -180,16 +187,16 @@ const EditUser: React.FC<
             />
             <br />
             {/* {props.myUser.isAdmin && ( */}
-              <div className=" form-group form-check">
-                <h4>Administrador</h4>
-                <input
-                  type="checkbox"
-                  className="form-control"
-                  checked={isAdmin}
-                  onChange={updateIsAdmin}
-                />
-                <br />
-              </div>
+            <div className=" form-group form-check">
+              <h4>Administrador</h4>
+              <input
+                type="checkbox"
+                className="form-control"
+                checked={isAdmin}
+                onChange={updateIsAdmin}
+              />
+              <br />
+            </div>
             {/* )} */}
             <button
               type="submit"
@@ -198,6 +205,7 @@ const EditUser: React.FC<
             >
               Save
             </button>
+            {error && <div className="div">{error}</div>}
           </div>
         </div>
       </div>

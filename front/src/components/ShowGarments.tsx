@@ -60,7 +60,7 @@ const ShowGarments: React.FC<
     <div className="container">
       <div className="row">
         {props.garments.map(g => (
-          <div key={g._id} className="col-4">
+          <div key={g._id} className="col-4 border-secondary mb-3">
             <div className="card">
               <img src="/images/Bomberg.png" className="card-img-top" alt="Bomberg" />
               <div className="card-body">

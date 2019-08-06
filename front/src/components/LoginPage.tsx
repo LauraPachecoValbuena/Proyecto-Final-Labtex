@@ -12,16 +12,20 @@ interface IProps {
 const Login: React.FC<IProps> = props => {
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
+  const [error, setError] = React.useState("");
 
   const updateEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
+    setError("");
   };
 
   const updatePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.currentTarget.value);
+    setError("");
   };
 
   const getToken = () => {
+    if (email && password) {
     fetch("http://localhost:3000/api/auth", {
       method: "POST",
       headers: {
@@ -44,6 +48,9 @@ const Login: React.FC<IProps> = props => {
         });
       }
     });
+  }else {
+    setError("you need to introduce you email and password");
+  }
   };
 
   return (
@@ -80,6 +87,7 @@ const Login: React.FC<IProps> = props => {
           >
             Sign in
           </button>
+          {error && <div className="div">{error}</div>}
         </div>
       </div>
     </div>
