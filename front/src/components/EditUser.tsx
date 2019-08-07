@@ -200,7 +200,7 @@ const EditUser: React.FC<
             {/* )} */}
             <button
               type="submit"
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0"
               onClick={() => Edit(user._id)}
             >
               Save

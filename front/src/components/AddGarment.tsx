@@ -9,6 +9,7 @@ import { IUser } from "../interfaceIuser";
 import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 interface IPropsGlobal {
   roles: IRole[];
@@ -188,13 +189,13 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
               onChange={updateImage}
             />
             <br />
-            <button
+            <Link to={"/garments/list"}
               type="submit"
               className="btn btn-outline-info"
               onClick={Add}
             >
               Save
-            </button>
+            </Link>
           </div>
         </div>
       </div>

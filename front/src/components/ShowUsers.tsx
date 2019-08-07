@@ -60,9 +60,9 @@ const ShowUsers: React.FC<
 
   return (
     <>
-      <div className="container-fluid">
-        <div className="row justify-content-center" id="table">
-          <table className="table table-bordered table-hover">
+      <div className="container">
+        <div className="row table-responsive-sm justify-content-center" id="table">
+          <table className="table table-bordered table-hover ">
             <thead>
               <tr>
                 <th scope="col">Username</th>
@@ -89,12 +89,12 @@ const ShowUsers: React.FC<
                   <td>{u.isAdmin + ""}</td>
                   <td>{u.role.name}</td>
                   <td>
-                    <Link to={"/users/edit/" + u._id} className="btn btn-info">
+                    <Link to={"/users/edit/" + u._id} className="btn btn-outline-info my-2 my-sm-0">
                       Edit
                     </Link>
                   </td>
                   <td>
-                    <div className="btn btn-info" onClick={() => Delete(u._id)}>
+                    <div className="btn btn-outline-info my-2 my-sm-0" onClick={() => Delete(u._id)}>
                       Delete
                     </div>
                   </td>
@@ -102,7 +102,7 @@ const ShowUsers: React.FC<
               ))}
             </tbody>
           </table>
-          <Link to="/users/add" className="btn btn-info">
+          <Link to="/users/add" className="btn btn-info my-2 my-sm-0">
             Add New User
           </Link>
         </div>

@@ -28,8 +28,8 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 		    <div className="collapse navbar-collapse" id="navbarNavDropdown">
 		      <ul className="navbar-nav">
 		        <li className="nav-item active">
-		          <a className="nav-link" href="#">
-		            Home <span className="sr-only">(current)
+		          <a className="nav-link" href="/">
+		            HOME <span className="sr-only">(current)
 					</span>
 		          </a>
 		        </li> 
