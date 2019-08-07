@@ -1,41 +1,37 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IGarment } from "../interfaceIgarment";
-import { IMyUser } from "../reducers/myUserReducer";
 import { RouteComponentProps } from "react-router";
-import { IUser } from "../interfaceIuser";
-import { IRole } from "../interfaceRole";
-import { ISize } from "../interfaceSize";
+import { IMyUser } from "../reducers/myUserReducer";
 import { IColor } from "../interfaceColor";
+import { ISize } from "../interfaceSize";
+import { IRole } from "../interfaceRole";
+import { IUser } from "../interfaceIuser";
 import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 
 interface IPropsGlobal {
-  sizes: ISize[];
-  colors: IColor[];
   roles: IRole[];
   users: IUser[];
-  garments: IGarment[];
+  sizes: ISize[];
+  colors: IColor[];
+  garment: IGarment[];
   token: string;
   myUser: IMyUser;
-  editGarment: (garment_id: string, garment: IGarment) => void;
+  addNewGarment: (garment: IGarment) => void;
 }
 
-const EditGarment: React.FC<
-  IPropsGlobal & RouteComponentProps<{ garment_id: string }>
-> = props => {
+const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
   const [reference, setReference] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [season, setSeason] = React.useState("");
   const [sizes, setSizes] = React.useState<string[]>([]);
   const [colors, setColors] = React.useState<string[]>([]);
   const [users, setUsers] = React.useState<string[]>([]);
-  const [images, setImages] = React.useState();
-  const [error, setError] = React.useState("");
+  const [image, setImage] = React.useState();
 
   const updateReference = (event: React.ChangeEvent<HTMLInputElement>) => {
     setReference(event.currentTarget.value);
-    setError("");
   };
 
   const updateDescription = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -79,35 +75,36 @@ const EditGarment: React.FC<
     setUsers(selectedOptions);
   };
 
-  const updateImages = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setImages(event.currentTarget.files![0]);
+  const updateImage = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setImage(event.currentTarget.files![0]);
   };
 
-  const garment = props.garments.find(
-    g => g._id === props.match.params.garment_id
-  );
+  const AddImage = (garment_id: string) => {
+    const formData = new FormData();
+    formData.append("file", image);
+    formData.append("id", garment_id);
 
-  useEffect(() => {
-    if (garment) {
-      setReference(garment.reference);
-      if (garment.description) setDescription(garment.description);
-      if (garment.season) setSeason(garment.season);
-      if (garment.sizes) setSizes(garment.sizes);
-      if (garment.colors) setColors(garment.colors);
-      if (garment.users) setUsers(garment.users);
-      if (garment.images) setImages(garment.images);
-    }
-  }, [garment]);
-
-  if (!garment) {
-    return null;
-  }
-
-  const Edit = (garment_id: string) => {
-    fetch("http://localhost:3000/api/garments/edit/" + garment_id, {
-      method: "PUT",
+    fetch("http://localhost:3000/api/garments/addImage", {
+      method: "POST",
       headers: {
-        "Content-type": "application/json",
+        Authorization: "Bearer " + props.token
+      },
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        response.json().then((garment: IGarment) => {
+          props.addNewGarment(garment);
+          props.history.push("/garments/list");
+        });
+      }
+    });
+  };
+
+  const Add = () => {
+    fetch("http://localhost:3000/api/garments/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
         Authorization: "Bearer " + props.token
       },
       body: JSON.stringify({
@@ -116,14 +113,12 @@ const EditGarment: React.FC<
         season: season,
         sizes: sizes,
         colors: colors,
-        users: users,
-        images: images
+        users: users
       })
     }).then(response => {
       if (response.ok) {
-        response.json().then(g => {
-          props.editGarment(garment_id, g);
-          props.history.push("/garments/list");
+        response.json().then((garment: IGarment) => {
+          AddImage(garment._id);
         });
       }
     });
@@ -142,7 +137,6 @@ const EditGarment: React.FC<
               id="reference"
               placeholder=""
               className="form-control"
-              value={reference}
               onChange={updateReference}
             />
             <br />
@@ -150,7 +144,6 @@ const EditGarment: React.FC<
             <textarea
               id="exampleFormControlTextarea1"
               className="form-control"
-              value={description}
               onChange={updateDescription}
             />
             <br />
@@ -160,37 +153,30 @@ const EditGarment: React.FC<
               id="season"
               placeholder=""
               className="form-control"
-              value={season}
               onChange={updateSeason}
             />
             <br />
 
             <h4>Colors</h4>
-            <select value={colors} onChange={updateColors} multiple>
+            <select onChange={updateColors} multiple>
               {props.colors.map(c => (
-                <option key={c._id} value={c._id}>
-                  {c.name}
-                </option>
+                <option key={c._id} value={c._id}>{c.name}</option>
               ))}
             </select>
             <br />
 
             <h4>Sizes</h4>
-            <select value={sizes} onChange={updateSizes} multiple>
+            <select onChange={updateSizes} multiple>
               {props.sizes.map(s => (
-                <option key={s._id} value={s._id}>
-                  {s.name}
-                </option>
+                <option key={s._id} value={s._id}>{s.name}</option>
               ))}
             </select>
             <br />
 
             <h4>Users</h4>
-            <select value={users} onChange={updateUsers} multiple>
+            <select onChange={updateUsers} multiple>
               {props.users.map(u => (
-                <option key={u._id} value={u._id}>
-                  {u.username}
-                </option>
+                <option key={u._id} value={u._id}>{u.username}</option>
               ))}
             </select>
             <br />
@@ -199,13 +185,13 @@ const EditGarment: React.FC<
             <input
               type="file"
               className="btn btn-info"
-              onChange={updateImages}
+              onChange={updateImage}
             />
             <br />
             <button
               type="submit"
               className="btn btn-outline-info"
-              onClick={() => Edit(garment._id)}
+              onClick={Add}
             >
               Save
             </button>
@@ -223,14 +209,14 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   sizes: state.sizes,
   colors: state.colors,
-  garments: state.garments
+  garment: state.garments
 });
 
 const mapDispatchToProps = {
-  editGarment: actions.editGarment
+  addNewGarment: actions.addNewGarment
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(EditGarment);
+)(AddGarment);

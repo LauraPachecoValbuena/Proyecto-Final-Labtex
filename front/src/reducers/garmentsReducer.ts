@@ -27,5 +27,10 @@ export const garmentsReducer = (
         }
         return [...garments]
     }
+
+    if (action.type === "ADD_NEW_GARMENT") {
+        state.push(action.garment)
+        return [...state]
+    }
     return state;
 };

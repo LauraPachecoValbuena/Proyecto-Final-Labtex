@@ -11,7 +11,7 @@ interface IPropsGlobal {
   token: string;
   garments: IGarment[];
   setGarments: (garments: []) => void;
-  removeGarments: (garment_id: string) => void;
+  removeGarment: (garment_id: string) => void;
 }
 
 const ShowGarments: React.FC<
@@ -43,7 +43,8 @@ const ShowGarments: React.FC<
   }, []);
 
   const Delete = (garment_id: string) => {
-    fetch("http://localhost:3000/api/garments" + garment_id, {
+    const id = garment_id;
+    fetch("http://localhost:3000/api/garments/" + garment_id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -51,7 +52,7 @@ const ShowGarments: React.FC<
       }
     }).then(response => {
       if (response.ok) {
-        props.removeGarments(garment_id);
+        props.removeGarment(garment_id);
         props.history.push("/garments/list");
       }
     });
@@ -62,7 +63,13 @@ const ShowGarments: React.FC<
         {props.garments.map(g => (
           <div key={g._id} className="col-4 border-secondary mb-3">
             <div className="card">
-              <img src="/images/Bomberg.png" className="card-img-top" alt="Bomberg" />
+              {g.images && (
+                <img
+                  src={"http://localhost:3000/uploads/" + g.images[0]}
+                  className="card-img-top"
+                  alt="Bomberg"
+                />
+              )}
               <div className="card-body">
                 <h5 className="card-title">{g.reference}</h5>
                 <p className="card-text">{g.description}</p>
@@ -71,12 +78,17 @@ const ShowGarments: React.FC<
                 </Link>
 
                 <div className="btn btn-info" onClick={() => Delete(g._id)}>
-                    Delete
+                  Delete
                 </div>
               </div>
             </div>
           </div>
         ))}
+        <div className="container">
+        <Link to="/garments/add" className="btn btn-info">
+          Add New Garment
+        </Link>
+        </div>
       </div>
     </div>
   );
@@ -88,7 +100,8 @@ const mapStateToProps = (state: IGlobalState) => ({
 });
 
 const mapDispatchToProps = {
-  setGarments: actions.setGarments
+  setGarments: actions.setGarments,
+  removeGarment: actions.removeGarment
 };
 
 export default connect(

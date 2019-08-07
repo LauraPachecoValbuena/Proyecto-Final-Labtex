@@ -7,6 +7,10 @@ import { IRole } from "../interfaceRole";
 import { roleReducer } from "./roleReducer";
 import { IGarment } from "../interfaceIgarment";
 import { garmentsReducer } from "./garmentsReducer";
+import { IColor } from "../interfaceColor";
+import { colorsReducer } from "./colorsReducer";
+import { ISize } from "../interfaceSize";
+import { sizesReducer } from "./sizesReducer";
 
 export interface IGlobalState {
     token: string;
@@ -14,6 +18,8 @@ export interface IGlobalState {
     users: IUser[];
     roles: IRole[];
     garments: IGarment[];
+    colors: IColor[];
+    sizes: ISize[];
 }
 
 export const reducers = combineReducers<IGlobalState>({
@@ -21,5 +27,7 @@ export const reducers = combineReducers<IGlobalState>({
     myUser: myUserReducer,
     users: usersReducer,
     roles: roleReducer,
-    garments: garmentsReducer
+    garments: garmentsReducer,
+    colors: colorsReducer,
+    sizes: sizesReducer
 });

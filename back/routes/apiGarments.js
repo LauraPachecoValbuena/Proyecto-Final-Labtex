@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 var md5 = require("md5");
 const mongodb = require("mongodb");
 
-
 const userModel = require("../models/userModel");
 const roleModel = require("../models/roleModel");
 const sizeModel = require("../models/sizeModel");
@@ -28,45 +27,6 @@ const garmentModel = require("../models/garmentModel");
 //     });
 // });
 
-
-
-// // Set The Storage Engine
-// const storage = multer.diskStorage({
-//   destination: './public/uploads/',
-//   filename: function(req, file, cb){
-//     cb(null,file.originalname + '-' + Date.now() + path.extname(file.originalname));
-//     // cb(null,file.originalname); ->solo la imagen con su nombre original
-//     console.log(filename)
-//   }
-//  });
-//  // Init Upload
-//  const upload = multer({
-//   storage: storage,
-//   limits:{fileSize: 1000000},
-//   fileFilter: function(req, file, cb){
-//     checkFileType(file, cb);
-//   }
-//  }).single('file');
-//  // Check File Type
-//  function checkFileType(file, cb){
-//   // Allowed ext
-//   const filetypes = /jpeg|jpg|png|gif/;
-//   // Check ext
-//   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-//    console.log(file.originalname)
-//   // Check mime
-//   const mimetype = filetypes.test(file.mimetype);
-//   // console.log(mimetype)
-//   if(mimetype && extname){
-//     return cb(null,true);
-//   } else {
-//     cb('Error: Images Only!');
-//   }
-//  }
-
-
-
-
 //Listamos las garments que haya en la base de datos.
 router.get("/list", async (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
@@ -75,8 +35,7 @@ router.get("/list", async (req, res) => {
     let vtoken = jwt.verify(token, "mysecret");
     let garments;
     if (vtoken) {
-      garments = await garmentModel
-      .find({})
+      garments = await garmentModel.find({});
     } else {
       send("error");
     }
@@ -128,7 +87,7 @@ router.put("/edit/:id", async (req, res) => {
       );
       garment = await garmentModel.findById(req.params.id);
     } else {
-      send("error");
+      res.send("error");
     }
     res.send(garment);
   } catch (e) {
@@ -136,26 +95,8 @@ router.put("/edit/:id", async (req, res) => {
   }
 });
 
-// //subida de imagenes
-// router.post('/upload', (req, res) => {
-//   upload(req, res, (err) => {
-//     const Imagen = mongoose.model('aas', { name: String });
-//     const subidaImagen = new Imagen({ name: req.file });
-//     console.log(req.file)
-//     subidaImagen.save().then(() => console.log('Subida en bbdd'));
-//     // console.log(req);
-//     res.sendStatus(200);
-//   });
-// });
-
-
-//router.post("/add",  multer({ storage: upload }).single("file")
-// ,(req, res) => {
-//   console.log(req.file);
-
-
 //aquí estamos añadiendo una prenda.
-router.post("/add",  (req, res) => {
+router.post("/add", (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
 
   try {
@@ -170,9 +111,7 @@ router.post("/add",  (req, res) => {
         season: req.body.season,
         sizes: req.body.sizes,
         colors: req.body.colors,
-        users: req.body.users,
-        images: req.body.images
-        // images: req.file
+        users: req.body.users
       });
       newGarment.save((err, obj) => {
         if (err) {
@@ -185,6 +124,44 @@ router.post("/add",  (req, res) => {
     }
   } catch (err) {
     console.log(err);
+    res.status(401).send("Sorry, you don't have permission");
+  }
+});
+
+//---------SUBIDA DE IMAGENES----------//
+
+// Set The Storage Engine
+const storage = multer.diskStorage({
+  destination: (_req, _file, cb) => {
+    cb(null, "public/uploads/");
+  },
+  filename: (_req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+
+// Init Upload
+const upload = multer({
+  storage
+}).single("file");
+
+router.post("/addImage", upload, (req, res) => {
+  const token = req.headers.authorization.replace("Bearer ", "");
+  try {
+    let vtoken = jwt.verify(token, "mysecret");
+    if (
+      vtoken.role === "5d3ebb9c17fb7b60d454b0a8" ||
+      vtoken.role === "5d3ebc4b17fb7b60d454b0f2"
+    ) {
+      garmentModel.updateOne(
+        { _id: req.body.id },
+        { $push: { images: req.file.filename } },
+        () => res.sendStatus(200)
+      );
+    } else {
+      res.send("error");
+    }
+  } catch (err) {
     res.status(401).send("Sorry, you don't have permission");
   }
 });

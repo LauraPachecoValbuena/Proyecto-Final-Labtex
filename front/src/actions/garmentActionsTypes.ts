@@ -1,4 +1,6 @@
 import { IGarment } from '../interfaceIgarment';
+import { ISize } from '../interfaceSize';
+import { IColor } from '../interfaceColor';
 
 type TSetGarmentsAction = {
     type: "SET_GARMENTS";
@@ -16,7 +18,25 @@ type TEditGarmentAction = {
     garment: IGarment;
 }
 
+type TAddNewGarmentAction = {
+    type: "ADD_NEW_GARMENT";
+    garment: IGarment;
+}
+
+type TSetSizesAction = {
+    type: "SET_SIZES";
+    sizes: ISize[];
+}
+
+type TSetColorsAction = {
+    type: "SET_COLORS";
+    colors: IColor[];
+}
+
 export type TAction =
     | TSetGarmentsAction
     | TRemoveGarmentAction
-    | TEditGarmentAction;
+    | TEditGarmentAction
+    | TAddNewGarmentAction
+    | TSetSizesAction
+    | TSetColorsAction;
