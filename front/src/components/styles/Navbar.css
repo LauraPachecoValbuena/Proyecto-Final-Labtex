@@ -1,28 +1,27 @@
 #root > div > div {
   z-index: 99999 !important;
 }
-.sidebarr {
-  height: 100%;
-  width: 100%;
+.sidebarr{
+    height: 100%;
+    width: 100%;
 }
 .sidenav {
-  height: 100vh;
+    height: 100vh;
 }
-.boton {
-  width: 100%;
+.boton{
+    width: 100%;
 }
-.dropdown-content {
-  top: 230px !important;
+.dropdown-content{
+    top:230px !important;
 }
-.sidebarr button {
-  border: none !important;
-  box-shadow: none;
-  padding: 0 32px;
-  width: 100%;
-  text-align: left;
+.sidebarr button{
+    border: none !important;
+    box-shadow: none;
+    padding: 0 32px;
+    width: 100%;
+    text-align: left;
 }
-/*el color del :hover */
-.btn:hover,
-.btn-large:hover {
+/* //el color del :hover / */
+/* .btn:hover, .btn-large:hover {
   background-color: #2bbbad;
-}
+} */

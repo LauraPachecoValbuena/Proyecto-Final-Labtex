@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import * as actions from "../actions/userActions";
 import { IMyUser } from "../reducers/myUserReducer";
 import { IGlobalState } from "../reducers/reducers";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ShowGarments from "./ShowGarments";
-// import "./styles/Navbar.css";
+import "./styles/Navbar.css";
+// import fondo from '#';
 
 interface IPropsGlobal {
   myUser: IMyUser;
@@ -13,7 +14,16 @@ interface IPropsGlobal {
 }
 
 const Navbar: React.FC<IPropsGlobal> = props => {
-  // const { SideNav, SideNavItem, Button, Dropdown, Divider} = require ('react-materialize');
+  const {
+    SideNav,
+    SideNavItem,
+    Button,
+    Dropdown,
+    Divider,
+    Fragment
+  } = require("react-materialize");
+
+
   const logOut = () => {
     props.saveToken("");
     localStorage.removeItem("token");
@@ -31,16 +41,6 @@ const Navbar: React.FC<IPropsGlobal> = props => {
                 HOME <span className="sr-only">(current)</span>
               </a>
             </li>
-            {/* <li className="nav-item">
-		  <a className="nav-link" href="#">
-		    Features
-		  </a>  
-		</li> */
-            /* <li className="nav-item">
-		  <a className="nav-link" href="#">
-		    Pricing
-		  </a>
-		</li> */}
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -84,7 +84,6 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             aria-label="Toggle navigation"
           >
             Logout
-            {/* <span className="navbar-toggler-icon" /> */}
           </button>
           <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
             Users
@@ -100,51 +99,65 @@ const Navbar: React.FC<IPropsGlobal> = props => {
     </div>
 
     //---------------MATERIALIZE-----------------------//
-    // <div className="container-fluid">
-    /* <style>
-
-      #root > div > div {
-        z-index: 99999 !important;
-      }
-
-</style> */
-    /* <SideNav trigger={<Button>asdasd</Button>} options={{ closeOnClick: true }}>
-				<div className="sidebarr">
-					<SideNavItem
-						userView
-						user={{
-							background: 'https://placeimg.com/640/480/tech',
-							image: './public/images/LogoLabtex.png',
-							name: 'John Doe'
-						}}
-					/>
-					<SideNavItem href="#!icon" icon="cloud">
-						First Link With Icon
-					</SideNavItem>
-					<Dropdown
-						trigger={<Button>texto</Button>}
-						options={{
-							alignment: 'left',
-							hover: false,
-							belowOrigin: true,
-							constrainWidth: false,
-							coverTrigger: true
-						}}
-					>
-						<a href="#">one</a>
-						<a href="#">two</a>
-						<Divider />
-						<a href="#">three</a>
-					</Dropdown>
-
-					<SideNavItem divider />
-					<SideNavItem subheader>Subheader</SideNavItem>
-					<SideNavItem waves href="#!third">
-						Third Link With Waves
-					</SideNavItem>
-				</div>
-			</SideNav>
-		</div> */
+    // <Fragment className="container-fluid">
+      /* <style>
+		  #root > div > div {
+			z-index: 99999 !important;
+		  }
+  </style> */
+    	/* <SideNav
+        trigger={<Button>asdasd</Button>}
+        options={{ closeOnClick: true }}
+      >
+        <div className="sidebarr">
+          <SideNavItem
+            userView
+            user={{
+              //   background: {fondo},
+              image: "./static/media/LogoLabtex.png",
+              name: "John Doe"
+            }}
+          />
+          <SideNavItem href="#!icon" icon="cloud">
+            First Link With Icon
+          </SideNavItem>
+          <Dropdown
+            trigger={<Button>texto</Button>}
+            options={{
+              alignment: "left",
+              hover: false,
+              belowOrigin: true,
+              constrainWidth: false,
+              coverTrigger: true
+            }}
+          >
+            <a href="#">one</a>
+            <a href="#">two</a>
+            <Divider />
+            <a href="#">three</a>
+          </Dropdown>
+          <SideNavItem divider />
+          <SideNavItem subheader>Subheader</SideNavItem>
+          <SideNavItem waves href="#!third">
+            <button
+              className="btn btn-outline-info my-2 my-sm-0"
+              type="submit"
+              onClick={logOut}
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Logout
+            </button>
+            <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
+              Users
+            </Link>
+          </SideNavItem>
+        </div>
+      </SideNav>
+    </Fragment> */
   );
 };
 

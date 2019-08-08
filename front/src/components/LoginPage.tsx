@@ -231,9 +231,6 @@ const Login: React.FC<IProps> = props => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <img className="logo" src="images/LogoLabtex.png" alt="Logotipo Labtex"/>
-      </div> */}
     </div>
     
   );
