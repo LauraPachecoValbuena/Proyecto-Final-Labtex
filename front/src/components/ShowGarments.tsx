@@ -70,17 +70,17 @@ const ShowGarments: React.FC<
       <div className="row">
         {props.garments.map(g => (
           <div key={g._id} className="col-4 border-secondary mb-3">
-            <div className="card">
+            <div className="card garments">
               {g.images && (
                 <img
                   src={"http://localhost:3000/uploads/" + g.images[0]}
-                  className="card-img-top"
+                  className="card-img-top garments"
                   alt="Bomberg"
                 />
               )}
-              <div className="card-body">
-                <h5 className="card-title">{g.reference}</h5>
-                <p className="card-text">{g.description}</p>
+              <div className="card-body garments">
+                <h5 className="card-title garments">{g.reference}</h5>
+                <p className="card-text garments">{g.description}</p>
                 <Link to={"/garments/edit/" + g._id} className="btn btn-info">
                   Edit
                 </Link>
