@@ -16,7 +16,6 @@ import { IUser } from "../interfaceIuser";
 import * as garmentActions from "../actions/garmentActions";
 import EditGarment from "./EditGarment";
 
-
 interface IPropsGlobal {
   token: string;
   roles: IRole[];
@@ -98,7 +97,6 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
     }
   };
 
-
   useEffect(() => {
     getRoles();
   }, []);
@@ -120,12 +118,16 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
       <Navbar />
       <Switch>
         <Route path="/users/add" exact component={AddUser} />
-        <Route path="/users/list" exact component={ShowUsers} />
-        <Route path="/users/edit/:user_id" exact component={EditUser} />
+        <Route path="/users/" exact component={ShowUsers} />
+        {/* <Route path="/users/edit/:user_id" exact component={EditUser} /> */}
+        <Route path="/users/:user_id" exact component={EditUser} />
         <Route path="/garments/add" exact component={AddGarment} />
-        <Route path="/garments/list" exact component={ShowGarments} />
-        <Route path="/garments/edit/:garment_id" exact component={EditGarment} />
-        
+        <Route path="/garments/" exact component={ShowGarments} />
+        <Route
+          path="/garments/edit/:garment_id"
+          exact
+          component={EditGarment}
+        />
       </Switch>
     </div>
   );
@@ -137,7 +139,6 @@ const mapStateToProps = (state: IGlobalState) => ({
   sizes: state.sizes,
   colors: state.colors,
   users: state.users
-
 });
 
 const mapDispatchToProps = {
@@ -145,7 +146,6 @@ const mapDispatchToProps = {
   setUsers: userActions.setUsers,
   setSizes: garmentActions.setSizes,
   setColors: garmentActions.setColors
-  
 };
 
 export default connect(

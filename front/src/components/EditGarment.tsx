@@ -104,6 +104,11 @@ const EditGarment: React.FC<
   }
 
   const Edit = (garment_id: string) => {
+    const formData = new FormData();
+    formData.append("file", images);
+    formData.append("id", garment_id);
+
+    
     fetch("http://localhost:3000/api/garments/edit/" + garment_id, {
       method: "PUT",
       headers: {
@@ -116,14 +121,27 @@ const EditGarment: React.FC<
         season: season,
         sizes: sizes,
         colors: colors,
-        users: users,
-        images: images
+        users: users
       })
     }).then(response => {
       if (response.ok) {
         response.json().then(g => {
           props.editGarment(garment_id, g);
-          props.history.push("/garments/list");
+          props.history.push("/garments/");
+        });
+      }
+    });
+    fetch("http://localhost:3000/api/garments/addImage", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + props.token
+      },
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        response.json().then(g => {
+          props.editGarment(garment_id, g);
+          props.history.push("/garments/");
         });
       }
     });

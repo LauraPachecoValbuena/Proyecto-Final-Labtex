@@ -4,10 +4,12 @@ import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { Link, RouteComponentProps, Redirect } from "react-router-dom";
+import { IMyUser } from "../reducers/myUserReducer";
 
 interface IPropsGlobal {
   token: string;
   users: IUser[];
+  myUser: IMyUser;
   setUsers: (users: []) => void;
   removeUser: (user_id: string) => void;
 }
@@ -39,7 +41,6 @@ const ShowUsers: React.FC<
   }, []);
 
   const Delete = (user_id: string) => {
-    const id = user_id;
     fetch("http://localhost:3000/api/users/" + user_id, {
       method: "DELETE",
       headers: {
@@ -49,7 +50,7 @@ const ShowUsers: React.FC<
     }).then(response => {
       if (response.ok) {
         props.removeUser(user_id);
-        props.history.push("/users/list");
+        props.history.push("/users");
       }
     });
   };
@@ -61,7 +62,10 @@ const ShowUsers: React.FC<
   return (
     <>
       <div className="container">
-        <div className="row table-responsive-sm justify-content-center" id="table">
+        <div
+          className="row table-responsive-sm justify-content-center"
+          id="table"
+        >
           <table className="table table-bordered table-hover ">
             <thead>
               <tr>
@@ -71,10 +75,10 @@ const ShowUsers: React.FC<
                 <th scope="col">Mobile</th>
                 <th scope="col">Company Name</th>
                 <th scope="col">Country</th>
-                <th scope="col">Is Admin</th>
-                <th scope="col">Role</th>
+                {props.myUser.isAdmin && <th scope="col">Is Admin</th>}
+                {props.myUser.isAdmin && <th scope="col">Role</th>}
                 <th />
-                <th />
+                {props.myUser.isAdmin && <th />}
               </tr>
             </thead>
             <tbody>
@@ -86,25 +90,36 @@ const ShowUsers: React.FC<
                   <td>{u.mobile}</td>
                   <td>{u.companyName}</td>
                   <td>{u.country}</td>
-                  <td>{u.isAdmin + ""}</td>
-                  <td>{u.role.name}</td>
+                  {props.myUser.isAdmin && <td> {u.isAdmin + ""}</td>}
+                  {props.myUser.isAdmin && <td>{u.role.name}</td>}
                   <td>
-                    <Link to={"/users/edit/" + u._id} className="btn btn-outline-info my-2 my-sm-0">
-                      Edit
+                    <Link
+                      to={"/users/" + u._id}
+                      className="btn btn-outline-info my-2 my-sm-0"
+                    >
+                      Profile
                     </Link>
                   </td>
-                  <td>
-                    <div className="btn btn-outline-info my-2 my-sm-0" onClick={() => Delete(u._id)}>
-                      Delete
-                    </div>
-                  </td>
+
+                  {props.myUser.isAdmin && (
+                    <td>
+                      <div
+                        className="btn btn-outline-info my-2 my-sm-0"
+                        onClick={() => Delete(u._id)}
+                      >
+                        Delete
+                      </div>
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
           </table>
-          <Link to="/users/add" className="btn btn-info my-2 my-sm-0">
-            Add New User
-          </Link>
+          {props.myUser.isAdmin && (
+            <Link to="/users/add" className="btn btn-info my-2 my-sm-0">
+              Add New User
+            </Link>
+          )}
         </div>
       </div>
     </>
@@ -113,7 +128,8 @@ const ShowUsers: React.FC<
 
 const mapStateToProps = (state: IGlobalState) => ({
   token: state.token,
-  users: state.users
+  users: state.users,
+  myUser: state.myUser
 });
 
 const mapDispatchToProps = {

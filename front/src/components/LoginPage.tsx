@@ -169,10 +169,12 @@ const Login: React.FC<IProps> = props => {
         <div className="card">
           ​
           <div className="card-body mx-4">
-            ​
+            ​<img className="logo" src="images/LogoLabtex.png"alt="" width="70" height="60"/>
             <div className="text-center">
               <h3 className="dark-grey-text mb-5">
+              
                 <strong>Sign in</strong>
+
               </h3>
             </div>
             ​
@@ -197,7 +199,7 @@ const Login: React.FC<IProps> = props => {
                 value={password}
                 onChange={updatePassword}
               />
-              <label htmlFor="Form-pass1">Your password</label>
+              <label className="label2" htmlFor="Form-pass1">Your password</label>
               <p className="font-small blue-text d-flex justify-content-end">
                 Forgot{" "}
                 <a href="#" className="blue-text ml-1">
@@ -229,7 +231,11 @@ const Login: React.FC<IProps> = props => {
           </div>
         </div>
       </div>
+      {/* <div className="container">
+        <img className="logo" src="images/LogoLabtex.png" alt="Logotipo Labtex"/>
+      </div> */}
     </div>
+    
   );
 };
 

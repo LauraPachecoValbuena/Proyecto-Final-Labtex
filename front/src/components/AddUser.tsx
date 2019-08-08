@@ -84,7 +84,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
       if (response.ok) {
         response.json().then((user: IUser) => {
           props.addNewUser(user);
-          props.history.push("/users/list");
+          props.history.push("/users/");
         });
       }
     });

@@ -155,7 +155,7 @@ router.post("/addImage", upload, (req, res) => {
     ) {
       garmentModel.updateOne(
         { _id: req.body.id },
-        { $push: { images: req.file.filename } },
+        { $set: { images: req.file.filename } },
         () => res.sendStatus(200)
       );
     } else {

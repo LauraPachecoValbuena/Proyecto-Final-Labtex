@@ -25,6 +25,11 @@ const EditUser: React.FC<
   const [country, setCountry] = React.useState("");
   const [isAdmin, setIsAdmin] = React.useState(false);
   const [error, setError] = React.useState("");
+  const [editMode, setEditMode] = React.useState<boolean>(false);
+
+  const updateEditMode = () => {
+    setEditMode(e => !e);
+  };
 
   const updateUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.currentTarget.value);
@@ -100,7 +105,7 @@ const EditUser: React.FC<
         if (response.ok) {
           response.json().then(u => {
             props.editUser(user_id, u);
-            props.history.push("/users/list");
+            props.history.push("/users/");
           });
         }
       });
@@ -109,6 +114,9 @@ const EditUser: React.FC<
     }
   };
 
+  const ICanSee =
+    props.myUser.isAdmin || props.myUser.id === props.match.params.user_id;
+
   return (
     <div className="container">
       <div className="row justify-content-center">
@@ -116,95 +124,157 @@ const EditUser: React.FC<
           <div className="form-group" id="formEdit">
             <h3>Personal Details</h3>
             <br />
-            <h4>Username</h4>
-            <input
-              type="text"
-              id="username"
-              placeholder=""
-              className="form-control"
-              value={username}
-              onChange={updateUsername}
-            />
-            <br />
-            <h4>Surname</h4>
-            <input
-              type="text"
-              id="surname"
-              placeholder=""
-              className="form-control"
-              value={surname}
-              onChange={updateSurname}
-            />
-            <br />
-            <h4>Email</h4>
-            <input
-              type="text"
-              id="email"
-              placeholder=""
-              className="form-control"
-              value={email}
-              onChange={updateEmail}
-            />
-            <br />
-            <h4>Password</h4>
-            <input
-              type="password"
-              id="password"
-              placeholder=""
-              className="form-control"
-              value={password}
-              onChange={updatePassword}
-            />
-            <br />
-            <h4>Mobile</h4>
-            <input
-              type="number"
-              id="mobile"
-              placeholder=""
-              className="form-control"
-              value={mobile}
-              onChange={updateMobile}
-            />
-            <br />
-            <h4>Company Name</h4>
-            <input
-              type="text"
-              id="companyName"
-              placeholder=""
-              className="form-control"
-              value={companyName}
-              onChange={updateCompanyName}
-            />
-            <br />
-            <h4>Country</h4>
-            <input
-              type="text"
-              id="country"
-              placeholder=""
-              className="form-control"
-              value={country}
-              onChange={updateCountry}
-            />
-            <br />
-            {/* {props.myUser.isAdmin && ( */}
-            <div className=" form-group form-check">
-              <h4>Administrador</h4>
-              <input
-                type="checkbox"
-                className="form-control"
-                checked={isAdmin}
-                onChange={updateIsAdmin}
-              />
+            <div>
+              <h4>Username</h4>
+              {editMode && (
+                <input
+                  type="text"
+                  id="username"
+                  placeholder=""
+                  className="form-control"
+                  value={username}
+                  onChange={updateUsername}
+                />
+              )}
+              {!editMode && <span>{username}</span>}
               <br />
             </div>
-            {/* )} */}
-            <button
-              type="submit"
-              className="btn btn-outline-info my-2 my-sm-0"
-              onClick={() => Edit(user._id)}
-            >
-              Save
-            </button>
+            <div>
+              <h4>Surname</h4>
+              {editMode && (
+                <input
+                  type="text"
+                  id="surname"
+                  placeholder=""
+                  className="form-control"
+                  value={surname}
+                  onChange={updateSurname}
+                />
+              )}
+              {!editMode && <span>{surname}</span>}
+              <br />
+            </div>
+            <div>
+              <h4>Email</h4>
+              {editMode && (
+                <input
+                  type="text"
+                  id="email"
+                  placeholder=""
+                  className="form-control"
+                  value={email}
+                  onChange={updateEmail}
+                />
+              )}
+              {!editMode && <span>{email}</span>}
+              <br />
+            </div>
+            {ICanSee && editMode && (
+              <div>
+                <h4>Password</h4>
+
+                <input
+                  type="password"
+                  id="password"
+                  placeholder=""
+                  className="form-control"
+                  value={password}
+                  onChange={updatePassword}
+                />
+
+                <br />
+              </div>
+            )}
+            {ICanSee && (
+              <div>
+                <h4>Mobile</h4>
+                {editMode && (
+                  <input
+                    type="number"
+                    id="mobile"
+                    placeholder=""
+                    className="form-control"
+                    value={mobile}
+                    onChange={updateMobile}
+                  />
+                )}
+                {!editMode && <span>{mobile}</span>}
+                <br />
+              </div>
+            )}
+            <div>
+              <h4>Company Name</h4>
+              {editMode && (
+                <input
+                  type="text"
+                  id="companyName"
+                  placeholder=""
+                  className="form-control"
+                  value={companyName}
+                  onChange={updateCompanyName}
+                />
+              )}
+              {!editMode && <span>{companyName}</span>}
+              <br />
+            </div>
+            <div>
+              <h4>Country</h4>
+              {editMode && (
+                <input
+                  type="text"
+                  id="country"
+                  placeholder=""
+                  className="form-control"
+                  value={country}
+                  onChange={updateCountry}
+                />
+              )}
+              {!editMode && <span>{country}</span>}
+              <br />
+            </div>
+            {props.myUser.isAdmin && (
+              <div className=" form-group form-check">
+                <h4>Administrador</h4>
+                {editMode && (
+                  <input
+                    type="checkbox"
+                    className="form-control"
+                    checked={isAdmin}
+                    onChange={updateIsAdmin}
+                  />
+                )}
+                {!editMode && <span>{isAdmin + ""}</span>}
+                <br />
+              </div>
+            )}
+            {editMode && (
+              <>
+                <button
+                  className="btn btn-outline-info my-2 my-sm-0"
+                  onClick={() => Edit(user._id)}
+                >
+                  Save
+                </button>
+                <button
+                  className="btn btn-outline-info my-2 my-sm-0"
+                  onClick={updateEditMode}
+                >
+                  Cancel
+                </button>
+              </>
+            )}
+            {props.myUser.isAdmin && (
+              <div>
+                {!editMode && (
+                  <button
+                    className="btn btn-outline-info my-2 my-sm-0"
+                    onClick={updateEditMode}
+                  >
+                    Edit
+                  </button>
+                )}
+              </div>
+            )}
             {error && <div className="div">{error}</div>}
           </div>
         </div>

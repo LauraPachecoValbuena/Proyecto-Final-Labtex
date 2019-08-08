@@ -13,9 +13,11 @@ interface IPropsGlobal {
 const App: React.FC<IPropsGlobal> = props => {
   return (
     <BrowserRouter>
-      {!props.token && <LoginPage />}
-      {props.token && <Route component={LayoutPage} />}
-      <Redirect to="/" />
+      <Switch>
+        {!props.token && <Route path="/" exact component={LoginPage} />}
+        {props.token && <Route component={LayoutPage} />}
+        <Redirect to="/" />
+      </Switch>
     </BrowserRouter>
   );
 };

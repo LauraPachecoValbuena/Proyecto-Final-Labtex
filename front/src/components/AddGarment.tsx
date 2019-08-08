@@ -95,7 +95,7 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
       if (response.ok) {
         response.json().then((garment: IGarment) => {
           props.addNewGarment(garment);
-          props.history.push("/garments/list");
+          props.history.push("/garments/");
         });
       }
     });
@@ -161,7 +161,9 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             <h4>Colors</h4>
             <select onChange={updateColors} multiple>
               {props.colors.map(c => (
-                <option key={c._id} value={c._id}>{c.name}</option>
+                <option key={c._id} value={c._id}>
+                  {c.name}
+                </option>
               ))}
             </select>
             <br />
@@ -169,7 +171,9 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             <h4>Sizes</h4>
             <select onChange={updateSizes} multiple>
               {props.sizes.map(s => (
-                <option key={s._id} value={s._id}>{s.name}</option>
+                <option key={s._id} value={s._id}>
+                  {s.name}
+                </option>
               ))}
             </select>
             <br />
@@ -177,7 +181,9 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             <h4>Users</h4>
             <select onChange={updateUsers} multiple>
               {props.users.map(u => (
-                <option key={u._id} value={u._id}>{u.username}</option>
+                <option key={u._id} value={u._id}>
+                  {u.username}
+                </option>
               ))}
             </select>
             <br />
@@ -189,7 +195,8 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
               onChange={updateImage}
             />
             <br />
-            <Link to={"/garments/list"}
+            <Link
+              to={"/garments/"}
               type="submit"
               className="btn btn-outline-info"
               onClick={Add}

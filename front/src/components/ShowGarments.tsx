@@ -6,9 +6,17 @@ import { connect } from "react-redux";
 import * as actions from "../actions/garmentActions";
 import { garmentsReducer } from "../reducers/garmentsReducer";
 import { Link } from "react-router-dom";
+import { IRole } from "../interfaceRole";
+import { IUser } from "../interfaceIuser";
+import { userInfo } from "os";
+import { usersReducer } from "../reducers/usersReducer";
+import { IMyUser } from "../reducers/myUserReducer";
 
 interface IPropsGlobal {
   token: string;
+  myUser: IMyUser;
+  roles: IRole[];
+  users: IUser[];
   garments: IGarment[];
   setGarments: (garments: []) => void;
   removeGarment: (garment_id: string) => void;
@@ -53,7 +61,7 @@ const ShowGarments: React.FC<
     }).then(response => {
       if (response.ok) {
         props.removeGarment(garment_id);
-        props.history.push("/garments/list");
+        props.history.push("/garments");
       }
     });
   };
@@ -76,19 +84,24 @@ const ShowGarments: React.FC<
                 <Link to={"/garments/edit/" + g._id} className="btn btn-info">
                   Edit
                 </Link>
-
-                <div className="btn btn-info" onClick={() => Delete(g._id)}>
-                  Delete
-                </div>
+                {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
+                  props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
+                  <div className="btn btn-info" onClick={() => Delete(g._id)}>
+                    Delete
+                  </div>
+                )}
               </div>
             </div>
           </div>
         ))}
-        <div className="container">
-        <Link to="/garments/add" className="btn btn-info">
-          Add New Garment
-        </Link>
-        </div>
+        {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
+          props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
+          <div className="container">
+            <Link to="/garments/add" className="btn btn-info">
+              Add New Garment
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -96,7 +109,10 @@ const ShowGarments: React.FC<
 
 const mapStateToProps = (state: IGlobalState) => ({
   token: state.token,
-  garments: state.garments
+  roles: state.roles,
+  garments: state.garments,
+  myUser: state.myUser,
+  users: state.users
 });
 
 const mapDispatchToProps = {

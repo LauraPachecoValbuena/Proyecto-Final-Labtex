@@ -11,7 +11,7 @@ router.get("/list", async (req, res) => {
 
   try {
     let vtoken = jwt.verify(token, "mysecret");
-    if (vtoken.isAdmin) {
+    if (vtoken) {
       const roles = await roleModel.find({});
       res.send(roles);
     } else {
