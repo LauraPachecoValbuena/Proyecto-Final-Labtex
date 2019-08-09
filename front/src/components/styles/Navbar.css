@@ -4,6 +4,7 @@
 .sidebarr{
     height: 100%;
     width: 100%;
+    background: none !important;
 }
 .sidenav {
     height: 100vh;
@@ -22,6 +23,42 @@
     text-align: left;
 }
 /* //el color del :hover / */
-/* .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
-} */
+.btn:hover, .btn-large:hover {
+  background-color: #2bbbad !important;
+}
+.sidenav .user-view .circle {
+    height: 60px !important;
+    width: 70px !important;
+    margin: auto;
+}
+.circle {
+    border-radius: 0% !important;
+}
+.link-side{
+    width: 100% !important;
+}
+.botonSidebar{
+    width: 100% !important;
+}
+.link-side a{
+    width: 100% !important;
+    padding: 0px !important;
+    text-align: left !important;
+}
+.logout{
+    padding-top: 47vh;
+}
+.botonUser{
+    margin-bottom: 5px;
+
+}
+.botonUser1{
+    width: 100%;
+text-align: left !important;
+}
+
+.sidenav-overlay {
+  
+    background-color: transparent !important; 
+   
+}

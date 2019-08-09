@@ -5,6 +5,8 @@ import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { Link, RouteComponentProps, Redirect } from "react-router-dom";
 import { IMyUser } from "../reducers/myUserReducer";
+import "./styles/ShowUsers.css";
+// import 'bootstrap/dist/css/bootstrap.css';
 
 interface IPropsGlobal {
   token: string;
@@ -95,7 +97,7 @@ const ShowUsers: React.FC<
                   <td>
                     <Link
                       to={"/users/" + u._id}
-                      className="btn btn-outline-info my-2 my-sm-0"
+                      className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
                     >
                       Profile
                     </Link>
@@ -104,7 +106,7 @@ const ShowUsers: React.FC<
                   {props.myUser.isAdmin && (
                     <td>
                       <div
-                        className="btn btn-outline-info my-2 my-sm-0"
+                        className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
                         onClick={() => Delete(u._id)}
                       >
                         Delete
@@ -116,7 +118,7 @@ const ShowUsers: React.FC<
             </tbody>
           </table>
           {props.myUser.isAdmin && (
-            <Link to="/users/add" className="btn btn-info my-2 my-sm-0">
+            <Link to="/users/add" className="btn btn-info my-2 my-sm-0 btnaddUsers">
               Add New User
             </Link>
           )}

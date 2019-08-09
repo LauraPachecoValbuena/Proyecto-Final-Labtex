@@ -6,6 +6,9 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ShowGarments from "./ShowGarments";
 import "./styles/Navbar.css";
+import "./styles/materialize.min.css";
+const materialize = require("react-materialize");
+// import logo from './images/LogoLabtex.png';
 // import fondo from '#';
 
 interface IPropsGlobal {
@@ -14,15 +17,13 @@ interface IPropsGlobal {
 }
 
 const Navbar: React.FC<IPropsGlobal> = props => {
-  const {
-    SideNav,
-    SideNavItem,
-    Button,
-    Dropdown,
-    Divider,
-    Fragment
-  } = require("react-materialize");
-
+  // const {
+  //   SideNav,
+  //   SideNavItem,
+  //   Button,
+  //   Dropdown,
+  //   Divider
+  // } = require("react-materialize");
 
   const logOut = () => {
     props.saveToken("");
@@ -30,99 +31,112 @@ const Navbar: React.FC<IPropsGlobal> = props => {
   };
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="images/LogoLabtex.png" width="70" height="60" />
+    // <div>
+    //   <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    //     <img src="images/LogoLabtex.png" width="70" height="60" />
 
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                HOME <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                id="navbarDropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                SEASONS
-              </a>
-              <div
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <Link to={"/garments/"} className="dropdown-item">
-                  SS'19
-                </Link>
-                <a className="dropdown-item" href="#">
-                  AW'20
-                </a>
-                <a className="dropdown-item" href="#">
-                  SS'20
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
+    //     <div className="collapse navbar-collapse" id="navbarNavDropdown">
+    //       <ul className="navbar-nav">
+    //         <li className="nav-item active">
+    //           <a className="nav-link" href="/">
+    //             HOME <span className="sr-only">(current)</span>
+    //           </a>
+    //         </li>
+    //         <li className="nav-item dropdown">
+    //           <a
+    //             className="nav-link dropdown-toggle"
+    //             id="navbarDropdownMenuLink"
+    //             data-toggle="dropdown"
+    //             aria-haspopup="true"
+    //             aria-expanded="false"
+    //           >
+    //             SEASONS
+    //           </a>
+    //           <div
+    //             className="dropdown-menu"
+    //             aria-labelledby="navbarDropdownMenuLink"
+    //           >
+    //             <Link to={"/garments/"} className="dropdown-item">
+    //               SS'19
+    //             </Link>
+    //             <a className="dropdown-item" href="#">
+    //               AW'20
+    //             </a>
+    //             <a className="dropdown-item" href="#">
+    //               SS'20
+    //             </a>
+    //           </div>
+    //         </li>
+    //       </ul>
+    //     </div>
 
-        <a className="navbar-brand" href="/">
-          {props.myUser.username}
-        </a>
-        <form className="form-inline">
-          <button
-            className="btn btn-outline-info my-2 my-sm-0"
-            type="submit"
-            onClick={logOut}
-            data-toggle="collapse"
-            data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            Logout
-          </button>
-          <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
-            Users
-          </Link>
-          <Link
-            to={"/users/" + props.myUser.id}
-            className="btn btn-outline-info my-2 my-sm-0"
-          >
-            Profile
-          </Link>
-        </form>
-      </nav>
-    </div>
+    //     <a className="navbar-brand" href="/">
+    //       {props.myUser.username}
+    //     </a>
+    //     <form className="form-inline">
+    //       <button
+    //         className="btn btn-outline-info my-2 my-sm-0"
+    //         type="submit"
+    //         onClick={logOut}
+    //         data-toggle="collapse"
+    //         data-target="#navbarNavDropdown"
+    //         aria-controls="navbarNavDropdown"
+    //         aria-expanded="false"
+    //         aria-label="Toggle navigation"
+    //       >
+    //         Logout
+    //       </button>
+    //       <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
+    //         Users
+    //       </Link>
+    //       <Link
+    //         to={"/users/" + props.myUser.id}
+    //         className="btn btn-outline-info my-2 my-sm-0"
+    //       >
+    //         Profile
+    //       </Link>
+    //     </form>
+    //   </nav>
+    // </div>
 
     //---------------MATERIALIZE-----------------------//
-    // <Fragment className="container-fluid">
-      /* <style>
-		  #root > div > div {
-			z-index: 99999 !important;
-		  }
-  </style> */
-    	/* <SideNav
-        trigger={<Button>asdasd</Button>}
+    <div className="container-fluid">
+      <materialize.SideNav
+        trigger={<materialize.Button>MENU</materialize.Button>}
         options={{ closeOnClick: true }}
       >
         <div className="sidebarr">
-          <SideNavItem
+          <materialize.SideNavItem
             userView
             user={{
-              //   background: {fondo},
-              image: "./static/media/LogoLabtex.png",
-              name: "John Doe"
+              image: "./images/LogoLabtex.png",
             }}
           />
-          <SideNavItem href="#!icon" icon="cloud">
-            First Link With Icon
-          </SideNavItem>
-          <Dropdown
-            trigger={<Button>texto</Button>}
+          <materialize.SideNavItem>
+            <a className="navbar-brand" href="/">
+              {props.myUser.username}
+            </a>
+          </materialize.SideNavItem>
+
+          <materialize.SideNavItem className="link-side" options={{ alignment: "left" }}>
+            <Link
+              to={"/users/" + props.myUser.id}
+              className="btn btn-outline-info my-2 my-sm-0 botonSidebar"
+            >
+              Profile
+            </Link>
+          </materialize.SideNavItem>
+          <materialize.SideNavItem className="link-side">
+            <Link
+              to={"/Home"}
+              className="btn btn-outline-info my-2 my-sm-0 botonSidebar"
+            >
+              Home
+            </Link>
+          </materialize.SideNavItem>
+          <materialize.SideNavItem divider />
+          <materialize.Dropdown
+            trigger={<materialize.Button> SEASONS</materialize.Button>}
             options={{
               alignment: "left",
               hover: false,
@@ -131,33 +145,46 @@ const Navbar: React.FC<IPropsGlobal> = props => {
               coverTrigger: true
             }}
           >
-            <a href="#">one</a>
-            <a href="#">two</a>
-            <Divider />
-            <a href="#">three</a>
-          </Dropdown>
-          <SideNavItem divider />
-          <SideNavItem subheader>Subheader</SideNavItem>
-          <SideNavItem waves href="#!third">
-            <button
-              className="btn btn-outline-info my-2 my-sm-0"
-              type="submit"
-              onClick={logOut}
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              Logout
-            </button>
-            <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
-              Users
+            <Link to={"/garments/"} className="dropdown-item">
+              SS'19
             </Link>
-          </SideNavItem>
+            <Link to={"/garments/"} className="dropdown-item">
+              AW'20
+            </Link>
+            <Link to={"/garments/"} className="dropdown-item">
+              SS'20
+            </Link>
+          </materialize.Dropdown>
+          <materialize.SideNavItem waves href="#!third">
+            Third Link With Waves
+          </materialize.SideNavItem>
+          <div className="logout">
+            <div className="botonUser">
+              <Link
+                to="/users"
+                className="btn btn-outline-info my-2 my-sm-0 botonUser1"
+              >
+                Users
+              </Link>
+            </div>
+            <div className="botonLogout">
+              <button
+                className="btn btn-outline-info my-2 my-sm-0"
+                type="submit"
+                onClick={logOut}
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
         </div>
-      </SideNav>
-    </Fragment> */
+      </materialize.SideNav>
+    </div>
   );
 };
 

@@ -10,6 +10,7 @@ import { IRole } from "../interfaceRole";
 import { IUser } from "../interfaceIuser";
 import { userInfo } from "os";
 import { usersReducer } from "../reducers/usersReducer";
+// import 'bootstrap/dist/css/bootstrap.css';
 import { IMyUser } from "../reducers/myUserReducer";
 
 interface IPropsGlobal {
@@ -70,23 +71,23 @@ const ShowGarments: React.FC<
       <div className="row">
         {props.garments.map(g => (
           <div key={g._id} className="col-4 border-secondary mb-3">
-            <div className="card garments">
+            <div className="card">
               {g.images && (
                 <img
                   src={"http://localhost:3000/uploads/" + g.images[0]}
-                  className="card-img-top garments"
+                  className="card-img-top"
                   alt="Bomberg"
                 />
               )}
-              <div className="card-body garments">
-                <h5 className="card-title garments">{g.reference}</h5>
-                <p className="card-text garments">{g.description}</p>
+              <div className="card-body">
+                <h3 className="card-title">{g.reference}</h3>
+                <p className="card-text">{g.description}</p>
                 <Link to={"/garments/edit/" + g._id} className="btn btn-info">
                   Edit
                 </Link>
                 {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
                   props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
-                  <div className="btn btn-info" onClick={() => Delete(g._id)}>
+                  <div className="btn btn-info delete-garment" onClick={() => Delete(g._id)}>
                     Delete
                   </div>
                 )}

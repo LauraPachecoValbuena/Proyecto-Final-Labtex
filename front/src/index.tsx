@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
 import { createStore } from "redux";
 import { reducers } from './reducers/reducers';
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const store = createStore(reducers, devToolsEnhancer({}));
