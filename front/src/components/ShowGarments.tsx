@@ -26,10 +26,12 @@ interface IPropsGlobal {
 const ShowGarments: React.FC<
   IPropsGlobal & RouteComponentProps<{ garment_id: string }>
 > = props => {
+
   const garment = props.garments.find(
     g => g._id === props.match.params.garment_id
   );
 
+  
   const getGarments = () => {
     if (props.token) {
       fetch("http://localhost:3000/api/garments/list", {
@@ -66,6 +68,8 @@ const ShowGarments: React.FC<
       }
     });
   };
+
+  
   return (
     <div className="container">
       <div className="row">
