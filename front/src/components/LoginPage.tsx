@@ -179,7 +179,7 @@ const Login: React.FC<IProps> = props => {
               />
               <div className="text-center">
                 <h3 className="dark-grey-text mb-5">
-                  <strong>Sign in</strong>
+                  {/* <strong>Sign in</strong> */}
                 </h3>
               </div>
               ​

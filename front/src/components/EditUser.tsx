@@ -233,7 +233,7 @@ const EditUser: React.FC<
               <br />
             </div>
             {props.myUser.isAdmin && (
-              <div className="form-group form-check">
+              <div className="form-group">
                 <h4>Administrador</h4>
                 {editMode && (
                   <input
