@@ -24,11 +24,10 @@ interface IPropsGlobal {
 }
 
 const EditGarment: React.FC<
-  IPropsGlobal & RouteComponentProps<{ garment_id: string, season_id: string }>
+  IPropsGlobal & RouteComponentProps<{ garment_id: string; season_id: string }>
 > = props => {
   const [reference, setReference] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [season, setSeason] = React.useState("");
   const [sizes, setSizes] = React.useState<string[]>([]);
   const [colors, setColors] = React.useState<string[]>([]);
   const [users, setUsers] = React.useState<string[]>([]);
@@ -42,10 +41,6 @@ const EditGarment: React.FC<
 
   const updateDescription = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDescription(event.currentTarget.value);
-  };
-
-  const updateSeason = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSeason(event.currentTarget.value);
   };
 
   const updateSizes = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -93,7 +88,6 @@ const EditGarment: React.FC<
     if (garment) {
       setReference(garment.reference);
       if (garment.description) setDescription(garment.description);
-      if (garment.season) setSeason(garment.season);
       if (garment.sizes) setSizes(garment.sizes);
       if (garment.colors) setColors(garment.colors);
       if (garment.users) setUsers(garment.users);
@@ -110,7 +104,6 @@ const EditGarment: React.FC<
     formData.append("file", images);
     formData.append("id", garment_id);
 
-    
     fetch("http://localhost:3000/api/garments/edit/" + garment_id, {
       method: "PUT",
       headers: {
@@ -120,7 +113,7 @@ const EditGarment: React.FC<
       body: JSON.stringify({
         reference: reference,
         description: description,
-        season: season,
+        season: props.match.params.season_id,
         sizes: sizes,
         colors: colors,
         users: users
@@ -129,10 +122,13 @@ const EditGarment: React.FC<
       if (response.ok) {
         response.json().then(g => {
           props.editGarment(garment_id, g);
-          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
+          props.history.push(
+            "/seasons/" + props.match.params.season_id + "/garments/"
+          );
         });
       }
     });
+
     fetch("http://localhost:3000/api/garments/addImage", {
       method: "POST",
       headers: {
@@ -141,9 +137,10 @@ const EditGarment: React.FC<
       body: formData
     }).then(response => {
       if (response.ok) {
-        response.json().then(g => {
-          props.editGarment(garment_id, g);
-          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
+        response.json().then(() => {
+          props.history.push(
+            "/seasons/" + props.match.params.season_id + "/garments/"
+          );
         });
       }
     });
@@ -176,12 +173,11 @@ const EditGarment: React.FC<
             <br />
             <h4>Season</h4>
             <input
+              disabled
               type="text"
               id="season"
-              placeholder=""
               className="form-control"
-              value={season}
-              onChange={updateSeason}
+              value={props.seasons.find(s => s._id === garment.season)!.name}
             />
             <br />
 
@@ -244,7 +240,7 @@ const mapStateToProps = (state: IGlobalState) => ({
   sizes: state.sizes,
   colors: state.colors,
   garments: state.garments,
-
+  seasons: state.seasons
 });
 
 const mapDispatchToProps = {

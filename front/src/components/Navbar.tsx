@@ -61,7 +61,8 @@ const Navbar: React.FC<IPropsGlobal> = props => {
                 {props.seasons.map(s => (
                   <Link
                     to={"/seasons/" + s._id + "/garments/"}
-                    className="dropdown-item"
+					className="dropdown-item"
+					key={s._id}
                   >
                     {s.name}
                   </Link>

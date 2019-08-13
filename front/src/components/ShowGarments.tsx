@@ -20,10 +20,10 @@ interface IPropsGlobal {
   roles: IRole[];
   users: IUser[];
   garments: IGarment[];
+  seasons: ISeason[];
   setGarments: (garments: []) => void;
   removeGarment: (garment_id: string) => void;
 }
-
 
 const ShowGarments: React.FC<
   IPropsGlobal & RouteComponentProps<{ season_id: string }>
@@ -70,46 +70,46 @@ const ShowGarments: React.FC<
   return (
     <div className="container">
       <div className="row">
-        {/* aquí hacerle el filter del season name*/}
-        {props.garments.map(g => (
-          <div key={g._id} className="col-4 border-secondary mb-3">
-            <div className="card">
-              {g.images && (
-                <img
-                  src={"http://localhost:3000/uploads/" + g.images[0]}
-                  className="card-img-top"
-                  alt="Bomberg"
-                />
-              )}
-              <div className="card-body">
-                <h3 className="card-title">{g.reference}</h3>
-                <p className="card-text">{g.description}</p>
-                <Link
-                  to={
-                    "/seasons/" +
-                    props.match.params.season_id +
-                    "/garments/edit/" +
-                    g._id
-                  }
-                  className="btn btn-info"
-                >
-                  {" "}
-
-                  Edit
-                </Link>
-                {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
-                  props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
-                  <div
-                    className="btn btn-info delete-garment"
-                    onClick={() => Delete(g._id)}
-                  >
-                    Delete
-                  </div>
+        {props.garments
+          .filter(g => g.season === props.match.params.season_id)
+          .map(g => (
+            <div key={g._id} className="col-4 border-secondary mb-3">
+              <div className="card">
+                {g.images && (
+                  <img
+                    src={"http://localhost:3000/uploads/" + g.images[0]}
+                    className="card-img-top"
+                    alt="Bomberg"
+                  />
                 )}
+                <div className="card-body">
+                  <h3 className="card-title">{g.reference}</h3>
+                  <p className="card-text">{g.description}</p>
+                  <Link
+                    to={
+                      "/seasons/" +
+                      props.match.params.season_id +
+                      "/garments/edit/" +
+                      g._id
+                    }
+                    className="btn btn-info"
+                  >
+                    {" "}
+                    Edit
+                  </Link>
+                  {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
+                    props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
+                    <div
+                      className="btn btn-info delete-garment"
+                      onClick={() => Delete(g._id)}
+                    >
+                      Delete
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
         {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
           props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
           <div className="container">
@@ -131,7 +131,8 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   garments: state.garments,
   myUser: state.myUser,
-  users: state.users
+  users: state.users,
+  seasons: state.seasons
 });
 
 const mapDispatchToProps = {

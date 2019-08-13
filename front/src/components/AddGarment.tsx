@@ -17,17 +17,17 @@ interface IPropsGlobal {
   users: IUser[];
   sizes: ISize[];
   colors: IColor[];
-  garment: IGarment[];
   token: string;
   myUser: IMyUser;
   seasons: ISeason[];
   addNewGarment: (garment: IGarment) => void;
 }
 
-const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: string }>> = props => {
+const AddGarment: React.FC<
+  IPropsGlobal & RouteComponentProps<{ season_id: string }>
+> = props => {
   const [reference, setReference] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [season, setSeason] = React.useState("");
   const [sizes, setSizes] = React.useState<string[]>([]);
   const [colors, setColors] = React.useState<string[]>([]);
   const [users, setUsers] = React.useState<string[]>([]);
@@ -39,10 +39,6 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: strin
 
   const updateDescription = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDescription(event.currentTarget.value);
-  };
-
-  const updateSeason = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSeason(event.currentTarget.value);
   };
 
   const updateSizes = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -82,27 +78,6 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: strin
     setImage(event.currentTarget.files![0]);
   };
 
-  const AddImage = (garment_id: string) => {
-    const formData = new FormData();
-    formData.append("file", image);
-    formData.append("id", garment_id);
-
-    fetch("http://localhost:3000/api/garments/addImage", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + props.token
-      },
-      body: formData
-    }).then(response => {
-      if (response.ok) {
-        response.json().then((garment: IGarment) => {
-          props.addNewGarment(garment);
-          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
-        });
-      }
-    });
-  };
-
   const Add = () => {
     fetch("http://localhost:3000/api/garments/add", {
       method: "POST",
@@ -113,7 +88,7 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: strin
       body: JSON.stringify({
         reference: reference,
         description: description,
-        season: season,
+        season: props.match.params.season_id,
         sizes: sizes,
         colors: colors,
         users: users
@@ -121,7 +96,25 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: strin
     }).then(response => {
       if (response.ok) {
         response.json().then((garment: IGarment) => {
-          AddImage(garment._id);
+          const formData = new FormData();
+          formData.append("file", image);
+          formData.append("id", garment._id);
+          fetch("http://localhost:3000/api/garments/addImage", {
+            method: "POST",
+            headers: {
+              Authorization: "Bearer " + props.token
+            },
+            body: formData
+          }).then(response => {
+            if (response.ok) {
+              response.json().then(() => {
+                props.addNewGarment(garment);
+                props.history.push(
+                  "/seasons/" + props.match.params.season_id + "/garments/"
+                );
+              });
+            }
+          });
         });
       }
     });
@@ -152,11 +145,14 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: strin
             <br />
             <h4>Season</h4>
             <input
+              disabled
               type="text"
               id="season"
-              placeholder=""
               className="form-control"
-              onChange={updateSeason}
+              value={
+                props.seasons.find(s => s._id === props.match.params.season_id)!
+                  .name
+              }
             />
             <br />
 
@@ -219,7 +215,6 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   sizes: state.sizes,
   colors: state.colors,
-  garment: state.garments,
   seasons: state.seasons
 });
 
