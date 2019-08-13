@@ -3,6 +3,7 @@ import { IGarment } from '../interfaceIgarment';
 import { TAction } from "./garmentActionsTypes";
 import { ISize } from "../interfaceSize";
 import { IColor } from "../interfaceColor";
+import { ISeason } from "../interfaceSeason";
 
 export const setGarments: ActionCreator<TAction> = (garments: IGarment[]) => ({
     type: "SET_GARMENTS",
@@ -33,4 +34,9 @@ export const setSizes: ActionCreator<TAction> = (sizes: ISize[]) => ({
 export const setColors: ActionCreator<TAction> = (colors: IColor[]) => ({
     type: "SET_COLORS",
     colors
+});
+
+export const setSeasons: ActionCreator<TAction> = (seasons: ISeason[]) => ({
+    type: "SET_SEASONS",
+    seasons
 });

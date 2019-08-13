@@ -10,6 +10,7 @@ import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { ISeason } from "../interfaceSeason";
 
 interface IPropsGlobal {
   roles: IRole[];
@@ -19,10 +20,11 @@ interface IPropsGlobal {
   garment: IGarment[];
   token: string;
   myUser: IMyUser;
+  seasons: ISeason[];
   addNewGarment: (garment: IGarment) => void;
 }
 
-const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
+const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: string }>> = props => {
   const [reference, setReference] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [season, setSeason] = React.useState("");
@@ -95,7 +97,7 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
       if (response.ok) {
         response.json().then((garment: IGarment) => {
           props.addNewGarment(garment);
-          props.history.push("/garments/");
+          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
         });
       }
     });
@@ -196,7 +198,7 @@ const AddGarment: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             />
             <br />
             <Link
-              to={"/garments/"}
+              to={"/seasons/" + props.match.params.season_id + "/garments/"}
               type="submit"
               className="btn btn-outline-info"
               onClick={Add}
@@ -217,7 +219,8 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   sizes: state.sizes,
   colors: state.colors,
-  garment: state.garments
+  garment: state.garments,
+  seasons: state.seasons
 });
 
 const mapDispatchToProps = {

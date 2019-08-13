@@ -11,6 +11,8 @@ import { IColor } from "../interfaceColor";
 import { colorsReducer } from "./colorsReducer";
 import { ISize } from "../interfaceSize";
 import { sizesReducer } from "./sizesReducer";
+import { ISeason } from "../interfaceSeason";
+import { seasonReducer } from "./seasonsReducer";
 
 export interface IGlobalState {
     token: string;
@@ -20,6 +22,7 @@ export interface IGlobalState {
     garments: IGarment[];
     colors: IColor[];
     sizes: ISize[];
+    seasons: ISeason[];
 }
 
 export const reducers = combineReducers<IGlobalState>({
@@ -29,5 +32,6 @@ export const reducers = combineReducers<IGlobalState>({
     roles: roleReducer,
     garments: garmentsReducer,
     colors: colorsReducer,
-    sizes: sizesReducer
+    sizes: sizesReducer,
+    seasons: seasonReducer
 });

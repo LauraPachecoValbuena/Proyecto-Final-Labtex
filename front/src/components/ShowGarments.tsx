@@ -12,6 +12,7 @@ import { userInfo } from "os";
 import { usersReducer } from "../reducers/usersReducer";
 // import 'bootstrap/dist/css/bootstrap.css';
 import { IMyUser } from "../reducers/myUserReducer";
+import { ISeason } from "../interfaceSeason";
 
 interface IPropsGlobal {
   token: string;
@@ -23,15 +24,10 @@ interface IPropsGlobal {
   removeGarment: (garment_id: string) => void;
 }
 
+
 const ShowGarments: React.FC<
-  IPropsGlobal & RouteComponentProps<{ garment_id: string }>
+  IPropsGlobal & RouteComponentProps<{ season_id: string }>
 > = props => {
-
-  const garment = props.garments.find(
-    g => g._id === props.match.params.garment_id
-  );
-
-  
   const getGarments = () => {
     if (props.token) {
       fetch("http://localhost:3000/api/garments/list", {
@@ -64,15 +60,17 @@ const ShowGarments: React.FC<
     }).then(response => {
       if (response.ok) {
         props.removeGarment(garment_id);
-        props.history.push("/garments");
+        props.history.push(
+          "/seasons/" + props.match.params.season_id + "/garments/"
+        );
       }
     });
   };
 
-  
   return (
     <div className="container">
       <div className="row">
+        {/* aquí hacerle el filter del season name*/}
         {props.garments.map(g => (
           <div key={g._id} className="col-4 border-secondary mb-3">
             <div className="card">
@@ -86,12 +84,25 @@ const ShowGarments: React.FC<
               <div className="card-body">
                 <h3 className="card-title">{g.reference}</h3>
                 <p className="card-text">{g.description}</p>
-                <Link to={"/garments/edit/" + g._id} className="btn btn-info">
+                <Link
+                  to={
+                    "/seasons/" +
+                    props.match.params.season_id +
+                    "/garments/edit/" +
+                    g._id
+                  }
+                  className="btn btn-info"
+                >
+                  {" "}
+
                   Edit
                 </Link>
                 {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
                   props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
-                  <div className="btn btn-info delete-garment" onClick={() => Delete(g._id)}>
+                  <div
+                    className="btn btn-info delete-garment"
+                    onClick={() => Delete(g._id)}
+                  >
                     Delete
                   </div>
                 )}
@@ -102,7 +113,10 @@ const ShowGarments: React.FC<
         {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
           props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
           <div className="container">
-            <Link to="/garments/add" className="btn btn-info">
+            <Link
+              to={"/seasons/" + props.match.params.season_id + "/garments/add"}
+              className="btn btn-info"
+            >
               Add New Garment
             </Link>
           </div>

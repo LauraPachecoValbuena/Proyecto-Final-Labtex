@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import { Switch, Route, RouteComponentProps } from "react-router";
 import ShowUsers from "./ShowUsers";
@@ -15,6 +15,7 @@ import { IColor } from "../interfaceColor";
 import { IUser } from "../interfaceIuser";
 import * as garmentActions from "../actions/garmentActions";
 import EditGarment from "./EditGarment";
+import { ISeason } from "../interfaceSeason";
 
 interface IPropsGlobal {
   token: string;
@@ -22,10 +23,12 @@ interface IPropsGlobal {
   users: IUser[];
   sizes: ISize[];
   colors: IColor[];
+  seasons: ISeason[];
   setUsers: (users: IUser[]) => void;
   setRoles: (roles: []) => void;
   setSizes: (sizes: ISize[]) => void;
   setColors: (colors: IColor[]) => void;
+  setSeasons: (seasons: ISeason[]) => void;
 }
 
 const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
@@ -97,6 +100,23 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
     }
   };
 
+  const getSeasons = () => {
+    if (props.token) {
+      fetch("http://localhost:3000/api/seasons/list", {
+        headers: {
+          "Content-type": "application/json",
+          Authorization: "Bearer " + props.token
+        }
+      }).then(response => {
+        if (response.ok) {
+          response.json().then(seasons => {
+            props.setSeasons(seasons);
+          });
+        }
+      });
+    }
+  };
+
   useEffect(() => {
     getRoles();
   }, []);
@@ -113,6 +133,10 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
     getUsers();
   }, []);
 
+  useEffect(() => {
+    getSeasons();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -121,10 +145,18 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
         <Route path="/users/" exact component={ShowUsers} />
         {/* <Route path="/users/edit/:user_id" exact component={EditUser} /> */}
         <Route path="/users/:user_id" exact component={EditUser} />
-        <Route path="/garments/add" exact component={AddGarment} />
-        <Route path="/garments/" exact component={ShowGarments} />
         <Route
-          path="/garments/edit/:garment_id"
+          path="/seasons/:season_id/garments/add"
+          exact
+          component={AddGarment}
+        />
+        <Route
+          path="/seasons/:season_id/garments/"
+          exact
+          component={ShowGarments}
+        />
+        <Route
+          path="/seasons/:season_id/garments/edit/:garment_id"
           exact
           component={EditGarment}
         />
@@ -138,14 +170,16 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   sizes: state.sizes,
   colors: state.colors,
-  users: state.users
+  users: state.users,
+  seasons: state.seasons
 });
 
 const mapDispatchToProps = {
   setRoles: userActions.setRoles,
   setUsers: userActions.setUsers,
   setSizes: garmentActions.setSizes,
-  setColors: garmentActions.setColors
+  setColors: garmentActions.setColors,
+  setSeasons: garmentActions.setSeasons
 };
 
 export default connect(

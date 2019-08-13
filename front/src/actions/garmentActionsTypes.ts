@@ -1,6 +1,7 @@
 import { IGarment } from '../interfaceIgarment';
 import { ISize } from '../interfaceSize';
 import { IColor } from '../interfaceColor';
+import { ISeason } from '../interfaceSeason';
 
 type TSetGarmentsAction = {
     type: "SET_GARMENTS";
@@ -33,10 +34,16 @@ type TSetColorsAction = {
     colors: IColor[];
 }
 
+type TSetSeasonsAction = {
+    type: "SET_SEASONS";
+    seasons: ISeason[];
+}
+
 export type TAction =
     | TSetGarmentsAction
     | TRemoveGarmentAction
     | TEditGarmentAction
     | TAddNewGarmentAction
     | TSetSizesAction
-    | TSetColorsAction;
+    | TSetColorsAction
+    | TSetSeasonsAction;

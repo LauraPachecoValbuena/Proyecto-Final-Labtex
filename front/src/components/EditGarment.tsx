@@ -9,6 +9,7 @@ import { IColor } from "../interfaceColor";
 import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
+import { ISeason } from "../interfaceSeason";
 
 interface IPropsGlobal {
   sizes: ISize[];
@@ -18,11 +19,12 @@ interface IPropsGlobal {
   garments: IGarment[];
   token: string;
   myUser: IMyUser;
+  seasons: ISeason[];
   editGarment: (garment_id: string, garment: IGarment) => void;
 }
 
 const EditGarment: React.FC<
-  IPropsGlobal & RouteComponentProps<{ garment_id: string }>
+  IPropsGlobal & RouteComponentProps<{ garment_id: string, season_id: string }>
 > = props => {
   const [reference, setReference] = React.useState("");
   const [description, setDescription] = React.useState("");
@@ -127,7 +129,7 @@ const EditGarment: React.FC<
       if (response.ok) {
         response.json().then(g => {
           props.editGarment(garment_id, g);
-          props.history.push("/garments/");
+          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
         });
       }
     });
@@ -141,7 +143,7 @@ const EditGarment: React.FC<
       if (response.ok) {
         response.json().then(g => {
           props.editGarment(garment_id, g);
-          props.history.push("/garments/");
+          props.history.push("/seasons/" + props.match.params.season_id + "/garments/");
         });
       }
     });
@@ -241,7 +243,8 @@ const mapStateToProps = (state: IGlobalState) => ({
   roles: state.roles,
   sizes: state.sizes,
   colors: state.colors,
-  garments: state.garments
+  garments: state.garments,
+
 });
 
 const mapDispatchToProps = {

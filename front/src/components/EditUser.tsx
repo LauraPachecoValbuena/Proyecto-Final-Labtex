@@ -247,6 +247,7 @@ const EditUser: React.FC<
                 <br />
               </div>
             )}
+            
             {editMode && (
               <>
                 <button

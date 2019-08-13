@@ -8,6 +8,7 @@ var apiGarmentsRouter = require("./apiGarments");
 var apiRolesRouter = require("./apiRoles");
 var apiSizesRouter = require("./apiSizes");
 var apiColorsRouter = require("./apiColors");
+var apiSeasonsRouter = require("./apiSeasons");
 
 //llamarlas
 // (/users) es la segunda parte de la url
@@ -17,6 +18,7 @@ router.use("/garments", apiGarmentsRouter);
 router.use("/roles", apiRolesRouter);
 router.use("/sizes", apiSizesRouter);
 router.use("/colors", apiColorsRouter);
+router.use("/seasons", apiSeasonsRouter);
 
 //exportar
 module.exports = router;
