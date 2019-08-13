@@ -47,7 +47,7 @@ const ShowGarments: React.FC<
 
   useEffect(() => {
     getGarments();
-  }, []);
+  }, [props.garments.length]);
 
   const Delete = (garment_id: string) => {
     const id = garment_id;
