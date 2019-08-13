@@ -79,7 +79,7 @@ const ShowGarments: React.FC<
                   <img
                     src={"http://localhost:3000/uploads/" + g.images[0]}
                     className="card-img-top"
-                    alt="Bomberg"
+                    alt="Prendas"
                   />
                 )}
                 <div className="card-body">

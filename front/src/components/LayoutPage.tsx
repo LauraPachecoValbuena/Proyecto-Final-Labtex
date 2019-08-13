@@ -16,6 +16,8 @@ import { IUser } from "../interfaceIuser";
 import * as garmentActions from "../actions/garmentActions";
 import EditGarment from "./EditGarment";
 import { ISeason } from "../interfaceSeason";
+import Search from "./Search";
+import { IGarment } from "../interfaceIgarment";
 
 interface IPropsGlobal {
   token: string;
@@ -24,11 +26,13 @@ interface IPropsGlobal {
   sizes: ISize[];
   colors: IColor[];
   seasons: ISeason[];
+  garments: IGarment[];
   setUsers: (users: IUser[]) => void;
   setRoles: (roles: []) => void;
   setSizes: (sizes: ISize[]) => void;
   setColors: (colors: IColor[]) => void;
   setSeasons: (seasons: ISeason[]) => void;
+  setGarments: (garments: []) => void;
 }
 
 const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
@@ -117,6 +121,23 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
     }
   };
 
+  const getGarments = () => {
+    if (props.token) {
+      fetch("http://localhost:3000/api/garments/list", {
+        headers: {
+          "Content-type": "application/json",
+          Authorization: "Bearer " + props.token
+        }
+      }).then(response => {
+        if (response.ok) {
+          response.json().then(garments => {
+            props.setGarments(garments);
+          });
+        }
+      });
+    }
+  };
+
   useEffect(() => {
     getRoles();
   }, []);
@@ -135,6 +156,10 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
 
   useEffect(() => {
     getSeasons();
+  }, []);
+
+  useEffect(() => {
+    getGarments();
   }, []);
 
   return (
@@ -160,6 +185,11 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = props => {
           exact
           component={EditGarment}
         />
+        <Route
+          path="/search"
+          exact
+          component={Search}
+        />
       </Switch>
     </div>
   );
@@ -171,7 +201,8 @@ const mapStateToProps = (state: IGlobalState) => ({
   sizes: state.sizes,
   colors: state.colors,
   users: state.users,
-  seasons: state.seasons
+  seasons: state.seasons,
+  garments: state.garments
 });
 
 const mapDispatchToProps = {
@@ -179,7 +210,8 @@ const mapDispatchToProps = {
   setUsers: userActions.setUsers,
   setSizes: garmentActions.setSizes,
   setColors: garmentActions.setColors,
-  setSeasons: garmentActions.setSeasons
+  setSeasons: garmentActions.setSeasons,
+  setGarments: garmentActions.setGarments
 };
 
 export default connect(

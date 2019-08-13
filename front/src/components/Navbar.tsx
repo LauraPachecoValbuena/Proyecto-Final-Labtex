@@ -87,15 +87,15 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             Users
           </Link>
 
-          <input
+          {/* <input
             className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
-          />
-          <button className="btn btn-outline-info my-2 my-sm-0" type="submit">
+          /> */}
+          <Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
             Search
-          </button>
+          </Link>
 
           <button
             className="btn btn-outline-info my-2 my-sm-0"
