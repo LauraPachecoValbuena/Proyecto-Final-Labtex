@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 import { Link, RouteComponentProps, Redirect } from "react-router-dom";
 import { IMyUser } from "../reducers/myUserReducer";
 import "./styles/ShowUsers.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashAlt, faAddressCard, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 // import 'bootstrap/dist/css/bootstrap.css';
 
 interface IPropsGlobal {
@@ -111,7 +113,7 @@ const ShowUsers: React.FC<
                       to={"/users/" + u._id}
                       className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
                     >
-                      Profile
+                      <FontAwesomeIcon icon={faAddressCard} />
                     </Link>
                   </td>
 
@@ -121,7 +123,7 @@ const ShowUsers: React.FC<
                         className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
                         onClick={() => Delete(u._id)}
                       >
-                        Delete
+                        <FontAwesomeIcon icon={faTrashAlt} />
                       </div>
                     </td>
                   )}
@@ -131,7 +133,7 @@ const ShowUsers: React.FC<
           </table>
           {props.myUser.isAdmin && (
             <Link to="/users/add" className="btn btn-info my-2 my-sm-0 btnaddUsers">
-              Add New User
+              <FontAwesomeIcon icon={faUserPlus} />
             </Link>
           )}
         </div>

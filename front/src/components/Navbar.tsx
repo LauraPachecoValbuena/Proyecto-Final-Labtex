@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import ShowGarments from "./ShowGarments";
 import "./styles/Navbar.css";
 import { ISeason } from "../interfaceSeason";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faSignOutAlt, faUsers, faUserCircle, faSearch, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 // import "./styles/materialize.min.css";
 // const materialize = require("react-materialize");
 // import logo from './images/LogoLabtex.png';
@@ -61,8 +63,8 @@ const Navbar: React.FC<IPropsGlobal> = props => {
                 {props.seasons.map(s => (
                   <Link
                     to={"/seasons/" + s._id + "/garments/"}
-					className="dropdown-item"
-					key={s._id}
+                    className="dropdown-item"
+                    key={s._id}
                   >
                     {s.name}
                   </Link>
@@ -80,11 +82,11 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             to={"/users/" + props.myUser.id}
             className="btn btn-outline-info my-2 my-sm-0"
           >
-            Profile
+            <FontAwesomeIcon icon={faUserCircle} />
           </Link>
 
           <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
-            Users
+          <FontAwesomeIcon icon={faUsers} />
           </Link>
 
           {/* <input
@@ -94,7 +96,7 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             aria-label="Search"
           /> */}
           <Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
-            Search
+          <FontAwesomeIcon icon={faSearch} />
           </Link>
 
           <button
@@ -107,7 +109,7 @@ const Navbar: React.FC<IPropsGlobal> = props => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            Logout
+            <FontAwesomeIcon icon={faPowerOff} />
           </button>
         </form>
       </nav>
