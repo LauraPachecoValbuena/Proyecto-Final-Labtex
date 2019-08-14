@@ -58,49 +58,58 @@ const Search: React.FC<
             onChange={search}
           />
           <br />
-          {props.garments
-            .filter(g => g.reference.startsWith(searchInput))
-            .map(g => (
-              <div key={g._id} className="col-5 border-secondary mb-3">
-                <div className="card">
-                  {g.images && (
-                    <img
-                      src={"http://localhost:3000/uploads/" + g.images[0]}
-                      className="card-img-top"
-                      alt="Prendas"
-                    />
-                  )}
-                  <div className="card-body">
-                    <h3 className="card-title">{g.reference}</h3>
-                    <p className="card-text">{g.description}</p>
-                    <Link
-                      to={"/seasons/" + g.season + "/garments/edit/" + g._id}
-                      className="btn btn-info"
-                    >
-                      {" "}
-                      Edit
-                    </Link>
-                    {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
-                      props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
-                      <div
-                        className="btn btn-info delete-garment"
-                        onClick={() => Delete(g._id)}
-                      >
-                        Delete
-                      </div>
+          {searchInput.length > 0 &&
+            props.garments
+              .filter(g => g.reference.startsWith(searchInput))
+              .map(g => (
+                <div key={g._id} className="col-5 border-secondary mb-3">
+                  <div className="card">
+                    {g.images && (
+                      <img
+                        src={"http://localhost:3000/uploads/" + g.images[0]}
+                        className="card-img-top"
+                        alt="Prendas"
+                      />
                     )}
+                    <div className="card-body">
+                      <h3 className="card-title">{g.reference}</h3>
+                      <p className="card-text">{g.description}</p>
+                      <Link
+                        to={"/seasons/" + g.season + "/garments/edit/" + g._id}
+                        className="btn btn-info"
+                      >
+                        {" "}
+                        Edit
+                      </Link>
+                      {(props.myUser.role === "5d3ebb9c17fb7b60d454b0a8" ||
+                        props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
+                        <div
+                          className="btn btn-info delete-garment"
+                          onClick={() => Delete(g._id)}
+                        >
+                          Delete
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
         </div>
 
         <div className="col-5">
+        {searchInput.length > 0 &&
+                  props.users
+                    .filter(u =>
+                      u.username
+                        .toLowerCase()
+                        .startsWith(searchInput.toLowerCase())
+                    ).length > 0 && (
           <div
             className="row table-responsive-sm justify-content-center"
             id="table"
           >
             <table className="table table-bordered table-hover ">
+            {/* {searchInput.length > 0 &&  */}
               <thead>
                 <tr>
                   <th scope="col">Username</th>
@@ -115,48 +124,52 @@ const Search: React.FC<
                   {props.myUser.isAdmin && <th />}
                 </tr>
               </thead>
+              
+            {/* } */}
               <tbody>
-                {props.users
-                  .filter(u =>
-                    u.username
-                      .toLowerCase()
-                      .startsWith(searchInput.toLowerCase())
-                  )
-                  .map(u => (
-                    //   <div>{u.username}</div>
-                    <tr key={u._id}>
-                      <td>{u.username}</td>
-                      <td>{u.surname}</td>
-                      <td>{u.email}</td>
-                      <td>{u.mobile}</td>
-                      <td>{u.companyName}</td>
-                      <td>{u.country}</td>
-                      {props.myUser.isAdmin && <td> {u.isAdmin + ""}</td>}
-                      {props.myUser.isAdmin && <td>{u.role.name}</td>}
-                      <td>
-                        <Link
-                          to={"/users/" + u._id}
-                          className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
-                        >
-                          Profile
-                        </Link>
-                      </td>
-
-                      {props.myUser.isAdmin && (
+                {searchInput.length > 0 &&
+                  props.users
+                    .filter(u =>
+                      u.username
+                        .toLowerCase()
+                        .startsWith(searchInput.toLowerCase())
+                    )
+                    .map(u => (
+                      //   <div>{u.username}</div>
+                      <tr key={u._id}>
+                        <td>{u.username}</td>
+                        <td>{u.surname}</td>
+                        <td>{u.email}</td>
+                        <td>{u.mobile}</td>
+                        <td>{u.companyName}</td>
+                        <td>{u.country}</td>
+                        {props.myUser.isAdmin && <td> {u.isAdmin + ""}</td>}
+                        {props.myUser.isAdmin && <td>{u.role.name}</td>}
                         <td>
-                          <div
+                          <Link
+                            to={"/users/" + u._id}
                             className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
-                            onClick={() => Delete(u._id)}
                           >
-                            Delete
-                          </div>
+                            Profile
+                          </Link>
                         </td>
-                      )}
-                    </tr>
-                  ))}
+
+                        {props.myUser.isAdmin && (
+                          <td>
+                            <div
+                              className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
+                              onClick={() => Delete(u._id)}
+                            >
+                              Delete
+                            </div>
+                          </td>
+                        )}
+                      </tr>
+                    ))}
               </tbody>
             </table>
           </div>
+          )}
         </div>
       </div>
     </div>

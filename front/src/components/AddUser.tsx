@@ -6,6 +6,8 @@ import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { IRole } from "../interfaceRole";
+import ShowUsers from "./ShowUsers";
+import { Link } from "react-router-dom";
 
 interface IPropsGlobal {
   roles: IRole[];
@@ -183,6 +185,12 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             >
               Save
             </button>
+
+            <Link to={"/users/"}
+              className="btn btn-outline-info"
+            >
+              Cancel
+            </Link>
           </div>
         </div>
       </div>

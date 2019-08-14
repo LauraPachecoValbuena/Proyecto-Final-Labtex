@@ -195,11 +195,17 @@ const AddGarment: React.FC<
             <br />
             <Link
               to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              type="submit"
               className="btn btn-outline-info"
               onClick={Add}
             >
               Save
+            </Link>
+
+            <Link
+              to={"/seasons/" + props.match.params.season_id + "/garments/"}
+              className="btn btn-outline-info"
+            >
+              Cancel
             </Link>
           </div>
         </div>

@@ -10,6 +10,7 @@ import { IGlobalState } from "../reducers/reducers";
 import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { ISeason } from "../interfaceSeason";
+import { Link } from "react-router-dom";
 
 interface IPropsGlobal {
   sizes: ISize[];
@@ -151,7 +152,7 @@ const EditGarment: React.FC<
       <div className="row justify-content-center">
         <div className="col-6">
           <div className="form-group" id="formEdit">
-            <h3>Garment Details</h3>
+            <h3>Garment's Details</h3>
             <br />
             <h4>Reference</h4>
             <input
@@ -225,6 +226,13 @@ const EditGarment: React.FC<
             >
               Save
             </button>
+
+            <Link
+              to={"/seasons/" + props.match.params.season_id + "/garments/"}
+              className="btn btn-outline-info"
+            >
+              Cancel
+            </Link>
           </div>
         </div>
       </div>

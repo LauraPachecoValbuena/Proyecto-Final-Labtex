@@ -20,6 +20,7 @@ const ShowUsers: React.FC<
   IPropsGlobal & RouteComponentProps<{ user_id: string }>
 > = props => {
   const user = props.users.find(u => u._id === props.match.params.user_id);
+  
 
   const getUsers = () => {
     if (props.token) {
@@ -84,7 +85,18 @@ const ShowUsers: React.FC<
               </tr>
             </thead>
             <tbody>
-              {props.users.map(u => (
+              {props.users.sort((a,b)=> {
+                let nameA = a.username.toLowerCase();
+                let nameB = b.username.toLowerCase();
+              
+                if (nameA < nameB){
+                  return -1;
+                }
+                if (nameA > nameB){
+                  return 1;
+                }
+                return 0;
+              }).map(u => (
                 <tr key={u._id}>
                   <td>{u.username}</td>
                   <td>{u.surname}</td>

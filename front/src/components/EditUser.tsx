@@ -234,7 +234,7 @@ const EditUser: React.FC<
             </div>
             {props.myUser.isAdmin && (
               <div className="form-group">
-                <h4>Administrador</h4>
+                <h4>Administrator</h4>
                 {editMode && (
                   <input
                     type="checkbox"
@@ -247,7 +247,7 @@ const EditUser: React.FC<
                 <br />
               </div>
             )}
-            
+
             {editMode && (
               <>
                 <button
@@ -264,7 +264,7 @@ const EditUser: React.FC<
                 </button>
               </>
             )}
-            {props.myUser.isAdmin && (
+            {ICanSee && (
               <div>
                 {!editMode && (
                   <button

@@ -39,10 +39,10 @@ const Navbar: React.FC<IPropsGlobal> = props => {
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                HOME <span className="sr-only">(current)</span>
-              </a>
+            <li className="nav-item">
+              <Link to={"/"}>
+                HOME {/*<span className="sr-only">(current)</span>*/}
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
