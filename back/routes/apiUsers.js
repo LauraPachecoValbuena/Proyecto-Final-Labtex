@@ -67,9 +67,10 @@ router.put("/edit/:id", async (req, res) => {
         {
           ...(req.body.username != null && { username: req.body.username }),
           ...(req.body.email != null && { email: req.body.email }),
-          ...(req.body.password != null && {
-            password: md5(req.body.password)
-          }),
+          ...(req.body.password != null &&
+            req.body.password.length > 0 && {
+              password: md5(req.body.password)
+            }),
           ...(req.body.surname != null && { surname: req.body.surname }),
           ...(req.body.mobile != null && { mobile: req.body.mobile }),
           ...(req.body.companyName != null && {
@@ -89,7 +90,9 @@ router.put("/edit/:id", async (req, res) => {
         {
           ...(req.body.username != null && { username: req.body.username }),
           ...(req.body.email != null && { email: req.body.email }),
-          ...(req.body.password != null && { password: md5(req.body.password) }),
+          ...(req.body.password != null && {
+            password: md5(req.body.password)
+          }),
           ...(req.body.surname != null && { surname: req.body.surname }),
           ...(req.body.mobile != null && { mobile: req.body.mobile }),
           ...(req.body.companyName != null && {
@@ -109,7 +112,6 @@ router.put("/edit/:id", async (req, res) => {
     res.status(400).send(e);
   }
 });
-
 
 //aqui estamos añadiendo un usuario nuevo.
 router.post("/add", (req, res) => {
