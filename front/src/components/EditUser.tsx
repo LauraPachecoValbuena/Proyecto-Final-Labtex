@@ -6,7 +6,7 @@ import * as actions from "../actions/userActions";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserEdit, faSave } from "@fortawesome/free-solid-svg-icons";
+import { faUserEdit, faSave, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 
 interface IPropsGlobal {
   users: IUser[];
@@ -258,14 +258,17 @@ const EditUser: React.FC<
                 >
                   <FontAwesomeIcon icon={faSave} />
                 </button>
+                
                 <button
                   className="btn btn-outline-info my-2 my-sm-0"
                   onClick={updateEditMode}
                 >
                   Cancel
+                  <FontAwesomeIcon icon={faWindowClose} />
                 </button>
               </>
             )}
+            
             {ICanSee && (
               <div>
                 {!editMode && (
