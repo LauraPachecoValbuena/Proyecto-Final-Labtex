@@ -47,9 +47,9 @@ const Search: React.FC<
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
-        <div className="col-4">
+        <div className="col-12">
           <h4>Search:</h4>
           <input
             type="text"
@@ -96,7 +96,7 @@ const Search: React.FC<
               ))}
         </div>
 
-        <div className="col-5">
+        <div className="col-12 ">
         {searchInput.length > 0 &&
                   props.users
                     .filter(u =>
