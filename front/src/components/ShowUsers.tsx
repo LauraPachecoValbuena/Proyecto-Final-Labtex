@@ -111,7 +111,7 @@ const ShowUsers: React.FC<
                   <td>
                     <Link
                       to={"/users/" + u._id}
-                      className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
+                      className="btn my-2 my-sm-0 btnshowUsers"
                     >
                       <FontAwesomeIcon icon={faAddressCard} />
                     </Link>
@@ -120,7 +120,7 @@ const ShowUsers: React.FC<
                   {props.myUser.isAdmin && (
                     <td>
                       <div
-                        className="btn btn-outline-info my-2 my-sm-0 btnshowUsers"
+                        className="btn my-2 my-sm-0 btnshowUsers"
                         onClick={() => Delete(u._id)}
                       >
                         <FontAwesomeIcon icon={faTrashAlt} />

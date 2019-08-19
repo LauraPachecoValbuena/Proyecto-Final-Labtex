@@ -8,6 +8,9 @@ import { connect } from "react-redux";
 import { IRole } from "../interfaceRole";
 import ShowUsers from "./ShowUsers";
 import { Link } from "react-router-dom";
+import "./styles/AddUser.css";
+import { faSave, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IPropsGlobal {
   roles: IRole[];
@@ -180,16 +183,16 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             </div>
             <button
               type="submit"
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnSaveUser"
               onClick={Add}
             >
-              Save
+              <FontAwesomeIcon icon={faSave} />
             </button>
 
             <Link to={"/users/"}
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnCancelUser"
             >
-              Cancel
+              <FontAwesomeIcon icon={faWindowClose} />
             </Link>
           </div>
         </div>

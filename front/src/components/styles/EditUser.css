@@ -1,0 +1,50 @@
+.btnEditUser {
+    color: #1FA5A5 !important;
+    /* border-color: #1FA5A5 !important; */
+    border-color: transparent !important;
+}
+
+.btnEditUser:hover {
+    color: white !important;
+    background-color: #1FA5A5 !important;
+    border-color: transparent !important;
+}
+
+.btnSaveUser.btnCancelUser {
+    color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+
+.btnSaveUser.btnCancelUser:hover {
+    color: white !important;
+    background-color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+
+.btn-outline-info {
+    color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+
+.btnCancelUser{
+    margin-left: 20px;
+}
+  
+.btnSaveUser{
+    margin-left: 220px;   
+}
+
+.row justify-content-center EditUser{
+    margin-left: 40px !important;
+}
+
+#formEdit {
+    margin-top: 80px !important;
+
+}

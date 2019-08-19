@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserEdit, faSave, faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import "./styles/EditUser.css";
 
 interface IPropsGlobal {
   users: IUser[];
@@ -121,8 +122,8 @@ const EditUser: React.FC<
 
   return (
     <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-6">
+      <div className="row justify-content-center EditUser">
+        <div className="col-6 EditUser">
           <div className="form-group" id="formEdit">
             <h3>Personal Details</h3>
             <br />
@@ -253,17 +254,17 @@ const EditUser: React.FC<
             {editMode && (
               <>
                 <button
-                  className="btn btn-outline-info my-2 my-sm-0"
+                  className="btn btn-outline-info my-2 my-sm-0 btnSaveUser"
                   onClick={() => Edit(user._id)}
                 >
                   <FontAwesomeIcon icon={faSave} />
                 </button>
                 
                 <button
-                  className="btn btn-outline-info my-2 my-sm-0"
+                  className="btn btn-outline-info my-2 my-sm-0 btnCancelUser"
                   onClick={updateEditMode}
                 >
-                  Cancel
+                  
                   <FontAwesomeIcon icon={faWindowClose} />
                 </button>
               </>
@@ -273,7 +274,7 @@ const EditUser: React.FC<
               <div>
                 {!editMode && (
                   <button
-                    className="btn btn-outline-info my-2 my-sm-0"
+                    className="btn btn-outline-info my-2 my-sm-0 btnEditUser"
                     onClick={updateEditMode}
                   >
                      <FontAwesomeIcon icon={faUserEdit} />

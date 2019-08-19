@@ -1,12 +1,29 @@
-/* .btnshowUsers {
+.btnshowUsers {
   color: #1FA5A5 !important;
-  border-color: #1FA5A5 !important;
-} */
+  border-color: transparent !important;
+}
 .btnshowUsers:hover {
   color: white !important;
   background-color: #1FA5A5 !important;
-  border-color: #1FA5A5 !important;
+  border-color: transparent !important;
 }
+
+/* .btn-outline-info {
+  color: #1FA5A5 !important;
+  border-color: transparent !important;
+}
+
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #1FA5A5 !important;
+  border-color: #1FA5A5 !important;
+} */
+
+/* .btn-info {
+  color: #fff;
+  background-color: transparent !important;
+  border-color: #1FA5A5;
+} */
 
 .btnaddUsers {
     color: #fff !important;
@@ -40,3 +57,7 @@
     cursor: pointer;
     border: 1px solid;
 } */
+
+#table {
+  margin-top: 80px !important;
+}
