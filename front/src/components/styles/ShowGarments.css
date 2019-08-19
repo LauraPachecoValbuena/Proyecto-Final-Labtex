@@ -1,0 +1,59 @@
+.row{
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+    margin-left: 20px !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    /* width: 16rem; */
+    /* font-size: 14pt; */
+    
+}
+
+.card-img-top{
+    margin-top: 40px;
+}
+
+.car-body{
+    justify-content: center !important;
+    padding: 0px !important;
+}
+
+.card-text, .card-title {
+    text-align: center !important;
+    color: #1FA5A5 !important;
+}
+
+.btnDeleteGarment {
+    color: #1FA5A5 !important;
+    border-color: transparent !important;
+    display: inline inline-block !important;
+}
+.btnDeleteGarment:hover {
+    color: white !important;
+    background-color: #1FA5A5 !important;
+    border-color: transparent !important;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+    /* outline: 0 !important; */
+}
+
+.btnEditGarment {
+    color: #1FA5A5 !important;
+    border-color: transparent !important;
+    margin-left: 60px !important;
+}
+
+.btnEditGarment:hover {
+    color: white !important;
+    background-color: #1FA5A5 !important;
+    border-color: transparent !important;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+    /* outline: 0 !important; */
+}
+
+.btnaddGarments {
+    color: #fff !important;
+    background-color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}

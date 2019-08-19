@@ -11,6 +11,9 @@ import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { ISeason } from "../interfaceSeason";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSave, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import "./styles/AddGarment.css";
 
 interface IPropsGlobal {
   roles: IRole[];
@@ -125,7 +128,7 @@ const AddGarment: React.FC<
       <div className="row justify-content-center">
         <div className="col-6">
           <div className="form-group" id="formEdit">
-            <h3>Garment Details</h3>
+            <h3>Garment's Details</h3>
             <br />
             <h4>Reference</h4>
             <input
@@ -156,7 +159,7 @@ const AddGarment: React.FC<
             />
             <br />
 
-            <h4>Colors</h4>
+            <h4>Colors:</h4>
             <select onChange={updateColors} multiple>
               {props.colors.map(c => (
                 <option key={c._id} value={c._id}>
@@ -165,8 +168,9 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
+            <br/>
 
-            <h4>Sizes</h4>
+            <h4>Sizes:</h4>
             <select onChange={updateSizes} multiple>
               {props.sizes.map(s => (
                 <option key={s._id} value={s._id}>
@@ -175,8 +179,9 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
+            <br/>
 
-            <h4>Users</h4>
+            <h4>Users:</h4>
             <select onChange={updateUsers} multiple>
               {props.users.map(u => (
                 <option key={u._id} value={u._id}>
@@ -185,28 +190,34 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
+            <br/>
 
-            <h4>Images</h4>
+            <h4>Images:</h4>
             <input
               type="file"
               className="btn btn-info"
               onChange={updateImage}
             />
             <br />
+            <br/>
+            <div className="botones">
             <Link
               to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
+              id="add"
               onClick={Add}
             >
-              Save
+              <FontAwesomeIcon icon={faSave} />
             </Link>
 
             <Link
               to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
+              id="cancel"
             >
-              Cancel
+              <FontAwesomeIcon icon={faWindowClose} />
             </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,19 @@
+.btnSaveGarment.btnCancelGarment {
+    color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+
+}
+
+.btnSaveGarment.btnCancelGarment:hover {
+    color: white !important;
+    background-color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+/* .from-group {
+    text-align: center !important;
+} */
+
+.botones {
+    text-align: center !important;
+    
+}

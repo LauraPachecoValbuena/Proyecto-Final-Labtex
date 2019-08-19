@@ -161,7 +161,8 @@ const Login: React.FC<IProps> = props => {
     //     </div>
     //   </div>
     // </div>
-    <div className="container">
+    <div className="container login">
+    
       <div className="d-flex justify-content-center">
         ​
         <div className="col-md-6 col-lg-5">
@@ -174,8 +175,8 @@ const Login: React.FC<IProps> = props => {
                 className="logo"
                 src="images/LogoLabtex.png"
                 alt=""
-                width="70"
-                height="60"
+                width="90"
+                height="58"
               />
               <div className="text-center">
                 <h3 className="dark-grey-text mb-5">

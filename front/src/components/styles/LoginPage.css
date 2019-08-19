@@ -1,3 +1,6 @@
+/* .container login {
+  background-image: url("FondoLogin.jpg");
+} */
 #azul1,
 #azul2 {
   color: #1fa5a5 !important;
@@ -48,6 +51,12 @@
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
 }
+
+.logo {
+  margin-left: 120px; 
+  margin-top: 20px;
+}
+
 .text-center {
   text-align: center !important;
 }
@@ -188,6 +197,4 @@ strong {
   top: 275px !important;
 }
 
-.logo {
-  margin-left: 120px;
-}
+

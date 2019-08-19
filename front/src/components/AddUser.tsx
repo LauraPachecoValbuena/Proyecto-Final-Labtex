@@ -165,13 +165,14 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
               onChange={updateCountry}
             />
             <br />
-            <h4>Role</h4>
+            <h4>Role:</h4>
             <select onChange={updateRole}>
               {props.roles.map(r => (
                 <option value={r._id}>{r.name}</option>
               ))}
             </select>
             <br />
+            <br/>
             <div className=" form-group form-check">
               <h4>Administrator</h4>
               <input
@@ -181,6 +182,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
               />
               <br />
             </div>
+            <div className="botones">
             <button
               type="submit"
               className="btn btn-outline-info my-2 my-sm-0 btnSaveUser"
@@ -194,6 +196,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             >
               <FontAwesomeIcon icon={faWindowClose} />
             </Link>
+            </div>
           </div>
         </div>
       </div>
