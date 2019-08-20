@@ -1,6 +1,9 @@
-/* .container login {
-  background-image: url("FondoLogin.jpg");
-} */
+.BackgroundImageLogin{
+  background-image: url("/images/FondoLogin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 #azul1,
 #azul2 {
   color: #1fa5a5 !important;
@@ -44,6 +47,8 @@
   border: 0;
   font-weight: 400;
   width: 400px;
+  background-color: rgba(239,239,239, 0.8);
+  
 }
 .card-body-login {
   padding-top: 1.5rem;
