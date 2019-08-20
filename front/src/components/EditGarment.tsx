@@ -11,6 +11,9 @@ import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { ISeason } from "../interfaceSeason";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSave, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import "./styles/EditGarment.css";
 
 interface IPropsGlobal {
   sizes: ISize[];
@@ -182,7 +185,7 @@ const EditGarment: React.FC<
             />
             <br />
 
-            <h4>Colors</h4>
+            <h4>Colors:</h4>
             <select value={colors} onChange={updateColors} multiple>
               {props.colors.map(c => (
                 <option key={c._id} value={c._id}>
@@ -192,7 +195,7 @@ const EditGarment: React.FC<
             </select>
             <br />
 
-            <h4>Sizes</h4>
+            <h4>Sizes:</h4>
             <select value={sizes} onChange={updateSizes} multiple>
               {props.sizes.map(s => (
                 <option key={s._id} value={s._id}>
@@ -202,8 +205,8 @@ const EditGarment: React.FC<
             </select>
             <br />
 
-            <h4>Users</h4>
-            <select value={users} onChange={updateUsers} multiple>
+            <h4>Users:</h4>
+            <select value={users} onChange={updateUsers} multiple className="selectMultiple">
               {props.users.map(u => (
                 <option key={u._id} value={u._id}>
                   {u.username}
@@ -219,20 +222,23 @@ const EditGarment: React.FC<
               onChange={updateImages}
             />
             <br />
+            <br/>
+            <div className="botones">
             <button
               type="submit"
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
               onClick={() => Edit(garment._id)}
             >
-              Save
+              <FontAwesomeIcon icon={faSave} />
             </button>
 
             <Link
               to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info"
+              className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
             >
-              Cancel
+              <FontAwesomeIcon icon={faWindowClose} />
             </Link>
+            </div>
           </div>
         </div>
       </div>

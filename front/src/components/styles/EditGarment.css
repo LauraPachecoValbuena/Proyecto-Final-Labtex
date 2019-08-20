@@ -1,0 +1,18 @@
+.btn-info input{
+    color: #fff;
+    background-color: #1FA5A5 !important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #1FA5A5 !important;
+    border-color: #1FA5A5 !important;
+}
+
+.selectMultiple{
+    border-color: transparent !important;
+    cursor: all-scroll;
+    background: scroll;  
+
+}
+
