@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import Navbar from './Navbar';
 import { Switch, Route, RouteComponentProps } from 'react-router';
 import ShowUsers from './ShowUsers';
@@ -18,7 +18,8 @@ import EditGarment from './EditGarment';
 import { ISeason } from '../interfaceSeason';
 import Search from './Search';
 import { IGarment } from '../interfaceIgarment';
-import "./styles/LayoutPage.css";
+import './styles/LayoutPage.css';
+import LayoutBackground from './LayoutBackground';
 
 interface IPropsGlobal {
 	token: string;
@@ -164,33 +165,14 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = (props) => {
 	}, []);
 
 	return (
-		// <div className="carouselLayout">
-		// 	<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-		// 		<div className="carousel-inner">
-		// 			<div className="carousel-item active">
-		// 				<img className="d-block w-80" src="/images/Interfaz Layout1.png" alt="First slide" />
-		// 			</div>
-		// 			<div className="carousel-item">
-		// 				<img className="d-block w-80" src="/images/Interfaz Layout2.png" alt="Second slide" />
-		// 			</div>
-		// 		</div>
-		// 		<a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-		// 			<span className="carousel-control-prev-icon" aria-hidden="true" />
-		// 			<span className="sr-only">Previous</span>
-		// 		</a>
-		// 		<a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-		// 			<span className="carousel-control-next-icon" aria-hidden="true" />
-		// 			<span className="sr-only">Next</span>
-		// 		</a>
-		// 	</div>
-    //   </div>
+		<Fragment>
+			<Navbar />
+			<Route path="/" exact component={LayoutBackground} />
 
-			<div>
-				<Navbar />
+			<div className="rutas">
 				<Switch>
 					<Route path="/users/add" exact component={AddUser} />
 					<Route path="/users/" exact component={ShowUsers} />
-					{/* <Route path="/users/edit/:user_id" exact component={EditUser} /> */}
 					<Route path="/users/:user_id" exact component={EditUser} />
 					<Route path="/seasons/:season_id/garments/add" exact component={AddGarment} />
 					<Route path="/seasons/:season_id/garments/" exact component={ShowGarments} />
@@ -198,7 +180,7 @@ const LayoutPage: React.FC<IPropsGlobal & RouteComponentProps> = (props) => {
 					<Route path="/search" exact component={Search} />
 				</Switch>
 			</div>
-		
+		</Fragment>
 	);
 };
 

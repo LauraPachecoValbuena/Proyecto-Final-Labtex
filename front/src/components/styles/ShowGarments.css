@@ -19,11 +19,17 @@
     justify-content: center !important;
     padding: 0px !important;
     height: 161px !important;
+    /* justify-items: flex-end !important; */
+
 }
 
 .card-text, .card-title {
     text-align: center !important;
     color: #1FA5A5 !important;
+}
+.GarmentsButtons {
+    position: absolute !important;
+    bottom: 0 !important;
 }
 
 .btnDeleteGarment {

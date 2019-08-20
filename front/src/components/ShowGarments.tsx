@@ -85,6 +85,7 @@ const ShowGarments: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: str
 						<div className="card-body">
 							<h3 className="card-title">{g.reference}</h3>
 							<p className="card-text">{g.description}</p>
+              <div className="GarmentsButtons">
 							<Link
 								to={'/seasons/' + props.match.params.season_id + '/garments/edit/' + g._id}
 								className="btn my-2 my-sm-0 btnEditGarment"
@@ -97,7 +98,8 @@ const ShowGarments: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: str
 								<div className="btn my-2 my-sm-0 btnDeleteGarment" onClick={() => Delete(g._id)}>
 									<FontAwesomeIcon icon={faTrashAlt} />
 								</div>
-							)}
+              )}
+              </div>
 						</div>
 					</div>
 					/* </div> */
