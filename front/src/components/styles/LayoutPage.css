@@ -2,6 +2,11 @@
     background-image: url("/images/Interfaz Layout1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
-    width: 80vw;
+    /* background-position: center; */
+    /* max-height: 100%; */
+    height: 100vh;
+    /* max-width: 100%; */
+    /* width: 97vw; */
+
+    
 }

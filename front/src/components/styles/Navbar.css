@@ -1,3 +1,40 @@
+.LogoNavbar{
+  margin-top: 30px;
+  margin-left: 25px;
+  
+}
+.nav-link{
+  font-weight: bolder;
+  color: #575756 !important;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+.usernameLayout{
+  font-weight: bolder;
+  color: #575756 !important;
+  font-size: 16pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos SIDEBAR 
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -30,7 +67,7 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*    
+     
     .collapsed{
        .arrow:before{
                  font-family: FontAwesome;
@@ -42,7 +79,7 @@
                  float:right;
             }
      }
-*/
+
 }
 
 .nav-side-menu ul:not(collapsed) .arrow:before,
@@ -159,4 +196,4 @@
 body {
   margin: 0px;
   padding: 0px;
-}
+} */
