@@ -85,21 +85,21 @@ const ShowGarments: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: str
 						<div className="card-body">
 							<h3 className="card-title">{g.reference}</h3>
 							<p className="card-text">{g.description}</p>
-              <div className="GarmentsButtons">
-							<Link
-								to={'/seasons/' + props.match.params.season_id + '/garments/edit/' + g._id}
-								className="btn my-2 my-sm-0 btnEditGarment"
-							>
-								{' '}
-								<FontAwesomeIcon icon={faEdit} />
-							</Link>
-							{(props.myUser.role === '5d3ebb9c17fb7b60d454b0a8' ||
-								props.myUser.role === '5d3ebc4b17fb7b60d454b0f2') && (
-								<div className="btn my-2 my-sm-0 btnDeleteGarment" onClick={() => Delete(g._id)}>
-									<FontAwesomeIcon icon={faTrashAlt} />
-								</div>
-              )}
-              </div>
+							<div className="GarmentsButtons">
+								<Link
+									to={'/seasons/' + props.match.params.season_id + '/garments/edit/' + g._id}
+									className="btn my-2 my-sm-0 btnEditGarment"
+								>
+									{' '}
+									<FontAwesomeIcon icon={faEdit} />
+								</Link>
+								{(props.myUser.role === '5d3ebb9c17fb7b60d454b0a8' ||
+									props.myUser.role === '5d3ebc4b17fb7b60d454b0f2') && (
+									<div className="btn my-2 my-sm-0 btnDeleteGarment" onClick={() => Delete(g._id)}>
+										<FontAwesomeIcon icon={faTrashAlt} />
+									</div>
+								)}
+							</div>
 						</div>
 					</div>
 					/* </div> */
@@ -113,8 +113,8 @@ const ShowGarments: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: str
 									to={'/seasons/' + props.match.params.season_id + '/garments/add'}
 									className="btn btn-info my-2 my-sm-0 btnaddGarments"
 								>
-                  <FontAwesomeIcon icon={faPlusCircle} />
-                  <br/>
+									<FontAwesomeIcon icon={faPlusCircle} />
+									<br />
 									New
 								</Link>
 							</div>
