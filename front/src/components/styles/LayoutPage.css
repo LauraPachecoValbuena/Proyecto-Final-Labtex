@@ -1,12 +1,8 @@
 .BackgroundImageLayout{
     background-image: url("/images/Interfaz Layout1.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
-    /* max-height: 100%; */
+    background-position: top;
     height: 100vh;
-    /* max-width: 100%; */
-    /* width: 97vw; */
+    overflow: hidden;
 
-    
 }

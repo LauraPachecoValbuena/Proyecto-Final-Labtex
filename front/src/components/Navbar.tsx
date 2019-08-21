@@ -82,10 +82,14 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 					</ul>
 				</div>
 
-				<a className="navbar-text">
-					<strong className="usernameLayout">{props.myUser.username}</strong>
-				</a>
 				<form className="form-inline">
+					<div>
+						<a className="navbar-text">
+							<strong className="usernameLayout">{props.myUser.username}</strong>
+						</a>
+					</div>
+				
+					<div>
 					<Link to={'/users/' + props.myUser.id} className="btn btn-outline-info my-2 my-sm-0">
 						<FontAwesomeIcon icon={faUserCircle} />
 					</Link>
@@ -110,6 +114,7 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 					>
 						<FontAwesomeIcon icon={faPowerOff} />
 					</button>
+					</div>
 				</form>
 			</nav>
 		</div>

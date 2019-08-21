@@ -1,12 +1,16 @@
+/* .navbar{
+
+} */
+
 .LogoNavbar{
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 25px;
   
 }
 .nav-link{
   font-weight: bolder;
   color: #575756 !important;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 25px;
 }
 .usernameLayout{
