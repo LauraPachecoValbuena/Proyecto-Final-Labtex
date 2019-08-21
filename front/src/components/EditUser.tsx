@@ -125,10 +125,10 @@ const EditUser: React.FC<
       <div className="row justify-content-center EditUser">
         <div className="col-6 EditUser">
           <div className="form-group" id="formEdit">
-            <h3>Personal Details</h3>
+            <h2>Personal Details</h2>
             <br />
             <div>
-              <h4>Username</h4>
+              <h3>Username</h3>
               {editMode && (
                 <input
                   type="text"
@@ -143,7 +143,7 @@ const EditUser: React.FC<
               <br />
             </div>
             <div>
-              <h4>Surname</h4>
+              <h3>Surname</h3>
               {editMode && (
                 <input
                   type="text"
@@ -158,7 +158,7 @@ const EditUser: React.FC<
               <br />
             </div>
             <div>
-              <h4>Email</h4>
+              <h3>Email</h3>
               {editMode && (
                 <input
                   type="text"
@@ -174,7 +174,7 @@ const EditUser: React.FC<
             </div>
             {ICanSee && editMode && (
               <div>
-                <h4>Password</h4>
+                <h3>Password</h3>
 
                 <input
                   type="password"
@@ -190,7 +190,7 @@ const EditUser: React.FC<
             )}
             {ICanSee && (
               <div>
-                <h4>Mobile</h4>
+                <h3>Mobile</h3>
                 {editMode && (
                   <input
                     type="number"
@@ -206,7 +206,7 @@ const EditUser: React.FC<
               </div>
             )}
             <div>
-              <h4>Company Name</h4>
+              <h3>Company Name</h3>
               {editMode && (
                 <input
                   type="text"
@@ -221,7 +221,7 @@ const EditUser: React.FC<
               <br />
             </div>
             <div>
-              <h4>Country</h4>
+              <h3>Country</h3>
               {editMode && (
                 <input
                   type="text"
@@ -237,7 +237,7 @@ const EditUser: React.FC<
             </div>
             {props.myUser.isAdmin && (
               <div className="form-group">
-                <h4>Administrator</h4>
+                <h3>Administrator</h3>
                 {editMode && (
                   <input
                     type="checkbox"
@@ -246,7 +246,7 @@ const EditUser: React.FC<
                     onChange={updateIsAdmin}
                   />
                 )}
-                {!editMode && <span>{isAdmin + ""}</span>}
+                {!editMode && <span> {props.myUser.isAdmin ? <img src="/images/CkeckedOk.png" width='20' alt=""/> : <img src="/images/notCheked.png" width='20' alt=""/>}</span>}
                 <br />
               </div>
             )}

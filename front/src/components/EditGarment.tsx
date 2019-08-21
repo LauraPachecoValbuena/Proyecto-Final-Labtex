@@ -186,7 +186,7 @@ const EditGarment: React.FC<
             <br />
 
             <h4>Colors:</h4>
-            <select value={colors} onChange={updateColors} multiple>
+            <select value={colors} onChange={updateColors} multiple className="selectMultiple">
               {props.colors.map(c => (
                 <option key={c._id} value={c._id}>
                   {c.name}
@@ -196,7 +196,7 @@ const EditGarment: React.FC<
             <br />
 
             <h4>Sizes:</h4>
-            <select value={sizes} onChange={updateSizes} multiple>
+            <select value={sizes} onChange={updateSizes} multiple className="selectMultiple">
               {props.sizes.map(s => (
                 <option key={s._id} value={s._id}>
                   {s.name}

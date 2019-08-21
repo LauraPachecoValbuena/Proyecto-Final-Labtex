@@ -162,10 +162,11 @@ const Login: React.FC<IProps> = (props) => {
 		//   </div>
 		// </div>
 		<div className="BackgroundImageLogin">
-			<div className="container">
-				<div className="d-flex justify-content-center">
+			<div className="container-fluid">
+				<div className="row">
+				{/* <div className="d-flex justify-content-center"> */}
 					​
-					<div className="col-md-6 col-lg-5">
+					<div className="col-md-6 col-lg-2 justify-content-center">
 						​
 						<div className="card-login">
 							​
@@ -231,6 +232,7 @@ const Login: React.FC<IProps> = (props) => {
 							</div>
 						</div>
 					</div>
+				{/* </div> */}
 				</div>
 			</div>
 		</div>

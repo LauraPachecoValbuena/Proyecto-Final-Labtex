@@ -42,5 +42,10 @@
 
 .row justify-content-center EditUser{
     margin-left: 40px !important;
+    
+}
+
+.form-group{
+    font-size: 14pt !important;
 }
 
