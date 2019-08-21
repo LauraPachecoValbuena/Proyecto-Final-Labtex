@@ -68,9 +68,10 @@ const ShowUsers: React.FC<
     <>
       <div className="container">
         <div
-          className="row table-responsive-sm justify-content-center"
+          className="row justify-content-center"
           id="table"
         >
+          <div className="table-responsive">
           <table className="table table-bordered table-hover ">
             <thead>
               <tr>
@@ -131,11 +132,14 @@ const ShowUsers: React.FC<
               ))}
             </tbody>
           </table>
+          <div>
           {props.myUser.isAdmin && (
             <Link to="/users/add" className="btn btn-info my-2 my-sm-0 btnaddUsers">
               <FontAwesomeIcon icon={faUserPlus} />
             </Link>
           )}
+          </div>
+          </div>
         </div>
       </div>
     </>

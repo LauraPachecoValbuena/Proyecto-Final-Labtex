@@ -32,13 +32,17 @@
     border-color: #1FA5A5 !important;
 }
 
-.btnCancelUser{
+.botones {
+    text-align: center !important;
+}
+
+/* .btnCancelUser{
     margin-left: 20px;
 }
   
 .btnSaveUser{
     margin-left: 220px;   
-}
+} */
 
 .row justify-content-center EditUser{
     margin-left: 40px !important;

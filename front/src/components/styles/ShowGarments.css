@@ -31,6 +31,7 @@
 .GarmentsButtons {
     position: absolute !important;
     bottom: 0 !important;
+    margin-left: 60px !important;
 }
 
 .btnDeleteGarment {
@@ -49,7 +50,6 @@
 .btnEditGarment {
     color: #1FA5A5 !important;
     border-color: transparent !important;
-    margin-left: 60px !important;
 }
 
 .btnEditGarment:hover {

@@ -253,6 +253,7 @@ const EditUser: React.FC<
 
             {editMode && (
               <>
+              <div className="botones">
                 <button
                   className="btn btn-outline-info my-2 my-sm-0 btnSaveUser"
                   onClick={() => Edit(user._id)}
@@ -267,6 +268,7 @@ const EditUser: React.FC<
                   
                   <FontAwesomeIcon icon={faWindowClose} />
                 </button>
+                </div>
               </>
             )}
             

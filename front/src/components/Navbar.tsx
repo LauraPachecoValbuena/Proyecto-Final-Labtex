@@ -37,7 +37,7 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 	};
 
 	return (
-		<div>
+		<div className="container-fluid">
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<a className="navbar-brand" href="/">
 					<img src="images/LogoLabtex.png" width="90" height="58" className="LogoNavbar" />
@@ -82,14 +82,14 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 					</ul>
 				</div>
 
-				<form className="form-inline">
-					<div>
+				<form className="form" id="formNavbar">
+					<div className="">
 						<a className="navbar-text">
 							<strong className="usernameLayout">{props.myUser.username}</strong>
 						</a>
 					</div>
 				
-					<div>
+					<div className="botonesNavbar">
 					<Link to={'/users/' + props.myUser.id} className="btn btn-outline-info my-2 my-sm-0">
 						<FontAwesomeIcon icon={faUserCircle} />
 					</Link>

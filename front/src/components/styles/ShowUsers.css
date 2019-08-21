@@ -1,3 +1,7 @@
+/* .table-responsive{
+  display: contents !important;
+} */
+
 .btnshowUsers {
   color: #1FA5A5 !important;
   border-color: transparent !important;
@@ -8,21 +12,8 @@
   border-color: transparent !important;
 }
 
-/* .btn-outline-info {
-  color: #1FA5A5 !important;
-  border-color: transparent !important;
-}
-
-.btn-outline-info:hover {
-  color: #fff;
-  background-color: #1FA5A5 !important;
-  border-color: #1FA5A5 !important;
-} */
-
-/* .btn-info {
-  color: #fff;
-  background-color: transparent !important;
-  border-color: #1FA5A5;
+/* .addUser{
+  display: inline !important;
 } */
 
 .btnaddUsers {
@@ -30,33 +21,6 @@
     background-color: #1FA5A5 !important;
     border-color: #1FA5A5 !important;
 }
-
-/* .btnshowUsers {
-    text-decoration: none;
-    color: #26a69a;
-    background-color: transparent;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: background-color .2s ease-out;
-    cursor: pointer;
-    border: 1px solid;
-}
-
-.btnshowUsers:hover {
-    background-color: #2bbbad;
-    border: none;
-} */
-
-/* .btn, .btn-large, .btn-small {
-    text-decoration: none;
-    color: #26a69a;
-    background-color: transparent;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: background-color .2s ease-out;
-    cursor: pointer;
-    border: 1px solid;
-} */
 
 #table {
   margin-top: 50px !important;
