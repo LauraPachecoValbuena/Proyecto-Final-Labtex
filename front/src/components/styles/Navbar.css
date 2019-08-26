@@ -20,7 +20,24 @@
 }
 
 #formNavbar {
-  margin-right: 30px !important;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 576px){
+  .LogoNavbar{
+    margin-top: 0px;
+    margin-left: 0px;
+    
+  }
+  .nav-link{
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  #formNavbar {
+    margin-top: 0px;
+  }
 }
 
 

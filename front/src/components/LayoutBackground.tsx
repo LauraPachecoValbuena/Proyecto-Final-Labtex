@@ -8,10 +8,10 @@ function LayoutBackground() {
 						<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="carousel-item active">
-									<img className="d-block w-100 " src="/images/Interfaz Layout2Peq.png" alt="First slide" />
+									<img className="d-block w-100 " src="/images/Interfaz Layout2Peq.png" alt="First slide" id="fotoCarousel" />
 								</div>
 								<div className="carousel-item">
-									<img className="d-block w-100" src="/images/Interfaz Layout4Peq.png" alt="Second slide" />
+									<img className="d-block w-100" src="/images/Interfaz Layout4Peq.png" alt="Second slide" id="fotoCarousel" />
 								</div>
 								{/* <div className="carousel-item">
       <img className="d-block w-100" src="..." alt="Third slide"/>

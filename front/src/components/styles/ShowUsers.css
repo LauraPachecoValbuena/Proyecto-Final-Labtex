@@ -1,6 +1,6 @@
-/* .table-responsive{
-  display: contents !important;
-} */
+.table-responsive{
+  margin-top: 100px !important;
+}
 
 .btnshowUsers {
   color: #1FA5A5 !important;

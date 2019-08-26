@@ -1,5 +1,9 @@
 .row{
     justify-content: center;
+
+}
+#rowGarments{
+    margin-top: 100px !important;
 }
 
 .card {

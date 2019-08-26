@@ -47,7 +47,7 @@ const Search: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: string }>
 
 	return (
 		<div className="container">
-			<div className="row">
+			<div className="row" id="searchRow">
 				<div className="col-12">
 					<h4>Search:</h4>
 					<input type="text" className="form-control" value={searchInput} onChange={search} />

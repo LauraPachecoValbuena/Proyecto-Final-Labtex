@@ -1,3 +1,16 @@
+.row justify-content-center EditUser{
+    margin-left: 40px !important;
+    
+}
+
+#formEditUser {
+    margin-top: 100px !important;
+}
+
+.form-group{
+    font-size: 14pt !important;
+}
+
 .btnEditUser {
     color: #1FA5A5 !important;
     /* border-color: #1FA5A5 !important; */
@@ -44,12 +57,5 @@
     margin-left: 220px;   
 } */
 
-.row justify-content-center EditUser{
-    margin-left: 40px !important;
-    
-}
 
-.form-group{
-    font-size: 14pt !important;
-}
 

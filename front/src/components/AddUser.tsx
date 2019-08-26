@@ -97,7 +97,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
 
   return (
     <div className="container">
-      <div className="row justify-content-center">
+      <div className="row justify-content-center" id="rowAddUser">
         <div className="col-6">
           <div className="form-group" id="formEdit">
             <h3>Personal Details</h3>
@@ -166,7 +166,7 @@ const AddUser: React.FC<IPropsGlobal & RouteComponentProps<{}>> = props => {
             />
             <br />
             <h4>Role:</h4>
-            <select onChange={updateRole}>
+            <select onChange={updateRole} className="select">
               {props.roles.map(r => (
                 <option value={r._id}>{r.name}</option>
               ))}

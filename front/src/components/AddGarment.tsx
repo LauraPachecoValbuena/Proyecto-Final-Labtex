@@ -125,7 +125,7 @@ const AddGarment: React.FC<
 
   return (
     <div className="container">
-      <div className="row justify-content-center">
+      <div className="row justify-content-center" id="rowAddGarment">
         <div className="col-6">
           <div className="form-group" id="formEdit">
             <h3>Garment's Details</h3>
@@ -160,7 +160,7 @@ const AddGarment: React.FC<
             <br />
 
             <h4>Colors:</h4>
-            <select onChange={updateColors} multiple>
+            <select onChange={updateColors} multiple className="selectMultiple">
               {props.colors.map(c => (
                 <option key={c._id} value={c._id}>
                   {c.name}
@@ -171,7 +171,7 @@ const AddGarment: React.FC<
             <br/>
 
             <h4>Sizes:</h4>
-            <select onChange={updateSizes} multiple>
+            <select onChange={updateSizes} multiple className="selectMultiple">
               {props.sizes.map(s => (
                 <option key={s._id} value={s._id}>
                   {s.name}
@@ -182,7 +182,7 @@ const AddGarment: React.FC<
             <br/>
 
             <h4>Users:</h4>
-            <select onChange={updateUsers} multiple>
+            <select onChange={updateUsers} multiple className="selectMultiple">
               {props.users.map(u => (
                 <option key={u._id} value={u._id}>
                   {u.username}

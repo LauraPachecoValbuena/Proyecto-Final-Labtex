@@ -122,7 +122,7 @@ const EditUser: React.FC<
 
   return (
     <div className="container">
-      <div className="row justify-content-center EditUser">
+      <div className="row justify-content-center EditUser" id="formEditUser">
         <div className="col-6 EditUser">
           <div className="form-group" id="formEdit">
             <h2>Personal Details</h2>

@@ -152,7 +152,7 @@ const EditGarment: React.FC<
 
   return (
     <div className="container">
-      <div className="row justify-content-center">
+      <div className="row justify-content-center" id="rowEditGarment">
         <div className="col-6">
           <div className="form-group" id="formEdit">
             <h3>Garment's Details</h3>

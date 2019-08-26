@@ -38,7 +38,7 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 
 	return (
 		<div className="container-fluid">
-			<nav className="navbar navbar-expand-lg navbar-light">
+			<nav className="navbar fixed-top navbar-expand-lg navbar-light">
 				<a className="navbar-brand" href="/">
 					<img src="images/LogoLabtex.png" width="90" height="58" className="LogoNavbar" />
 				</a>

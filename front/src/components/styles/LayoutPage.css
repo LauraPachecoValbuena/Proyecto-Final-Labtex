@@ -7,3 +7,18 @@
     /* overflow: hidden !important; */
 }
 
+.carousel-item{
+    margin-top: 60px !important;
+}
+
+@media (max-width: 576px){
+    /* .carousel-item{
+        margin-top: 200px;
+    } */
+    #fotoCarousel{
+        margin-top: 180px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        margin-top: 100px;
+    }
+}

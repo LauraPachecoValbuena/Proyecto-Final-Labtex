@@ -71,7 +71,7 @@ const ShowGarments: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: str
 
 	return (
 		<div className="container">
-			<div className="row">
+			<div className="row" id="rowGarments">
 				{props.garments.filter((g) => g.season === props.match.params.season_id).map((g) => (
 					// <div key={g._id} className="col-sm-4">
 					<div key={g._id} className="col-sm-3 card border-light mb-3 btn-outline-info">
