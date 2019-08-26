@@ -4,7 +4,7 @@
 }
 
 #formEditUser {
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 
 .form-group{
@@ -47,6 +47,12 @@
 
 .botones {
     text-align: center !important;
+}
+
+@media (max-width: 576px){
+    #formEditUser{
+        margin-top: 275px;
+    }
 }
 
 /* .btnCancelUser{

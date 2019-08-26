@@ -26,6 +26,9 @@
 
 
 @media (max-width: 576px){
+  .navbar{
+    background-color:rgb(236, 236, 236);
+  }
   .LogoNavbar{
     margin-top: 0px;
     margin-left: 0px;

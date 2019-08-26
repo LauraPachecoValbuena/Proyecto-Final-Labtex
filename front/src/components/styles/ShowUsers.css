@@ -23,5 +23,11 @@
 }
 
 #table {
-  margin-top: 50px !important;
+  margin-top: 50px;
+}
+
+@media (max-width: 576px){
+  #table {
+    margin-top: 170px;
+  }
 }
