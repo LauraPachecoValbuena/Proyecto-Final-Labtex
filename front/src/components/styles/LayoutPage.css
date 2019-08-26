@@ -1,9 +1,9 @@
 .BackgroundImageLayout{
-    background-image: url("/images/Interfaz Layout2Peq.png");
+    /* background-image: url("/images/Interfaz Layout2Peq.png"); */
     background-repeat: no-repeat;
     background-position: top;
     max-height: 100%;
     height: 100vh;
-    /* overflow: visible !important; */
-
+    /* overflow: hidden !important; */
 }
+
