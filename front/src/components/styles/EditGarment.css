@@ -1,5 +1,5 @@
 #rowEditGarment{
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 
 .btn-info input{
@@ -19,5 +19,11 @@
     cursor: all-scroll;
     background: scroll;  
 
+}
+
+@media (max-width: 576px){
+    #rowEditGarment{
+        margin-top: 275px;
+    }
 }
 

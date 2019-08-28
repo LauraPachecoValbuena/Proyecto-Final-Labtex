@@ -3,7 +3,7 @@
 }
 
 #rowAddUser{
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 
 .select{
@@ -28,6 +28,12 @@
 .botones {
     text-align: center !important;
     
+}
+
+@media (max-width: 576px){
+    #rowAddUser{
+        margin-top: 275px;
+    }
 }
 
 /* .btnCancelUser{

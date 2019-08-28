@@ -1,7 +1,13 @@
 #searchRow{
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 .col-12 {
     display: contents !important;
+}
+
+@media (max-width: 576px){
+    #searchRow{
+        margin-top: 275px;
+    }
 }
 

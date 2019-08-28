@@ -3,7 +3,7 @@
 
 }
 #rowGarments{
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 
 .card {
@@ -35,7 +35,7 @@
 .GarmentsButtons {
     position: absolute !important;
     bottom: 0 !important;
-    margin-left: 60px !important;
+    margin-left: 60px;
 }
 
 .btnDeleteGarment {
@@ -68,4 +68,16 @@
     color: #fff !important;
     background-color: #1FA5A5 !important;
     border-color: #1FA5A5 !important;
+}
+
+@media (max-width: 576px){
+    #rowGarments{
+        margin-top: 275px;
+    }
+
+    .GarmentsButtons {
+        position: absolute !important;
+        bottom: 0 !important;
+        margin-left: 100px;
+    }
 }

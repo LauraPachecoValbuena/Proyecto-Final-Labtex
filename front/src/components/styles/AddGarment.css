@@ -1,5 +1,5 @@
 #rowAddGarment{
-    margin-top: 100px !important;
+    margin-top: 100px;
 }
 
 .btnSaveGarment.btnCancelGarment {
@@ -27,4 +27,10 @@
     cursor: all-scroll;
     background: scroll;  
 
+}
+
+@media (max-width: 576px){
+    #rowAddGarment{
+        margin-top: 275px;
+    }
 }
