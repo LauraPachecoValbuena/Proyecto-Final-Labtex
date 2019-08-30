@@ -50,7 +50,7 @@ const Login: React.FC<IProps> = (props) => {
 				}
 			});
 		} else {
-			setError('you need to introduce you email and password');
+			setError('You have to introduce your email and password');
 		}
 	};
 
