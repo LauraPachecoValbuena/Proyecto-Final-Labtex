@@ -11,7 +11,7 @@ function LayoutBackground() {
 									<img className="d-block w-100 " src="/images/Interfaz Layout2Peq.png" alt="First slide" id="fotoCarousel" />
 								</div>
 								<div className="carousel-item">
-									<img className="d-block w-100" src="/images/Interfaz Layout4Peq.png" alt="Second slide" id="fotoCarousel" />
+									<img className="d-block w-100" src="/images/Interfaz Layout6Peq.png" alt="Second slide" id="fotoCarousel" />
 								</div>
 								{/* <div className="carousel-item">
       <img className="d-block w-100" src="..." alt="Third slide"/>
