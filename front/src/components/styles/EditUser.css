@@ -5,6 +5,7 @@
 
 #formEditUser {
     margin-top: 100px;
+    /* text-align: center; */
 }
 
 .form-group{
@@ -52,6 +53,7 @@
 @media (max-width: 576px){
     #formEditUser{
         margin-top: 275px;
+        text-align: inherit;
     }
 }
 

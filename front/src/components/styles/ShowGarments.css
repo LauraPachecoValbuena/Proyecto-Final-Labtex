@@ -28,6 +28,10 @@
 
 }
 
+/* .card-text{
+    font-weight: bolder;
+} */
+
 .card-text, .card-title {
     text-align: center !important;
     color: #1FA5A5 !important;
