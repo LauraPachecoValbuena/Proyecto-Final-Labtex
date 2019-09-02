@@ -11,8 +11,8 @@ import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { ISeason } from "../interfaceSeason";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSave, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import "./styles/AddGarment.css";
 
 interface IPropsGlobal {
@@ -138,6 +138,7 @@ const AddGarment: React.FC<
               className="form-control"
               onChange={updateReference}
             />
+            {reference.length === 0 && <div>The reference cannot be empty</div>}
             <br />
             <h4>Description</h4>
             <textarea
@@ -168,7 +169,7 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
-            <br/>
+            <br />
 
             <h4>Sizes:</h4>
             <select onChange={updateSizes} multiple className="selectMultiple">
@@ -179,7 +180,7 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
-            <br/>
+            <br />
 
             <h4>Users:</h4>
             <select onChange={updateUsers} multiple className="selectMultiple">
@@ -190,7 +191,7 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
-            <br/>
+            <br />
 
             <h4>Images:</h4>
             <input
@@ -199,24 +200,27 @@ const AddGarment: React.FC<
               onChange={updateImage}
             />
             <br />
-            <br/>
+            <br />
             <div className="botones">
-            <Link
-              to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
-              id="add"
-              onClick={Add}
-            >
-              <FontAwesomeIcon icon={faSave} />
-            </Link>
+              {reference.length > 0 && (
+                <Link
+                  to={"/seasons/" + props.match.params.season_id + "/garments/"}
+                  className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
+                  id="add"
+                  onClick={Add}
+                >
+                  <FontAwesomeIcon icon={faSave} />
+                </Link>
+              )}
+              {/* {reference.length === 0 && <div>La referencia no puede ser vacía amigo</div>} */}
 
-            <Link
-              to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
-              id="cancel"
-            >
-              <FontAwesomeIcon icon={faWindowClose} />
-            </Link>
+              <Link
+                to={"/seasons/" + props.match.params.season_id + "/garments/"}
+                className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
+                id="cancel"
+              >
+                <FontAwesomeIcon icon={faWindowClose} />
+              </Link>
             </div>
           </div>
         </div>
