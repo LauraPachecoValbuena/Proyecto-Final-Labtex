@@ -34,8 +34,12 @@ router.get("/list", async (req, res) => {
   try {
     let vtoken = jwt.verify(token, "mysecret");
     let garments;
-    if (vtoken) {
-      garments = await garmentModel.find({});
+    if (vtoken && typeof vtoken === "object") {
+      garments = await garmentModel.find({
+        ...(vtoken.role === "5d3ebc9017fb7b60d454b119" && {
+          users: { $in: [vtoken.id] }
+        })
+      });
     } else {
       send("error");
     }

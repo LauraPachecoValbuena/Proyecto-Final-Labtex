@@ -1,28 +1,12 @@
-.BackgroundImageLayout{
-    /* background-image: url("/images/Interfaz Layout2Peq.png"); */
-    background-repeat: no-repeat;
-    background-position: top;
-    max-height: 100%;
-    height: 100vh;
-    /* overflow: hidden !important; */
+.BackgroundImageLayout {
+  position: absolute;
+  top: 100px;
+  width: 60vw;
 }
 
-#fotoCarousel{
-    margin-top: inherit;
-}
-
-.carousel-item{
-    margin-top: 60px !important;
-}
-
-@media (max-width: 576px){
-    /* .carousel-item{
-        margin-top: 200px;
-    } */
-    #fotoCarousel{
-        margin-top: 205px;
-    }
-    .carousel-control-next, .carousel-control-prev {
-        margin-top: 140px;
-    }
+@media (max-width: 576px) {
+  .BackgroundImageLayout {
+    top: 275px;
+    width: 100vw;
+  }
 }
