@@ -63,9 +63,11 @@ const Search: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: string }>
 									/>
 								)}
 								<div className="card-body">
+									<div>
 									<h3 className="card-title">{g.reference}</h3>
 									<p className="card-text">{g.description}</p>
-									<div className="GarmentsButtons">
+									</div>
+									<div className="card-buttons">
 										<Link
 											to={'/seasons/' + props.match.params.season_id + '/garments/edit/' + g._id}
 											className="btn my-2 my-sm-0 btnEditGarment"

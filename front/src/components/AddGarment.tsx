@@ -212,7 +212,6 @@ const AddGarment: React.FC<
                   <FontAwesomeIcon icon={faSave} />
                 </Link>
               )}
-              {/* {reference.length === 0 && <div>La referencia no puede ser vacía amigo</div>} */}
 
               <Link
                 to={"/seasons/" + props.match.params.season_id + "/garments/"}
