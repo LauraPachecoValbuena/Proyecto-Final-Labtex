@@ -16,6 +16,10 @@
   display: inline !important;
 } */
 
+.col-12AddUser {
+  text-align: center;
+}
+
 .btnaddUsers {
     color: #fff !important;
     background-color: #1FA5A5 !important;

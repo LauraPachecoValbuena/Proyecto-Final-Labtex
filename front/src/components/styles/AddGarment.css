@@ -29,6 +29,10 @@
 
 }
 
+.avisoRef{
+    font-size: 10pt;
+}
+
 @media (max-width: 576px){
     #rowAddGarment{
         margin-top: 275px;

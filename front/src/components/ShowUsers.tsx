@@ -132,7 +132,7 @@ const ShowUsers: React.FC<
               ))}
             </tbody>
           </table>
-          <div className="col-11">
+          <div className="col-12 col-12AddUser">
           {props.myUser.isAdmin && (
             <Link to="/users/add" className="btn btn-info my-2 my-sm-0 btnaddUsers">
               <FontAwesomeIcon icon={faUserPlus} />

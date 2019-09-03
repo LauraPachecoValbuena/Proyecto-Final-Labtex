@@ -138,7 +138,7 @@ const AddGarment: React.FC<
               className="form-control"
               onChange={updateReference}
             />
-            {reference.length === 0 && <div>The reference cannot be empty</div>}
+            {reference.length === 0 && <div className="avisoRef">* The reference cannot be empty</div>}
             <br />
             <h4>Description</h4>
             <textarea

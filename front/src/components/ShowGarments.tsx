@@ -128,7 +128,7 @@ const ShowGarments: React.FC<
           props.myUser.role === "5d3ebc4b17fb7b60d454b0f2") && (
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 col-12AddGarment">
                 <Link
                   to={
                     "/seasons/" + props.match.params.season_id + "/garments/add"
