@@ -13,6 +13,10 @@
     border-color: #1FA5A5 !important;
 }
 
+.btnImage {
+   width: -webkit-fill-available;
+}
+
 .selectMultiple{
     /* border-color: transparent !important; */
     border-color: whitesmoke !important;
@@ -25,5 +29,8 @@
     #rowEditGarment{
         margin-top: 275px;
     }
+    .btnImage {
+        width: 178px;
+     }
 }
 

@@ -104,4 +104,9 @@
     bottom: 0 !important;
     margin-left: 100px;
   }
+  .btnaddGarments{
+      position: fixed;
+      right: 20px;
+      bottom: 10px;
+  }
 }

@@ -160,6 +160,8 @@ const AddGarment: React.FC<
             />
             <br />
 
+            <div className="row">
+            <div className="col-sm-12 col-lg-4">
             <h4>Colors:</h4>
             <select onChange={updateColors} multiple className="selectMultiple">
               {props.colors.map(c => (
@@ -170,7 +172,9 @@ const AddGarment: React.FC<
             </select>
             <br />
             <br />
+            </div>
 
+            <div className="col-sm-12 col-lg-4">
             <h4>Sizes:</h4>
             <select onChange={updateSizes} multiple className="selectMultiple">
               {props.sizes.map(s => (
@@ -181,7 +185,9 @@ const AddGarment: React.FC<
             </select>
             <br />
             <br />
+            </div>
 
+            <div className="col-sm-12 col-lg-4">
             <h4>Users:</h4>
             <select onChange={updateUsers} multiple className="selectMultiple">
               {props.users.map(u => (
@@ -191,12 +197,15 @@ const AddGarment: React.FC<
               ))}
             </select>
             <br />
-            <br />
+            </div>
 
+            </div>
+
+            <br />
             <h4>Images:</h4>
             <input
               type="file"
-              className="btn btn-info"
+              className="btn btn-info btnImage"
               onChange={updateImage}
             />
             <br />

@@ -11,8 +11,8 @@ import * as actions from "../actions/garmentActions";
 import { connect } from "react-redux";
 import { ISeason } from "../interfaceSeason";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSave, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import "./styles/EditGarment.css";
 
 interface IPropsGlobal {
@@ -184,60 +184,81 @@ const EditGarment: React.FC<
               value={props.seasons.find(s => s._id === garment.season)!.name}
             />
             <br />
+            <div className="row">
+              <div className="col-sm-12 col-lg-4">
+                <h4>Colors:</h4>
+                <select
+                  value={colors}
+                  onChange={updateColors}
+                  multiple
+                  className="selectMultiple"
+                >
+                  {props.colors.map(c => (
+                    <option key={c._id} value={c._id}>
+                      {c.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <br />
 
-            <h4>Colors:</h4>
-            <select value={colors} onChange={updateColors} multiple className="selectMultiple">
-              {props.colors.map(c => (
-                <option key={c._id} value={c._id}>
-                  {c.name}
-                </option>
-              ))}
-            </select>
+              <div className="col-sm-12 col-lg-4">
+                <h4>Sizes:</h4>
+                <select
+                  value={sizes}
+                  onChange={updateSizes}
+                  multiple
+                  className="selectMultiple"
+                >
+                  {props.sizes.map(s => (
+                    <option key={s._id} value={s._id}>
+                      {s.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <br />
+
+              <div className="col-sm-12 col-lg-4">
+                <h4>Users:</h4>
+                <select
+                  value={users}
+                  onChange={updateUsers}
+                  multiple
+                  className="selectMultiple"
+                >
+                  {props.users.map(u => (
+                    <option key={u._id} value={u._id}>
+                      {u.username}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
             <br />
-
-            <h4>Sizes:</h4>
-            <select value={sizes} onChange={updateSizes} multiple className="selectMultiple">
-              {props.sizes.map(s => (
-                <option key={s._id} value={s._id}>
-                  {s.name}
-                </option>
-              ))}
-            </select>
-            <br />
-
-            <h4>Users:</h4>
-            <select value={users} onChange={updateUsers} multiple className="selectMultiple">
-              {props.users.map(u => (
-                <option key={u._id} value={u._id}>
-                  {u.username}
-                </option>
-              ))}
-            </select>
-            <br />
-
             <h4>Images</h4>
             <input
               type="file"
-              className="btn btn-info"
+              className="btn btn-info btnImage"
               onChange={updateImages}
             />
             <br />
-            <br/>
+            <br />
             <div className="botones">
-            <button
-              type="submit"
-              className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
-              onClick={() => Edit(garment._id)}
-            >
-              <FontAwesomeIcon icon={faSave} />
-            </button>
+              <button
+                type="submit"
+                className="btn btn-outline-info my-2 my-sm-0 btnSaveGarment"
+                onClick={() => Edit(garment._id)}
+              >
+                <FontAwesomeIcon icon={faSave} />
+              </button>
 
-            <Link
-              to={"/seasons/" + props.match.params.season_id + "/garments/"}
-              className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
-            >
-              <FontAwesomeIcon icon={faWindowClose} />
-            </Link>
+              <Link
+                to={"/seasons/" + props.match.params.season_id + "/garments/"}
+                className="btn btn-outline-info my-2 my-sm-0 btnCancelGarment"
+              >
+                <FontAwesomeIcon icon={faWindowClose} />
+              </Link>
             </div>
           </div>
         </div>
