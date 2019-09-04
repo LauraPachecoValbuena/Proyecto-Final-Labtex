@@ -15,7 +15,18 @@
 }
 
 .card:hover .card-title {
-  color: white !important;
+  color: #ECECEC !important;
+}
+.card:hover .card-text {
+  color: #ECECEC !important;
+}
+.card:hover .btnDeleteGarment {
+  color: #ECECEC !important;
+  border-color: transparent !important;
+}
+.card:hover .btnEditGarment {
+  color: #ECECEC !important;
+  border-color: transparent !important;
 }
 
 .card img {
