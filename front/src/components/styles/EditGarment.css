@@ -18,7 +18,6 @@
 }
 
 .selectMultiple{
-    /* border-color: transparent !important; */
     border-color: whitesmoke !important;
     cursor: all-scroll;
     background: scroll;  
