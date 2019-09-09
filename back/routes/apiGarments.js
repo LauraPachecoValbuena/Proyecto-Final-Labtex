@@ -14,20 +14,6 @@ const colorModel = require("../models/colorModel");
 const garmentModel = require("../models/garmentModel");
 
 //Listamos las garments que haya en la base de datos.
-// router.get("/", async (req, res) => {
-//   const token = req.headers.authorization.replace("Bearer ", "");
-//   garmentModel
-//     .find({})
-//     .then(objs => {
-//       res.send(objs);
-//       console.log(objs);
-//     })
-//     .catch(err => {
-//       res.send("ERROR: " + err);
-//     });
-// });
-
-//Listamos las garments que haya en la base de datos.
 router.get("/list", async (req, res) => {
   const token = req.headers.authorization.replace("Bearer ", "");
 

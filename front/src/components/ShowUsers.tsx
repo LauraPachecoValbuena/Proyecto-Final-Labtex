@@ -8,7 +8,7 @@ import { IMyUser } from "../reducers/myUserReducer";
 import "./styles/ShowUsers.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt, faAddressCard, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-// import 'bootstrap/dist/css/bootstrap.css';
+
 
 interface IPropsGlobal {
   token: string;
@@ -60,9 +60,6 @@ const ShowUsers: React.FC<
     });
   };
 
-  //   if (!user) {
-  //     return <Redirect to="/" />;
-  //   }
 
   return (
     <>
@@ -107,7 +104,9 @@ const ShowUsers: React.FC<
                   <td>{u.mobile}</td>
                   <td>{u.companyName}</td>
                   <td>{u.country}</td>
-                  {props.myUser.isAdmin && <td className="text-center"> {u.isAdmin ? <img src="/images/CkeckedOk.png" width='20' alt=""/> : <img src="/images/notCheked.png" width='20' alt=""/>}</td>}
+                  {props.myUser.isAdmin && <td className="text-center"> {u.isAdmin ? 
+                  <img src="/images/CkeckedOk.png" width='20' alt=""/> : 
+                  <img src="/images/notCheked.png" width='20' alt=""/>}</td>}
                   {props.myUser.isAdmin && <td>{u.role.name}</td>}
                   <td>
                     <Link

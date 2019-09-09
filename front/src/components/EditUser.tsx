@@ -246,7 +246,9 @@ const EditUser: React.FC<
                     onChange={updateIsAdmin}
                   />
                 )}
-                {!editMode && <span> {props.myUser.isAdmin ? <img src="/images/CkeckedOk.png" width='20' alt=""/> : <img src="/images/notCheked.png" width='20' alt=""/>}</span>}
+                {!editMode && <span> {props.myUser.isAdmin ? 
+                <img src="/images/CkeckedOk.png" width='20' alt=""/> : 
+                <img src="/images/notCheked.png" width='20' alt=""/>}</span>}
                 <br />
               </div>
             )}

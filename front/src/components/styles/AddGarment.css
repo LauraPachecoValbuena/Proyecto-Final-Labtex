@@ -13,16 +13,12 @@
     background-color: #1FA5A5 !important;
     border-color: #1FA5A5 !important;
 }
-/* .from-group {
-    text-align: center !important;
-} */
 
 .botones {
     text-align: center !important;  
 }
 
 .selectMultiple{
-    /* border-color: transparent !important; */
     border-color: whitesmoke !important;
     cursor: all-scroll;
     background: scroll;  

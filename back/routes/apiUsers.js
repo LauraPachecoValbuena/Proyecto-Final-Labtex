@@ -9,7 +9,7 @@ const roleModel = require("../models/roleModel");
 
 //estamos pididnedo que nos liste todos los usuarios.
 router.get("/list", async (req, res) => {
-  //cuando tengas mas peticiones, consultas no será solo / puesto que habrá que distinguirlas.
+
   const token = req.headers.authorization.replace("Bearer ", "");
 
   try {
@@ -129,7 +129,7 @@ router.post("/add", (req, res) => {
         companyName: req.body.companyName,
         country: req.body.country,
         isAdmin: req.body.isAdmin,
-        role: req.body.role //como hago xa no tener q meterlo a mano??
+        role: req.body.role 
       });
       newUser.save((err, obj) => {
         if (err) {

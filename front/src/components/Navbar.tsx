@@ -8,21 +8,7 @@ import ShowGarments from './ShowGarments';
 import './styles/Navbar.css';
 import { ISeason } from '../interfaceSeason';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faCoffee,
-	faSignOutAlt,
-	faUsers,
-	faUserCircle,
-	faSearch,
-	faPowerOff,
-	faHome,
-	faChevronCircleDown,
-	faBars
-} from '@fortawesome/free-solid-svg-icons';
-// import "./styles/materialize.min.css";
-// const materialize = require("react-materialize");
-// import logo from './images/LogoLabtex.png';
-// import fondo from '#';
+import { faUsers, faUserCircle, faSearch, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 
 interface IPropsGlobal {
 	myUser: IMyUser;
@@ -88,32 +74,32 @@ const Navbar: React.FC<IPropsGlobal> = (props) => {
 							<strong className="usernameLayout">{props.myUser.username}</strong>
 						</a>
 					</div>
-				
+
 					<div className="botonesNavbar">
-					<Link to={'/users/' + props.myUser.id} className="btn btn-outline-info my-2 my-sm-0">
-						<FontAwesomeIcon icon={faUserCircle} />
-					</Link>
+						<Link to={'/users/' + props.myUser.id} className="btn btn-outline-info my-2 my-sm-0">
+							<FontAwesomeIcon icon={faUserCircle} />
+						</Link>
 
-					<Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
-						<FontAwesomeIcon icon={faUsers} />
-					</Link>
+						<Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
+							<FontAwesomeIcon icon={faUsers} />
+						</Link>
 
-					<Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
-						<FontAwesomeIcon icon={faSearch} />
-					</Link>
+						<Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
+							<FontAwesomeIcon icon={faSearch} />
+						</Link>
 
-					<button
-						className="btn btn-outline-info my-2 my-sm-0"
-						type="submit"
-						onClick={logOut}
-						data-toggle="collapse"
-						data-target="#navbarNavDropdown"
-						aria-controls="navbarNavDropdown"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<FontAwesomeIcon icon={faPowerOff} />
-					</button>
+						<button
+							className="btn btn-outline-info my-2 my-sm-0"
+							type="submit"
+							onClick={logOut}
+							data-toggle="collapse"
+							data-target="#navbarNavDropdown"
+							aria-controls="navbarNavDropdown"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<FontAwesomeIcon icon={faPowerOff} />
+						</button>
 					</div>
 				</form>
 			</nav>
@@ -131,105 +117,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
-
-//----------------------SIDEBAR-----------------------------------//
-
-{
-	/* <div className="nav-side-menu">
-<div className="brand">
-  <img src="images/LogoLabtex.png" width="70" height="60"  />
-</div>
- <FontAwesomeIcon icon={faBars}   className="fa fa-bars fa-2x toggle-btn"
-  data-toggle="collapse"
-  data-target="#menu-content" />
-
-<div className="menu-list">
-  <a className="navbar-brand" href="/">
-    {props.myUser.username}
-  </a>
-  <form className="form-inline">
-    <Link
-      to={"/users/" + props.myUser.id}
-      className="btn btn-outline-info my-2 my-sm-0"
-    >
-      <FontAwesomeIcon icon={faUserCircle} />
-    </Link>
-
-    <Link to="/users" className="btn btn-outline-info my-2 my-sm-0">
-      <FontAwesomeIcon icon={faUsers} />
-    </Link>
-    <br/>
-
-
-    <Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
-      <FontAwesomeIcon icon={faSearch} />
-    </Link> */
-}
-
-{
-	/* <button
-      className="btn btn-outline-info my-2 my-sm-0"
-      type="submit"
-      onClick={logOut}
-      data-toggle="collapse"
-      data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <FontAwesomeIcon icon={faPowerOff} />
-    </button> */
-}
-// </form>
-
-// <ul id="menu-content" className="menu-content collapse out">
-//   <li>
-//     <Link to={"/"}>
-//       <FontAwesomeIcon icon={faHome} /> HOME
-//     </Link>
-//   </li>
-
-//   <li
-//     data-toggle="collapse"
-//     data-target="#service"
-//     className="collapsed"
-//   >
-//     <a >
-//       SEASONS <FontAwesomeIcon icon={faChevronCircleDown} />
-//     </a>
-//   </li>
-//   <ul className="sub-menu collapse" id="service">
-//     {props.seasons.map(s => (
-//       <Link
-//         to={"/seasons/" + s._id + "/garments/"}
-//         className="dropdown-item"
-//         key={s._id}
-//       >
-//         {s.name}
-//       </Link>
-//     ))}
-//   </ul>
-//   <form className="form">
-{
-	/* <Link to="/search" className="btn btn-outline-info my-2 my-sm-0">
-      <FontAwesomeIcon icon={faSearch} />
-    </Link>
-    <br/> */
-}
-
-//     <button
-//       className="btn btn-outline-info my-2 my-sm-0"
-//       type="submit"
-//       onClick={logOut}
-//       data-toggle="collapse"
-//       data-target="#navbarNavDropdown"
-//       aria-controls="navbarNavDropdown"
-//       aria-expanded="false"
-//       aria-label="Toggle navigation"
-//     >
-//       <FontAwesomeIcon icon={faPowerOff} />
-//     </button>
-//   </form>
-//   </ul>
-// </div>
-// </div>

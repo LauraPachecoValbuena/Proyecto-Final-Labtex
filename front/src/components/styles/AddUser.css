@@ -7,7 +7,6 @@
 }
 
 .select{
-    /* border-color: transparent !important; */
     border-color: whitesmoke !important;
     cursor: all-scroll;
     background: scroll;  
@@ -36,12 +35,5 @@
     }
 }
 
-/* .btnCancelUser{
-    margin-left: 20px;
-}
-  
-.btnSaveUser{
-    margin-left: 220px;   
-} */
 
 

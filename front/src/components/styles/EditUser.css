@@ -5,7 +5,6 @@
 
 #formEditUser {
     margin-top: 100px;
-    /* text-align: center; */
 }
 
 .form-group{
@@ -14,7 +13,6 @@
 
 .btnEditUser {
     color: #1FA5A5 !important;
-    /* border-color: #1FA5A5 !important; */
     border-color: transparent !important;
 }
 
@@ -57,13 +55,6 @@
     }
 }
 
-/* .btnCancelUser{
-    margin-left: 20px;
-}
-  
-.btnSaveUser{
-    margin-left: 220px;   
-} */
 
 
 

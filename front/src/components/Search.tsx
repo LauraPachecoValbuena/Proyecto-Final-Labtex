@@ -64,8 +64,8 @@ const Search: React.FC<IPropsGlobal & RouteComponentProps<{ season_id: string }>
 								)}
 								<div className="card-body">
 									<div>
-									<h3 className="card-title">{g.reference}</h3>
-									<p className="card-text">{g.description}</p>
+										<h3 className="card-title">{g.reference}</h3>
+										<p className="card-text">{g.description}</p>
 									</div>
 									<div className="card-buttons">
 										<Link
