@@ -1,0 +1,106 @@
+{
+    "_id" : ObjectId("5d40626217fb7b60d45522ad"),
+    "name" : "hotpink"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d40628017fb7b60d45522cd"),
+    "name" : "lightcoral"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d40629417fb7b60d45522f3"),
+    "name" : "crimson"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d4062a217fb7b60d4552305"),
+    "name" : "red"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d4062b217fb7b60d4552317"),
+    "name" : "yellow"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5d4062bf17fb7b60d4552323"),
+    "name" : "gold"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5d4062d217fb7b60d455233d"),
+    "name" : "orangered"
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5d4062e517fb7b60d4552359"),
+    "name" : "Aquamarine"
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5d4062f817fb7b60d455236a"),
+    "name" : "lighseagreen"
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5d40630b17fb7b60d4552387"),
+    "name" : "darkcyan"
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5d40631a17fb7b60d455239d"),
+    "name" : "blue"
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5d40632917fb7b60d45523af"),
+    "name" : "skyblue"
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5d40633717fb7b60d45523b9"),
+    "name" : "green"
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5d40634817fb7b60d45523d3"),
+    "name" : "seagreen"
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5d40635a17fb7b60d45523ea"),
+    "name" : "white"
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5d40636b17fb7b60d45523fa"),
+    "name" : "lightgrey"
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5d40637817fb7b60d455240e"),
+    "name" : "grey"
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("5d40638517fb7b60d455241f"),
+    "name" : "black"
+}

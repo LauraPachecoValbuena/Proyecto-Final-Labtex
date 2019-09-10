@@ -1,0 +1,29 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d40570617fb7b60d4551916"),
+    "name" : "extrasmall"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d40572517fb7b60d4551936"),
+    "name" : "small"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d40574e17fb7b60d4551956"),
+    "name" : "medium"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d40576717fb7b60d4551966"),
+    "name" : "large"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d40577f17fb7b60d4551978"),
+    "name" : "extralarge"
+}

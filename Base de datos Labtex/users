@@ -1,0 +1,118 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d3b15f817fb7b60d454a354"),
+    "username" : "Laura",
+    "email" : "lorauhhuhh@hotmail.com",
+    "password" : "81dc9bdb52d04dc20036dbd8313ed055",
+    "surname" : "Pacheco",
+    "mobile" : 696678336,
+    "companyName" : "Labtex",
+    "country" : "Spain",
+    "isAdmin" : true,
+    "role" : ObjectId("5d3ebb9c17fb7b60d454b0a8")
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d4044a699556f182c0c942d"),
+    "isAdmin" : true,
+    "username" : "Juanjo",
+    "email" : "juanjo@hotmail.es",
+    "password" : "9380dbe1d7116a06e477d6f0ac6f0f39",
+    "surname" : "Forner ",
+    "mobile" : 666778899,
+    "companyName" : "Labtex",
+    "role" : ObjectId("5d3ebc9017fb7b60d454b119"),
+    "__v" : 0,
+    "country" : "Spain"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d40450499556f182c0c942e"),
+    "isAdmin" : false,
+    "username" : "Mary",
+    "email" : "mary@hotmail.es",
+    "password" : "915a85c4443bfc9a5b148ae2f86ba0ce",
+    "surname" : "Popins",
+    "mobile" : 666223344,
+    "companyName" : "Labtex",
+    "role" : ObjectId("5d3ebc4b17fb7b60d454b0f2"),
+    "__v" : 0,
+    "country" : "Holland"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d440626ff17a3357023e7bd"),
+    "isAdmin" : false,
+    "username" : "Angel",
+    "email" : "angel@hotmail.com",
+    "password" : "f4f068e71e0d87bf0ad51e6214ab84e9",
+    "surname" : "Garcia",
+    "mobile" : 666992266,
+    "companyName" : "Labtex",
+    "country" : "Spain",
+    "role" : ObjectId("5d3ebc4b17fb7b60d454b0f2"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d44067aff17a3357023e7be"),
+    "isAdmin" : false,
+    "username" : "Lorena",
+    "email" : "lorena@gmail.com",
+    "password" : "d41d8cd98f00b204e9800998ecf8427e",
+    "surname" : "Smith",
+    "mobile" : 669224488,
+    "companyName" : "Labtex",
+    "country" : "England",
+    "role" : ObjectId("5d3ebc4b17fb7b60d454b0f2"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5d4c027e5920530b149f80b7"),
+    "isAdmin" : false,
+    "username" : "Miguel Angel",
+    "email" : "miguel@hotmail.com",
+    "password" : "9eb0c9605dc81a68731f61b3e0838937",
+    "surname" : "Ortiz",
+    "mobile" : 666234567,
+    "companyName" : "Fafinvest",
+    "country" : "Spain",
+    "role" : ObjectId("5d3ebc9017fb7b60d454b119"),
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5d6e315739fd8518701c92d4"),
+    "isAdmin" : false,
+    "username" : "Inma",
+    "email" : "inma@gmail.com",
+    "password" : "d40dbcae0e7088fc4a7e1768cf8771da",
+    "surname" : "Gomez",
+    "mobile" : 668347801,
+    "companyName" : "polopique",
+    "country" : "Portugal",
+    "role" : ObjectId("5d3ebc9017fb7b60d454b119"),
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5d6e400939fd8518701c92d5"),
+    "isAdmin" : false,
+    "username" : "Luis ",
+    "email" : "luis@gmail.com",
+    "password" : "502ff82f7f1f8218dd41201fe4353687",
+    "surname" : "Bonachera",
+    "mobile" : 699679822,
+    "companyName" : "Intexteis",
+    "country" : "Portugal",
+    "role" : ObjectId("5d3ebc9017fb7b60d454b119"),
+    "__v" : 0
+}

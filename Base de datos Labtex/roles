@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("5d3ebb9c17fb7b60d454b0a8"),
+    "name" : "designer"
+}
+
+{
+    "_id" : ObjectId("5d3ebc4b17fb7b60d454b0f2"),
+    "name" : "buyer"
+}
+
+{
+    "_id" : ObjectId("5d3ebc9017fb7b60d454b119"),
+    "name" : "supplier"
+}

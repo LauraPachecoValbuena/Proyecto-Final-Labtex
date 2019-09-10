@@ -1,0 +1,1636 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d44198fae725e0410875a86"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062e517fb7b60d4552359")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "reference" : "10190001",
+    "description" : "Blazer with flowers all over print.\nThe print and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-02T11:07:59.649Z"),
+    "__v" : 0,
+    "images" : [ 
+        "1567270680194.png"
+    ]
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d4ad9a3c7ec6a1ec04a8ee7"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062e517fb7b60d4552359"), 
+        ObjectId("5d40632917fb7b60d45523af"), 
+        ObjectId("5d40636b17fb7b60d45523fa")
+    ],
+    "users" : [ 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354")
+    ],
+    "images" : [ 
+        "1567270661063.png"
+    ],
+    "reference" : "10190002",
+    "description" : "Crochet cape.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-07T14:01:07.368Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d4adc0d731b2f12a40f9400"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062b217fb7b60d4552317")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567270772990.png"
+    ],
+    "reference" : "10190003",
+    "description" : "Soft Jacket.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-07T14:11:25.399Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d4add0e731b2f12a40f9401"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40631a17fb7b60d455239d"), 
+        ObjectId("5d40635a17fb7b60d45523ea")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567271083781.png"
+    ],
+    "reference" : "10190004",
+    "description" : "Studded Denim waistcoat with chest patch.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-07T14:15:42.651Z"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d4aebc802d6f5242c5ff1e1"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062d217fb7b60d455233d"), 
+        ObjectId("5d40630b17fb7b60d4552387"), 
+        ObjectId("5d40637817fb7b60d455240e")
+    ],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567271095342.png"
+    ],
+    "reference" : "10190005",
+    "description" : "Crochet waistcoat with fringes all around in armhole.\nThe main fabric, lining and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-07T15:18:32.996Z"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5d5285f127d748437cdbf1f2"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40631a17fb7b60d455239d"), 
+        ObjectId("5d40637817fb7b60d455240e"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567102129682.png"
+    ],
+    "reference" : "20200001",
+    "description" : "Checked duffel coat.\nThe print and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-13T09:42:09.666Z"),
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5d52b6f63fdb441bb499e2d9"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062a217fb7b60d4552305"), 
+        ObjectId("5d40633717fb7b60d45523b9"), 
+        ObjectId("5d40637817fb7b60d455240e"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567102336469.png"
+    ],
+    "reference" : "20200002",
+    "description" : "Military asymmetric rain coat.\nThe size set was approved Agust 5th.\nWaiting the pre-production samples.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-13T13:11:18.793Z"),
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5d5ad9b3c5afd4392407c62e"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40635a17fb7b60d45523ea"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567271214918.png"
+    ],
+    "reference" : "10190006",
+    "description" : "Leather Biker.\nThe main fabric (leather) and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-19T17:17:39.932Z"),
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5d5ae1f7c5afd4392407c62f"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40628017fb7b60d45522cd"), 
+        ObjectId("5d4062e517fb7b60d4552359"), 
+        ObjectId("5d40632917fb7b60d45523af")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567271261830.png"
+    ],
+    "reference" : "10190007",
+    "description" : "Bomber with contrast piping in ranglan sleeves.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-19T17:52:55.426Z"),
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5d5ae216c5afd4392407c630"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916")
+    ],
+    "colors" : [ 
+        ObjectId("5d40628017fb7b60d45522cd"), 
+        ObjectId("5d40629417fb7b60d45522f3"), 
+        ObjectId("5d4062a217fb7b60d4552305")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d44067aff17a3357023e7be"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567271436128.png"
+    ],
+    "reference" : "10190008",
+    "description" : "Ethnic denim jacket.\nWith embroideries in neck and sleeves.\nThe embroideries and qualities were approve in July.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-19T17:53:26.207Z"),
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5d6816756588a32d3c1ee284"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40629417fb7b60d45522f3"), 
+        ObjectId("5d40630b17fb7b60d4552387"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567102904069.png"
+    ],
+    "reference" : "20200003",
+    "description" : "Studded Bomber.\nPre-production samples were approved on July 1st.\nWaiting the production.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:16:21.807Z"),
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5d6818836588a32d3c1ee285"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [ 
+        ObjectId("5d40630b17fb7b60d4552387"), 
+        ObjectId("5d40631a17fb7b60d455239d"), 
+        ObjectId("5d40637817fb7b60d455240e")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567103107690.png"
+    ],
+    "reference" : "20200004",
+    "description" : "Wool Blazer with chest embroidery.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:25:07.673Z"),
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5d6819136588a32d3c1ee286"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40628017fb7b60d45522cd"), 
+        ObjectId("5d40633717fb7b60d45523b9"), 
+        ObjectId("5d40636b17fb7b60d45523fa")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567103251657.png"
+    ],
+    "reference" : "20200005",
+    "description" : "Checked Blazer.\nThe print and quality were approved in July.\nWaiting the third sample to check fitting, lining, trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:27:31.641Z"),
+    "__v" : 0
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5d6819a66588a32d3c1ee287"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [ 
+        ObjectId("5d40635a17fb7b60d45523ea"), 
+        ObjectId("5d40637817fb7b60d455240e"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567103451776.png"
+    ],
+    "reference" : "20200006",
+    "description" : "Fake Fur Bomber.\nThe 4th sample was approved.\nWaiting the size set.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:29:58.526Z"),
+    "__v" : 0
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5d681b506588a32d3c1ee288"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40630b17fb7b60d4552387"), 
+        ObjectId("5d40631a17fb7b60d455239d"), 
+        ObjectId("5d40636b17fb7b60d45523fa"), 
+        ObjectId("5d40637817fb7b60d455240e")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567103824828.png"
+    ],
+    "reference" : "20200007",
+    "description" : "Aviator Jacket.\nThe leather, lining, fake-fur and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:37:04.808Z"),
+    "__v" : 0
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5d681b966588a32d3c1ee28a"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40633717fb7b60d45523b9"), 
+        ObjectId("5d40637817fb7b60d455240e"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567103894674.png"
+    ],
+    "reference" : "20200008",
+    "description" : "Studded Leather Biker.\nThe main fabric (leather) and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:38:14.649Z"),
+    "__v" : 0
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5d681dc86588a32d3c1ee28d"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d40628017fb7b60d45522cd"), 
+        ObjectId("5d40630b17fb7b60d4552387"), 
+        ObjectId("5d40637817fb7b60d455240e")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567104456932.png"
+    ],
+    "reference" : "20200009",
+    "description" : "Patch Bomber.\nIn our warehouse.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:47:36.900Z"),
+    "__v" : 0
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("5d681e706588a32d3c1ee28f"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567104624923.png"
+    ],
+    "reference" : "20200010",
+    "description" : "Turnover collar sweater with fringes.\nThe size set was approved Agust 5th.\nWaiting the pre-production samples.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:50:24.897Z"),
+    "__v" : 0
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("5d681eb46588a32d3c1ee291"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [ 
+        ObjectId("5d4062d217fb7b60d455233d"), 
+        ObjectId("5d40631a17fb7b60d455239d"), 
+        ObjectId("5d40638517fb7b60d455241f")
+    ],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567104715130.png"
+    ],
+    "reference" : "20200011",
+    "description" : "Cable knit jersey with rize knit.\nThe quality was approved in July.\nWaiting the third sample to check fitting, lining, trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:51:32.476Z"),
+    "__v" : 0
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("5d681ef96588a32d3c1ee292"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567104762033.png"
+    ],
+    "reference" : "20200012",
+    "description" : "Ruffles knit sweater.\nPre-production samples were approved on July 1st.\nWaiting the production.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:52:41.990Z"),
+    "__v" : 0
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("5d681f236588a32d3c1ee293"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567104803514.png"
+    ],
+    "reference" : "20200013",
+    "description" : "Military Jersey.\nThe main fabric and trimmings were approved, waiting the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:53:23.484Z"),
+    "__v" : 0
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("5d681f4a6588a32d3c1ee294"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567105309362.png"
+    ],
+    "reference" : "20200014",
+    "description" : "Ethnic, wool cape.\nThe main fabric, lining, textures and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:54:02.477Z"),
+    "__v" : 0
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("5d681f756588a32d3c1ee295"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567104885237.png"
+    ],
+    "reference" : "20200015",
+    "description" : "Cable knit jacket.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T18:54:45.200Z"),
+    "__v" : 0
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("5d6821646588a32d3c1ee296"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567105380565.png"
+    ],
+    "reference" : "20200016",
+    "description" : "Racing playsuit.\nThe print and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:03:00.528Z"),
+    "__v" : 0
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("5d6821876588a32d3c1ee297"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567105583459.png"
+    ],
+    "reference" : "20200017",
+    "description" : "Business playsuit.\nThe size set was approved Agust 5th.\nWaiting the pre-production samples.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:03:35.188Z"),
+    "__v" : 0
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("5d6822d43126420ec8529b3f"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d440626ff17a3357023e7bd"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567105896315.png"
+    ],
+    "reference" : "20200018",
+    "description" : "Zipper and belt playsuit.\nThe print and quality were approved in July.\nWaiting the third sample to check fitting, lining, trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:09:08.887Z"),
+    "__v" : 0
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("5d6823b53126420ec8529b41"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567105973446.png"
+    ],
+    "reference" : "20200019",
+    "description" : "Cowboy pleats dress.\nPre-production samples were approved on July 1st.\nWaiting the production.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:12:53.405Z"),
+    "__v" : 0
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("5d6823da3126420ec8529b42"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567106010984.png"
+    ],
+    "reference" : "20200020",
+    "description" : "Ethnic patch with fringes dress.\nThe print and quality were approved in July.\nWaiting the third sample to check fitting, lining, trimmings.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:13:30.940Z"),
+    "__v" : 0
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("5d6823f23126420ec8529b43"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567106034863.png"
+    ],
+    "reference" : "20200021",
+    "description" : "Night long dress.\nIn our warehouse.",
+    "season" : ObjectId("5d526ddebe6a9bdf52df5f3d"),
+    "dateAdded" : ISODate("2019-08-29T19:13:54.817Z"),
+    "__v" : 0
+}
+
+/* 30 */
+{
+    "_id" : ObjectId("5d6aa9f2e5b55f19d0574eec"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d44067aff17a3357023e7be"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567271532952.png"
+    ],
+    "reference" : "10190009",
+    "description" : "Fleece sweater with ruffles in armhole.\nThe size set was approved in June.\nWaitingthe pre-production sample.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:10:10.795Z"),
+    "__v" : 0
+}
+
+/* 31 */
+{
+    "_id" : ObjectId("5d6aaa94e5b55f19d0574eee"),
+    "sizes" : [],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567272184770.png"
+    ],
+    "reference" : "10190010",
+    "description" : "Bustier blazer with double buttons.\nThe qualities and trimmings were approved in July.\nWaiting the third sample to check fitting.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:12:52.361Z"),
+    "__v" : 0
+}
+
+/* 32 */
+{
+    "_id" : ObjectId("5d6aaae6e5b55f19d0574eef"),
+    "sizes" : [],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272220221.png"
+    ],
+    "reference" : "10190011",
+    "description" : "Asymetric top with ruffle in neckline.\nMain fabric and all over print were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:14:14.620Z"),
+    "__v" : 0
+}
+
+/* 33 */
+{
+    "_id" : ObjectId("5d6aab03e5b55f19d0574ef0"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272236482.png"
+    ],
+    "reference" : "10190012",
+    "description" : "Mixed single jerseys t-shirt.\nThe main fabric and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:14:43.339Z"),
+    "__v" : 0
+}
+
+/* 34 */
+{
+    "_id" : ObjectId("5d6aab7ee5b55f19d0574ef1"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272294245.png"
+    ],
+    "reference" : "10190013",
+    "description" : "Blouse with all  over print (stripes/flowers) with long sleeves.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:16:46.891Z"),
+    "__v" : 0
+}
+
+/* 35 */
+{
+    "_id" : ObjectId("5d6aac34e5b55f19d0574ef2"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272508022.png"
+    ],
+    "reference" : "10190014",
+    "description" : "Ruffles top.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:19:48.073Z"),
+    "__v" : 0
+}
+
+/* 36 */
+{
+    "_id" : ObjectId("5d6aacbae5b55f19d0574ef4"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272122776.png"
+    ],
+    "reference" : "10190015",
+    "description" : "Crossed top with woven stripes.\nMain fabric and woven stripes were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:22:02.756Z"),
+    "__v" : 0
+}
+
+/* 37 */
+{
+    "_id" : ObjectId("5d6aae9be5b55f19d0574ef6"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d6e315739fd8518701c92d4"), 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e")
+    ],
+    "images" : [ 
+        "1567272603858.png"
+    ],
+    "reference" : "10190016",
+    "description" : "Crochet boho dress.\nThe main fabric, lining and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:30:03.836Z"),
+    "__v" : 0
+}
+
+/* 38 */
+{
+    "_id" : ObjectId("5d6aaec3e5b55f19d0574ef8"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567272701997.png"
+    ],
+    "reference" : "10190017",
+    "description" : "Pleats contrast dress with belt.\nMain fabric approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:30:43.040Z"),
+    "__v" : 0
+}
+
+/* 39 */
+{
+    "_id" : ObjectId("5d6aaee4e5b55f19d0574ef9"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567272676247.png"
+    ],
+    "reference" : "10190018",
+    "description" : "Safari dress with bottom part in contrast and belt/bag.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:31:16.234Z"),
+    "__v" : 0
+}
+
+/* 40 */
+{
+    "_id" : ObjectId("5d6aaf1ae5b55f19d0574efa"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567272730861.png"
+    ],
+    "reference" : "10190019",
+    "description" : "Asymetric bottom dress with checks.\nThe qualities and trimmings were approved in July.\nWaiting the third sample to check fitting.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:32:10.842Z"),
+    "__v" : 0
+}
+
+/* 41 */
+{
+    "_id" : ObjectId("5d6aaf3fe5b55f19d0574efc"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567272797284.png"
+    ],
+    "reference" : "10190020",
+    "description" : "Polka dots long sleeves and pleats dress.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:32:47.684Z"),
+    "__v" : 0
+}
+
+/* 42 */
+{
+    "_id" : ObjectId("5d6aaf7ce5b55f19d0574efd"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567272866230.png"
+    ],
+    "reference" : "10190021",
+    "description" : "Matt sequins short dress with V neckline.\nMain fabric approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:33:48.330Z"),
+    "__v" : 0
+}
+
+/* 43 */
+{
+    "_id" : ObjectId("5d6aafdee5b55f19d0574eff"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567584649927.png"
+    ],
+    "reference" : "10190022",
+    "description" : "Blouse dress with asymetryc front closure.\nThe qualities and trimmings were approved in July.\nWaiting the third sample to check fitting.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:35:26.005Z"),
+    "__v" : 0
+}
+
+/* 44 */
+{
+    "_id" : ObjectId("5d6ab013e5b55f19d0574f00"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567584518668.png"
+    ],
+    "reference" : "10190023",
+    "description" : "Short dress with ruffles in armholes and lace galon in bottom part and body.\nMain fabric approved on July 5th.\nWaitng the size set.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:36:19.184Z"),
+    "__v" : 0
+}
+
+/* 45 */
+{
+    "_id" : ObjectId("5d6ab033e5b55f19d0574f02"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567584468538.png"
+    ],
+    "reference" : "10190024",
+    "description" : "Yellow flowers all over print dress with front zipper and patch pockets.\nThe print and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:36:51.103Z"),
+    "__v" : 0
+}
+
+/* 46 */
+{
+    "_id" : ObjectId("5d6ab08ce5b55f19d0574f04"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d4c027e5920530b149f80b7")
+    ],
+    "images" : [ 
+        "1567273116468.png"
+    ],
+    "reference" : "10190025",
+    "description" : "Shorts with flowers all over print.\nThe print and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:38:20.650Z"),
+    "__v" : 0
+}
+
+/* 47 */
+{
+    "_id" : ObjectId("5d6ab0bde5b55f19d0574f05"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567273176151.png"
+    ],
+    "reference" : "10190026",
+    "description" : "Denim shorts with flowers all over print in lining.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:39:09.983Z"),
+    "__v" : 0
+}
+
+/* 48 */
+{
+    "_id" : ObjectId("5d6ab0f1e5b55f19d0574f06"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567273201172.png"
+    ],
+    "reference" : "10190027",
+    "description" : "Shorts with leopards all over print.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:40:01.154Z"),
+    "__v" : 0
+}
+
+/* 49 */
+{
+    "_id" : ObjectId("5d6ab121e5b55f19d0574f08"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567273249708.png"
+    ],
+    "reference" : "10190028",
+    "description" : "Denim short skirty with double zipper in front side.\nMain fabric approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:40:49.690Z"),
+    "__v" : 0
+}
+
+/* 50 */
+{
+    "_id" : ObjectId("5d6ab13ce5b55f19d0574f09"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567273276764.png"
+    ],
+    "reference" : "10190029",
+    "description" : "Ruffles short skirt.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:41:16.734Z"),
+    "__v" : 0
+}
+
+/* 51 */
+{
+    "_id" : ObjectId("5d6ab164e5b55f19d0574f0a"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567273354029.png"
+    ],
+    "reference" : "10190030",
+    "description" : "Ethnic short skirt with embroideries.\nThe embroideries and qualities were approved in July.\nWaiting the size set.",
+    "season" : ObjectId("5d526dbebe6a9bdf52df5f25"),
+    "dateAdded" : ISODate("2019-08-31T17:41:56.528Z"),
+    "__v" : 0
+}
+
+/* 52 */
+{
+    "_id" : ObjectId("5d6ac52de5b55f19d0574f0b"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567278501297.png"
+    ],
+    "reference" : "10200001",
+    "description" : "Ethnic long tunic.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:06:21.063Z"),
+    "__v" : 0
+}
+
+/* 53 */
+{
+    "_id" : ObjectId("5d6ac564e5b55f19d0574f0c"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567278487974.png"
+    ],
+    "reference" : "10200002",
+    "description" : "Flowers and stripes all over print long dress.\nThe main fabric and lining were approved.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:07:16.557Z"),
+    "__v" : 0
+}
+
+/* 54 */
+{
+    "_id" : ObjectId("5d6ac57ee5b55f19d0574f0d"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567278462421.png"
+    ],
+    "reference" : "10200003",
+    "description" : "Hippie-chic dress.\nThe prints and quality were approve in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:07:42.392Z"),
+    "__v" : 0
+}
+
+/* 55 */
+{
+    "_id" : ObjectId("5d6ac5fbe5b55f19d0574f0f"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567371605072.png"
+    ],
+    "reference" : "10200004",
+    "description" : "Stripes and fringes kimono.\nThe main fabric were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:09:47.793Z"),
+    "__v" : 0
+}
+
+/* 56 */
+{
+    "_id" : ObjectId("5d6ac758e5b55f19d0574f10"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567371552117.png"
+    ],
+    "reference" : "10200005",
+    "description" : "Leaves and ruffles short playsuit.\nThe main fabric and print were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:15:36.324Z"),
+    "__v" : 0
+}
+
+/* 57 */
+{
+    "_id" : ObjectId("5d6ac830e5b55f19d0574f12"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567289147301.png"
+    ],
+    "reference" : "10200006",
+    "description" : "Multi-colors tassels short playsuit.\nThe main fabric and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-08-31T19:19:12.840Z"),
+    "__v" : 0
+}
+
+/* 58 */
+{
+    "_id" : ObjectId("5d6c2124e5b55f19d0574f14"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567367460786.png"
+    ],
+    "reference" : "10200007",
+    "description" : "Check texture and flap chest pocket.\nMain fabric and lining were approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T19:51:00.769Z"),
+    "__v" : 0
+}
+
+/* 59 */
+{
+    "_id" : ObjectId("5d6c31b4e5b55f19d0574f15"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567371700745.png"
+    ],
+    "reference" : "10200008",
+    "description" : "Salior buttons t-shirt.\nThe size set was approved in June.\nWaitingthe pre-production sample.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:01:40.721Z"),
+    "__v" : 0
+}
+
+/* 60 */
+{
+    "_id" : ObjectId("5d6c3203e5b55f19d0574f16"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567371779663.png"
+    ],
+    "reference" : "10200009",
+    "description" : "Round neck kimono with front zipper.\nThe qualities and trimmings were approved in July.\nWaiting the third sample to check fitting.\n",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:02:59.647Z"),
+    "__v" : 0
+}
+
+/* 61 */
+{
+    "_id" : ObjectId("5d6c3240e5b55f19d0574f17"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567372110103.png"
+    ],
+    "reference" : "10200010",
+    "description" : "Safari lined waistcoat with belt.\nMain fabric and trimmings were approved on July 5th.\nWaitng the size set to check fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:04:00.133Z"),
+    "__v" : 0
+}
+
+/* 62 */
+{
+    "_id" : ObjectId("5d6c32c6e5b55f19d0574f18"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567371974107.png"
+    ],
+    "reference" : "10200011",
+    "description" : "Check texture long shirt.\nThe main fabric and trimmings were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:06:14.089Z"),
+    "__v" : 0
+}
+
+/* 63 */
+{
+    "_id" : ObjectId("5d6c3304e5b55f19d0574f19"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567372036345.png"
+    ],
+    "reference" : "10200012",
+    "description" : "V-neck with shoulder buttons long shirt.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:07:16.329Z"),
+    "__v" : 0
+}
+
+/* 64 */
+{
+    "_id" : ObjectId("5d6c3394e5b55f19d0574f1a"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567372385611.png"
+    ],
+    "reference" : "10200013",
+    "description" : "Blouse long dress with leather belt.\nThe size set was approved in June.\nWaiting the pre-production sample.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:09:40.325Z"),
+    "__v" : 0
+}
+
+/* 65 */
+{
+    "_id" : ObjectId("5d6c33b6e5b55f19d0574f1b"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40577f17fb7b60d4551978")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567372295339.png"
+    ],
+    "reference" : "10200014",
+    "description" : "Geometric all over print short dress with lace galon in ruffle.\nMain fabric approved on July 5th.\nWaitng the size set to check fitting and trimmings.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:10:14.006Z"),
+    "__v" : 0
+}
+
+/* 66 */
+{
+    "_id" : ObjectId("5d6c3444e5b55f19d0574f1c"),
+    "sizes" : [ 
+        ObjectId("5d40572517fb7b60d4551936"), 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567372773677.png"
+    ],
+    "reference" : "10200015",
+    "description" : "Pleats halter long dress.\nThe main fabric and lining were approved, waiting the trimmings and the 3rd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:12:36.555Z"),
+    "__v" : 0
+}
+
+/* 67 */
+{
+    "_id" : ObjectId("5d6c34e2e5b55f19d0574f1d"),
+    "sizes" : [ 
+        ObjectId("5d40570617fb7b60d4551916"), 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e315739fd8518701c92d4")
+    ],
+    "images" : [ 
+        "1567372514250.png"
+    ],
+    "reference" : "10200016",
+    "description" : "Ethnic body wrap skirt.\nThe main fabric and all over print were approved on July 16th.\nWaiting the 2nd sample to check the fitting.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:15:14.222Z"),
+    "__v" : 0
+}
+
+/* 68 */
+{
+    "_id" : ObjectId("5d6c3511e5b55f19d0574f1e"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956"), 
+        ObjectId("5d40576717fb7b60d4551966")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567372732400.png"
+    ],
+    "reference" : "10200017",
+    "description" : "Polka dots ruffles skirt.\nThe print and quality were approved in July.\nWaiting the third sample to check fitting, lining, trimmings.\n",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:16:01.848Z"),
+    "__v" : 0
+}
+
+/* 69 */
+{
+    "_id" : ObjectId("5d6c3535e5b55f19d0574f1f"),
+    "sizes" : [ 
+        ObjectId("5d40574e17fb7b60d4551956")
+    ],
+    "colors" : [],
+    "users" : [ 
+        ObjectId("5d3b15f817fb7b60d454a354"), 
+        ObjectId("5d40450499556f182c0c942e"), 
+        ObjectId("5d6e400939fd8518701c92d5")
+    ],
+    "images" : [ 
+        "1567372641156.png"
+    ],
+    "reference" : "10200018",
+    "description" : "Safari long skirt with belt.\nThe trimmings and quality were approved in July.\nWaiting the size set.",
+    "season" : ObjectId("5d526e00be6a9bdf52df5f56"),
+    "dateAdded" : ISODate("2019-09-01T21:16:37.422Z"),
+    "__v" : 0
+}
